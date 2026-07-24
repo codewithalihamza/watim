@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Sampled directly from legacy/4.pdf */
+  --bg-deep: #0b2a40;
+  --bg-hero: #103d58;
+  --bg-mid: #144251;
+  --teal: #217992;
+  --teal-bright: #2f95a6;
+  --cyan: #4bb8c4;
+  --heading-teal: #1c6b7d;
+  --footer-teal: #359c9f;
+  --footer-teal-top: #3fa3a8;
+  --ink: #eaf6f6;
+  --muted: #93b3ba;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg-deep: var(--bg-deep);
+  --color-bg-hero: var(--bg-hero);
+  --color-bg-mid: var(--bg-mid);
+  --color-teal: var(--teal);
+  --color-teal-bright: var(--teal-bright);
+  --color-cyan: var(--cyan);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --font-display: var(--font-poppins);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg-deep);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #071c29; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--teal), var(--heading-teal));
+  border-radius: 10px;
+}
+
+/* ---------- Selection ---------- */
+::selection { background: var(--teal); color: #05202c; }
+
+/* ---------- Animations ---------- */
+@keyframes floaty {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(3deg); }
+}
+@keyframes floatySlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.55; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.08); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes gridDrift {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(60px); }
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-floaty { animation: floaty 6s ease-in-out infinite; }
+.animate-floaty-slow { animation: floatySlow 7s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulseGlow 5s ease-in-out infinite; }
+.animate-spin-slow { animation: spinSlow 26s linear infinite; }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-floaty, .animate-floaty-slow, .animate-pulse-glow, .animate-spin-slow { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---------- Utility: gradient text ---------- */
+.text-gradient-teal {
+  background: linear-gradient(180deg, #63c6d0 0%, #2f95a6 55%, #1c6b7d 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Glass card ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ---------- Shimmer border for search ---------- */
+.shimmer-border {
+  position: relative;
 }
