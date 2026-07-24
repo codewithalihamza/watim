@@ -1,6 +1,6 @@
 "use client";
 
-import Logo from "./Logo";
+import Image from "next/image";
 import Reveal from "./Reveal";
 
 const columns = [
@@ -33,7 +33,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Left: brand + newsletter */}
           <Reveal>
-            <Logo withWordmark />
+            <Image
+              src="/assets/watm-logo-white.png"
+              alt="WATM Marketing Solutions"
+              width={901}
+              height={342}
+              unoptimized
+              className="h-16 w-auto sm:h-20"
+            />
             <p className="mt-6 max-w-sm text-[#dff2f2]">
               Stay up to date with our latest features and releases by joining
               our newsletter.
