@@ -2,12 +2,36 @@ import Image from "next/image";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 
+// Curated high-resolution imagery (Unsplash). Portrait crops @ q=85.
+const IMG =
+  "?auto=format&fit=crop&w=900&h=1200&q=85";
+
 const works = [
-  { src: "/portfolio/card1.png", title: "ValueFirst — Instant OTP", tag: "Branding" },
-  { src: "/portfolio/card2.png", title: "SNBL Art Campaign", tag: "Social" },
-  { src: "/portfolio/card3.png", title: "Meet Value First", tag: "Engagement" },
-  { src: "/portfolio/card4.png", title: "Purity Tech — Welcome", tag: "Corporate" },
-  { src: "/portfolio/card5.png", title: "SNBL — Culture", tag: "Creative" },
+  {
+    src: "https://images.unsplash.com/photo-1552664730-d307ca884978" + IMG,
+    title: "Brand Strategy Sessions",
+    tag: "Branding",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7" + IMG,
+    title: "Creative Direction",
+    tag: "Social",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f" + IMG,
+    title: "Data-Driven Campaigns",
+    tag: "Engagement",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf" + IMG,
+    title: "Client Partnerships",
+    tag: "Corporate",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12" + IMG,
+    title: "Content Production",
+    tag: "Creative",
+  },
 ];
 
 export default function Gallery() {

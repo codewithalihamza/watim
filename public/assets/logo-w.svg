@@ -1,14 +1,10 @@
-<svg viewBox="0 0 120 150" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WATM logo">
+<svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="WATM logo">
   <g fill="currentColor">
-    <!-- left stroke of W -->
-    <path d="M8 4 L30 4 L47 96 L36 108 L24 108 Z" />
-    <!-- middle-left down stroke -->
-    <path d="M42 40 L58 40 L64 92 L56 100 L48 92 Z" />
-    <!-- right stroke of W -->
-    <path d="M112 4 L90 4 L64 96 L74 106 L86 106 Z" />
-    <!-- arrow/flag foot -->
-    <path d="M52 112 L70 112 L64 148 L58 148 Z" />
-    <path d="M40 118 L54 116 L52 130 L38 128 Z" />
-    <path d="M80 116 L94 118 L96 128 L82 130 Z" />
+    <path d="M26 26 L64 18 L92 116 L74 140 L56 132 Z" />
+    <path d="M78 54 L104 54 L114 130 L100 150 L86 130 Z" />
+    <path d="M174 26 L136 18 L108 116 L126 140 L144 132 Z" />
+    <path d="M90 140 L110 140 L108 182 L100 196 L92 182 Z" />
+    <path d="M74 150 L96 147 L94 166 L72 164 Z" />
+    <path d="M104 147 L126 150 L128 164 L106 166 Z" />
   </g>
 </svg>
