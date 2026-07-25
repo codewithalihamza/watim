@@ -1,7 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
-import Logo from "./Logo";
 
 const links = [
   { label: "Home", href: "#home" },
@@ -23,15 +23,21 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled
           ? "border-b border-white/5 bg-[#0a2536]/80 backdrop-blur-xl"
           : "bg-transparent"
-      }`}
+        }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#home" className="transition-transform hover:scale-105">
-          <Logo />
+          <Image
+            src="/assets/headerlogo.png"
+            alt="WATM"
+            width={140}
+            height={36}
+            className="h-9 w-auto"
+            priority
+          />
         </a>
 
         <div className="hidden items-center gap-9 lg:flex">
@@ -60,28 +66,24 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""
+              }`}
           />
         </button>
       </nav>
 
       {/* mobile menu */}
       <div
-        className={`overflow-hidden border-t border-white/5 bg-[#0a2536]/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${
-          open ? "max-h-96" : "max-h-0"
-        }`}
+        className={`overflow-hidden border-t border-white/5 bg-[#0a2536]/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${open ? "max-h-96" : "max-h-0"
+          }`}
       >
         <div className="flex flex-col gap-1 px-6 py-4">
           {links.map((l) => (
