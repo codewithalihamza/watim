@@ -6,30 +6,31 @@ import Tilt from "./Tilt";
 const IMG =
   "?auto=format&fit=crop&w=900&h=1200&q=85";
 
+// Authentic Saudi Arabian culture & lifestyle imagery (Unsplash). Portrait crops @ q=85.
 const works = [
   {
-    src: "https://images.unsplash.com/photo-1552664730-d307ca884978" + IMG,
-    title: "Brand Strategy Sessions",
-    tag: "Branding",
+    src: "/portfolio/A happy man in traditional wear embraces his camel in a desert setting..jpg",
+    title: "Traditional Arabian Culture",
+    tag: "Arabian Culture",
   },
   {
-    src: "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7" + IMG,
-    title: "Creative Direction",
-    tag: "Social",
+    src: "https://images.unsplash.com/photo-1648027753410-31ae2ed611a2" + IMG,
+    title: "Desert Lifestyle Campaigns",
+    tag: "Lifestyle",
   },
   {
-    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f" + IMG,
-    title: "Data-Driven Campaigns",
-    tag: "Engagement",
+    src: "/portfolio/Woman wearing traditional Bedouin attire with coin jewelry in desert landscape..jpg",
+    title: "Women in Arabian Culture",
+    tag: "Culture",
   },
   {
-    src: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf" + IMG,
-    title: "Client Partnerships",
-    tag: "Corporate",
+    src: "https://images.unsplash.com/photo-1578895101408-1a36b834405b" + IMG,
+    title: "Landmark Architecture",
+    tag: "Heritage",
   },
   {
-    src: "https://images.unsplash.com/photo-1531403009284-440f080d1e12" + IMG,
-    title: "Content Production",
+    src: "/portfolio/Arab men dressed in traditional clothing at Uhud Mountain marketplace near a mosque..jpg",
+    title: "Traditional Arabian Market",
     tag: "Creative",
   },
 ];
