@@ -17,7 +17,7 @@ export default function Hero() {
           <Parallax strength={26} className="animate-floaty-slow relative">
             <div className="animate-pulse-glow absolute inset-0 -z-10 translate-y-6 scale-90 rounded-full bg-cyan/25 blur-3xl" />
             <Image
-              src="/assets/hero-man.png"
+              src="/assets/new2.png"
               alt="Man wearing a keffiyeh with an apple pierced by an arrow — precision marketing"
               width={418}
               height={423}
