@@ -51,12 +51,7 @@ export default function Navbar() {
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-cyan transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a
-            href="#contact"
-            className="rounded-full border border-white/40 px-7 py-2.5 text-[15px] font-medium text-ink transition-all duration-300 hover:border-cyan hover:bg-cyan hover:text-[#06212e] hover:shadow-[0_0_24px_-4px] hover:shadow-cyan"
-          >
-            Login
-          </a>
+         
         </div>
 
         {/* mobile toggle */}
