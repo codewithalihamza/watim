@@ -1,16 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  /* Sampled directly from legacy/4.pdf */
-  --bg-deep: #0b2a40;
-  --bg-hero: #103d58;
-  --bg-mid: #144251;
-  --teal: #217992;
-  --teal-bright: #2f95a6;
-  --cyan: #4bb8c4;
-  --heading-teal: #1c6b7d;
-  --footer-teal: #359c9f;
-  --footer-teal-top: #3fa3a8;
+  /* Sampled from legacy/a1.psd — brand swatch layer + background scans */
+
+  /* Brand swatches (authoritative, from the PSD's own palette layer) */
+  --brand-teal: #2f9894;
+  --brand-cyan: #3197a3;
+  --brand-navy: #0b2735;
+  --brand-slate: #0e3144;
+
+  /* Backgrounds — PSD reads deep teal-black, not blue */
+  --bg-deep: #0a2331;
+  --bg-hero: #113b49;
+  --bg-mid: #14394a;
+  --bg-glow: #2b909b;
+
+  /* Accents */
+  --teal: #1a6472;
+  --teal-bright: #32889b;
+  --cyan: #88d7e1;
+  --heading-teal: #113d4a;
+
+  /* Headline gradient stops (from the PSD headline glyphs) */
+  --headline-top: #88d7e1;
+  --headline-bottom: #2f8e9e;
+
+  /* Card / tile gradient (icon tiles in the hero orbit) */
+  --tile-top: #1a6472;
+  --tile-bottom: #1ca1ac;
+
+  /* Footer band */
+  --footer-teal: #2f9894;
+  --footer-teal-top: #1a6472;
+
   --ink: #eaf6f6;
   --muted: #93b3ba;
 }
@@ -24,6 +46,11 @@
   --color-cyan: var(--cyan);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
+  --color-brand-teal: var(--brand-teal);
+  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-slate: var(--brand-slate);
+  --color-bg-glow: var(--bg-glow);
   --font-display: var(--font-poppins);
   --font-sans: var(--font-inter);
 }
@@ -45,14 +72,14 @@ body {
 
 /* ---------- Scrollbar ---------- */
 ::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #071c29; }
+::-webkit-scrollbar-track { background: #071b26; }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--teal), var(--heading-teal));
+  background: linear-gradient(var(--brand-teal), var(--teal));
   border-radius: 10px;
 }
 
 /* ---------- Selection ---------- */
-::selection { background: var(--teal); color: #05202c; }
+::selection { background: var(--brand-teal); color: #0b2735; }
 
 /* ---------- Animations ---------- */
 @keyframes floaty {
@@ -113,12 +140,57 @@ body {
 }
 
 /* ---------- Utility: gradient text ---------- */
+/* PSD headline: bright cyan at the top edge falling to mid teal */
 .text-gradient-teal {
-  background: linear-gradient(180deg, #63c6d0 0%, #2f95a6 55%, #1c6b7d 100%);
+  background: linear-gradient(
+    180deg,
+    var(--headline-top) 0%,
+    #5cb6c6 45%,
+    var(--headline-bottom) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
+
+/* ---------- Hero icon tiles (the orbiting ring in the PSD) ---------- */
+.hero-tile {
+  background: linear-gradient(160deg, var(--tile-top) 0%, var(--tile-bottom) 100%);
+  border-radius: 18px;
+  box-shadow:
+    0 24px 50px -18px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+/* faint back-row tiles that sit behind the subject */
+.hero-tile-back {
+  background: linear-gradient(160deg, #14515f 0%, #17707c 100%);
+  border-radius: 18px;
+  box-shadow: 0 20px 44px -20px rgba(0, 0, 0, 0.5);
+}
+/* the warm rim-light streak the PSD puts along the top edge of the tiles */
+.hero-tile-rim::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    100deg,
+    transparent 8%,
+    rgba(255, 226, 170, 0.85) 28%,
+    rgba(255, 255, 255, 0.35) 38%,
+    transparent 55%
+  );
+  height: 2px;
+  top: -1px;
+  bottom: auto;
+  filter: blur(0.5px);
+}
+
+@keyframes tileFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -14px, 0); }
+}
+.animate-tile-float { animation: tileFloat 7s ease-in-out infinite; }
 
 /* ---------- Glass card ---------- */
 .glass {

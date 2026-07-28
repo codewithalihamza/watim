@@ -14,7 +14,7 @@ export default function GrowthSection() {
     <section id="about" className="relative py-24">
       {/* subtle W watermark */}
       <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden opacity-[0.04]">
-        <div className="mt-20 h-[600px] w-[900px] bg-[conic-gradient(from_180deg,transparent,#6fe3e3_30%,transparent_60%)] [clip-path:polygon(0_0,20%_0,50%_100%,80%_0,100%_0,65%_100%,35%_100%)]" />
+        <div className="mt-20 h-[600px] w-[900px] bg-[conic-gradient(from_180deg,transparent,#88d7e1_30%,transparent_60%)] [clip-path:polygon(0_0,20%_0,50%_100%,80%_0,100%_0,65%_100%,35%_100%)]" />
       </div>
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
@@ -58,9 +58,9 @@ export default function GrowthSection() {
 
         {/* Right: course card */}
         <Reveal delay={2} className="relative">
-          <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#0f3b4a]/70 p-4 shadow-[0_0_60px_-15px_rgba(33,121,146,0.55)] backdrop-blur-md">
+          <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#113b49]/70 p-4 shadow-[0_0_60px_-15px_rgba(47,152,148,0.55)] backdrop-blur-md">
             {/* thumbnail */}
-            <div className="relative h-52 overflow-hidden rounded-2xl bg-gradient-to-br from-teal/80 to-[#123f4b]">
+            <div className="relative h-52 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a6472] to-[#1ca1ac]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,255,255,0.22),transparent_60%)]" />
               <div
                 className="absolute inset-0 opacity-40"
@@ -107,7 +107,7 @@ export default function GrowthSection() {
                 <span className="rounded-full border border-amber-400/80 px-4 py-1.5 text-sm text-amber-300">
                   Intermediate
                 </span>
-                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-teal/40 text-xs font-semibold text-white ring-2 ring-[#0f3b4a]">
+                <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-teal/40 text-xs font-semibold text-white ring-2 ring-[#113b49]">
                   26+
                 </span>
               </div>
@@ -117,7 +117,7 @@ export default function GrowthSection() {
                   $12
                   <span className="text-base font-normal text-muted">/month</span>
                 </span>
-                <button className="rounded-full bg-teal px-6 py-2.5 text-sm font-medium text-[#062029] transition-all hover:scale-105 hover:bg-cyan">
+                <button className="rounded-full bg-brand-teal px-6 py-2.5 text-sm font-medium text-[#0b2735] transition-all hover:scale-105 hover:bg-cyan">
                   Enroll Now
                 </button>
               </div>

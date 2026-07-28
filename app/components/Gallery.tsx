@@ -55,7 +55,7 @@ export default function Gallery() {
               delay={((i % 4) + 1) as 1 | 2 | 3 | 4}
               className="group"
             >
-              <Tilt max={9} className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 shadow-lg group-hover:shadow-[0_20px_50px_-15px_rgba(33,121,146,0.6)]">
+              <Tilt max={9} className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-white/10 shadow-lg group-hover:shadow-[0_20px_50px_-15px_rgba(47,152,148,0.6)]">
                 <Image
                   src={w.src}
                   alt={w.title}
@@ -64,7 +64,7 @@ export default function Gallery() {
                   sizes="(max-width: 768px) 45vw, 20vw"
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#062029] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0b2735] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90" />
                 <div className="absolute inset-x-0 bottom-0 translate-y-4 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   <span className="text-xs font-medium uppercase tracking-wider text-teal-bright">
                     {w.tag}

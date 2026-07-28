@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed -i \"s/await exportLayer\\(56, 'layer-glassw.png'\\);   \\\\/\\\\/ 455,357 1819x722/await exportLayer\\(62, 'layer-glassw2.png'\\);/\" extract-layer.js)",
+      "Bash(node extract-layer.js)",
+      "Bash(node \"C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/c9c1c825-b5b6-46ee-bd61-ffba8087a93e/scratchpad/final-assets.js\")",
+      "Bash(sed -i 's/rgba\\(33,121,146,0.6\\)/rgba\\(47,152,148,0.6\\)/; s/from-\\\\[#062029\\\\]/from-[#0b2735]/' app/components/Gallery.tsx)",
+      "Bash(sed -i 's/from-teal to-cyan/from-brand-teal to-cyan/' app/components/ProgressBar.tsx)",
+      "Bash(npx next *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1819,1019 --virtual-time-budget=6000 --screenshot=shot-hero.png http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1819,1019 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\shot2.png\" http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1819,1019 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\shot3.png\" http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --window-size=1440,4200 --virtual-time-budget=9000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\shot-full.png\" http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --remote-debugging-port=9222 --user-data-dir=\"C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\cdp-profile\" about:blank)",
+      "Bash(curl -s http://127.0.0.1:9222/json/version)",
+      "Bash(node \"C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/c9c1c825-b5b6-46ee-bd61-ffba8087a93e/scratchpad/scroll-shot.js\")",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --window-size=390,844 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\mobile.png\" http://localhost:3111/)",
+      "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --window-size=390,844 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\mobile2.png\" http://localhost:3111/)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(taskkill //F //FI \"WINDOWTITLE eq *\" //IM chrome.exe)"
+    ]
+  }
+}

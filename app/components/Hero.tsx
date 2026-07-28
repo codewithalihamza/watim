@@ -1,5 +1,6 @@
 import Image from "next/image";
 import HeroBackground from "./HeroBackground";
+import HeroTiles from "./HeroTiles";
 import Parallax from "./Parallax";
 import Reveal from "./Reveal";
 
@@ -11,55 +12,66 @@ export default function Hero() {
     >
       <HeroBackground />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 px-6 lg:grid-cols-2 lg:px-10">
-        {/* Left: subject */}
-        <Reveal immediate className="relative flex justify-center lg:justify-start">
-          <Parallax strength={26} className="animate-floaty-slow relative">
-            <div className="animate-pulse-glow absolute inset-0 -z-10 translate-y-6 scale-90 rounded-full bg-cyan/25 blur-3xl" />
-            <Image
-              src="/assets/new.png"
-              alt="Man wearing a keffiyeh with an apple pierced by an arrow — precision marketing"
-              width={418}
-              height={423}
-              priority
-              unoptimized
-              className="h-auto w-[300px] drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)] sm:w-[380px] lg:w-[440px]"
-            />
-          </Parallax>
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-4 lg:px-10">
+        {/*
+          Left: the subject standing inside the ring of icon tiles.
+          The back tile row renders beneath the man, the front row above him,
+          which is what gives the PSD its wrap-around depth.
+        */}
+        <Reveal immediate className="relative">
+          <div className="relative mx-auto aspect-[560/620] w-full max-w-[560px] scale-90 sm:scale-100">
+            <HeroTiles layer="back" />
+
+            <Parallax
+              strength={18}
+              className="absolute inset-x-0 bottom-0 z-10 flex justify-center"
+            >
+              <div className="relative">
+                <div className="animate-pulse-glow absolute inset-x-4 bottom-0 -z-10 h-3/4 rounded-full bg-teal-bright/25 blur-3xl" />
+                <Image
+                  src="/assets/hero-man-phone.png"
+                  alt="A man in traditional Saudi dress holding up a phone showing the WATM app"
+                  width={388}
+                  height={1200}
+                  priority
+                  className="h-auto w-[165px] drop-shadow-[0_36px_60px_rgba(0,0,0,0.5)] sm:w-[196px] lg:w-[218px]"
+                />
+              </div>
+            </Parallax>
+
+            <div className="absolute inset-0 z-20">
+              <HeroTiles layer="front" />
+            </div>
+          </div>
         </Reveal>
 
-        {/* Right: headline */}
+        {/* Right: headline + glass W emblem */}
         <div className="relative">
           <Reveal immediate delay={1}>
-            <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+            <h1 className="text-center font-display text-[2.6rem] font-extrabold uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-[4.6rem]">
               <span className="block text-gradient-teal">Marketing</span>
               <span className="block text-gradient-teal">Solutions</span>
-              <span className="mt-2 block text-2xl font-bold text-ink/95 sm:text-3xl lg:text-4xl">
-                Start With
-              </span>
+              <span className="block text-gradient-teal">Start With</span>
             </h1>
           </Reveal>
 
-          <Reveal immediate delay={2} className="mt-4 flex items-center gap-5">
-            <span className="font-display text-6xl font-extrabold uppercase tracking-tight text-white sm:text-7xl lg:text-8xl">
-              WATM
-            </span>
-            <Parallax strength={40} className="animate-floaty">
+          <Reveal immediate delay={2} className="mt-6 flex justify-center ">
+            <Parallax strength={34} className="animate-floaty">
               <Image
-                src="/assets/glass-w.png"
-                alt="Glass WATM emblem"
-                width={145}
-                height={180}
-                unoptimized
-                className="h-20 w-auto drop-shadow-[0_0_28px_rgba(75,184,196,0.6)] sm:h-24 lg:h-28"
+                src="/assets/glass-w-psd.png"
+                alt="WATM glass emblem"
+                width={700}
+                height={470}
+                priority
+                className="h-24 w-auto drop-shadow-[0_0_40px_rgba(50,136,155,0.55)] sm:h-32 lg:h-40"
               />
             </Parallax>
           </Reveal>
 
-          <Reveal immediate delay={3} className="mt-8 flex flex-wrap gap-4">
+          <Reveal immediate delay={3} className="mt-10 flex flex-wrap justify-center gap-4">
             <a
               href="#about"
-              className="group relative overflow-hidden rounded-full bg-teal px-8 py-3.5 font-medium text-[#062029] transition-all duration-300 hover:shadow-[0_10px_40px_-8px] hover:shadow-teal"
+              className="group relative overflow-hidden rounded-full bg-brand-teal px-8 py-3.5 font-medium text-[#062029] transition-all duration-300 hover:shadow-[0_10px_40px_-8px] hover:shadow-brand-teal"
             >
               <span className="relative z-10">Get Started</span>
               <span className="absolute inset-0 -translate-x-full bg-cyan transition-transform duration-500 group-hover:translate-x-0" />
@@ -73,8 +85,6 @@ export default function Hero() {
           </Reveal>
         </div>
       </div>
-
-
     </section>
   );
 }

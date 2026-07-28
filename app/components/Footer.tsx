@@ -22,11 +22,11 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-b from-[#1c6b7d] via-[#3fa3a8] to-[#359c9f] pt-20"
+      className="relative overflow-hidden bg-gradient-to-b from-[#1a6472] via-[#2f9894] to-[#3197a3] pt-20"
     >
       {/* faint W geometry */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
-        <div className="absolute -left-10 top-10 h-full w-[60%] bg-[#0a2536]/40 [clip-path:polygon(0_0,18%_0,50%_90%,82%_0,100%_0,50%_60%)]" />
+        <div className="absolute -left-10 top-10 h-full w-[60%] bg-[#0b2735]/40 [clip-path:polygon(0_0,18%_0,50%_90%,82%_0,100%_0,50%_60%)]" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
@@ -57,7 +57,7 @@ export default function Footer() {
               />
               <button
                 type="submit"
-                className="rounded-full bg-[#0e3b47] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0a2c36]"
+                className="rounded-full bg-[#0e3144] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0b2735]"
               >
                 Subscribe
               </button>

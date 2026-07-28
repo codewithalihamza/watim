@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled
-          ? "border-b border-white/5 bg-[#0a2536]/80 backdrop-blur-xl"
+          ? "border-b border-white/5 bg-[#0a2331]/80 backdrop-blur-xl"
           : "bg-transparent"
         }`}
     >
@@ -77,7 +77,7 @@ export default function Navbar() {
 
       {/* mobile menu */}
       <div
-        className={`overflow-hidden border-t border-white/5 bg-[#0a2536]/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${open ? "max-h-96" : "max-h-0"
+        className={`overflow-hidden border-t border-white/5 bg-[#0a2331]/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${open ? "max-h-96" : "max-h-0"
           }`}
       >
         <div className="flex flex-col gap-1 px-6 py-4">
@@ -94,7 +94,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-full border border-white/40 px-4 py-3 text-center text-ink transition-colors hover:bg-cyan hover:text-[#06212e]"
+            className="mt-2 rounded-full border border-white/40 px-4 py-3 text-center text-ink transition-colors hover:bg-cyan hover:text-[#0b2735]"
           >
             Login
           </a>
