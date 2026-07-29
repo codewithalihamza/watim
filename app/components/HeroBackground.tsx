@@ -25,7 +25,7 @@ export default function HeroBackground() {
         fill
         priority
         aria-hidden
-        sizes="100vw"
+        sizes="(max-width: 639px) 0px, 100vw"
         className="hidden object-cover object-bottom opacity-90 sm:block"
       />
       <Image
@@ -34,7 +34,7 @@ export default function HeroBackground() {
         fill
         priority
         aria-hidden
-        sizes="100vw"
+        sizes="(min-width: 640px) 0px, 100vw"
         className="object-cover object-bottom opacity-90 sm:hidden"
       />
 
@@ -45,7 +45,7 @@ export default function HeroBackground() {
         fill
         priority
         aria-hidden
-        sizes="100vw"
+        sizes="(max-width: 639px) 0px, 100vw"
         className="hidden object-cover mix-blend-soft-light sm:block"
       />
       <Image
@@ -54,7 +54,7 @@ export default function HeroBackground() {
         fill
         priority
         aria-hidden
-        sizes="100vw"
+        sizes="(min-width: 640px) 0px, 100vw"
         className="object-cover mix-blend-soft-light sm:hidden"
       />
 
@@ -78,7 +78,7 @@ export default function HeroBackground() {
         alt=""
         fill
         aria-hidden
-        sizes="100vw"
+        sizes="(max-width: 639px) 0px, 100vw"
         className="hidden object-cover object-left opacity-[0.14] sm:block"
       />
       <Image
@@ -86,7 +86,7 @@ export default function HeroBackground() {
         alt=""
         fill
         aria-hidden
-        sizes="100vw"
+        sizes="(min-width: 640px) 0px, 100vw"
         className="object-cover object-center opacity-[0.13] sm:hidden"
       />
 
