@@ -26,7 +26,7 @@ export default function Hero() {
         */}
         <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           {/* ---- Copy ---- */}
-          <div className="order-1 min-w-0 pb-8 text-center lg:pb-0 lg:text-left">
+          <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
             <p className="animate-drift delay-1 text-[0.7rem] font-medium uppercase tracking-[0.34em] text-accent/90 sm:text-xs">
               Marketing Solutions
             </p>
@@ -59,12 +59,12 @@ export default function Hero() {
           </div>
 
           {/* ---- Subject ---- */}
-          <div className="animate-fade order-2 relative flex w-full min-w-0 justify-center self-end overflow-hidden lg:order-2 lg:justify-end lg:self-end lg:overflow-visible">
+          <div className="animate-fade order-1 relative flex w-full min-w-0 justify-center self-end overflow-hidden lg:order-2 lg:justify-end lg:self-end lg:overflow-visible">
             {/* rim glow behind him, as in the comp */}
             <div className="animate-bloom absolute bottom-0 h-[70%] w-[80%] rounded-full bg-field-glow/25 blur-[90px]" />
 
             <Image
-              src="/brand/man.webp"
+              src="/brand/man-mobile.webp"
               alt="A man in traditional Saudi dress standing before the Riyadh skyline"
               width={737}
               height={1116}

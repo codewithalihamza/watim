@@ -49,10 +49,17 @@
       "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\pat-d.png' --virtual-time-budget=9000 http://localhost:3000/)",
       "Bash(curl -s http://localhost:3000/)",
       "Bash(curl -s \"http://localhost:3000/_next/image?url=%2Fbrand%2Fpattern.webp&w=1920&q=75\" -o /tmp/opt.webp)",
-      "Bash(taskkill //F //PID 11780)"
+      "Bash(taskkill //F //PID 11780)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=500,1200 --screenshot=C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/64033184-3cd6-4280-a9d5-db6a054cfda3/scratchpad/reorder-m.png --virtual-time-budget=9000 http://localhost:3300/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=500,1200 --screenshot=C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/64033184-3cd6-4280-a9d5-db6a054cfda3/scratchpad/mobile-fade-final.png --virtual-time-budget=9000 http://localhost:3400/)",
+      "Skill(update-config)",
+      "Skill(update-config:*)",
+      "Bash(mkdir -p /d/Github/watim/.claude/skills/legacy-redesign)",
+      "Edit(/.claude/skills/legacy-redesign/**)"
     ],
     "additionalDirectories": [
-      "\\tmp"
+      "\\tmp",
+      "D:\\Github\\watim\\.claude\\skills"
     ]
   }
 }
