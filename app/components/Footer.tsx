@@ -72,7 +72,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
             {columns.map((col, i) => (
               <Reveal key={col.title} delay={(i + 1) as 1 | 2 | 3}>
-                <h4 className="mb-5 font-display font-semibold text-white">
+                <h4 className="mb-5 display font-semibold text-white">
                   {col.title}
                 </h4>
                 <ul className="space-y-3">

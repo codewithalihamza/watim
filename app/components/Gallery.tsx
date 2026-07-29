@@ -40,10 +40,10 @@ export default function Gallery() {
     <section id="gallery" className="relative py-24">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
         <Reveal className="mb-14 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-bright">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
             Our Gallery
           </p>
-          <h2 className="font-display text-4xl font-bold text-ink sm:text-5xl">
+          <h2 className="display text-4xl font-bold text-ink sm:text-5xl">
             Work That Speaks Louder
           </h2>
         </Reveal>
@@ -66,7 +66,7 @@ export default function Gallery() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0b2735] via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-90" />
                 <div className="absolute inset-x-0 bottom-0 translate-y-4 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                  <span className="text-xs font-medium uppercase tracking-wider text-teal-bright">
+                  <span className="text-xs font-medium uppercase tracking-wider text-accent">
                     {w.tag}
                   </span>
                   <p className="mt-1 text-sm font-semibold text-white">

@@ -23,12 +23,12 @@ export default function SearchSection() {
               <input
                 type="text"
                 placeholder="Search courses, products…"
-                className="w-full rounded-full border-2 border-cyan/40 bg-white/5 px-6 py-4 text-ink placeholder:text-muted/70 outline-none transition-all duration-300 focus:border-cyan focus:bg-white/10 focus:shadow-[0_0_30px_-6px] focus:shadow-cyan"
+                className="w-full rounded-full border-2 border-accent/40 bg-white/5 px-6 py-4 text-ink placeholder:text-muted/70 outline-none transition-all duration-300 focus:border-accent focus:bg-white/10 focus:shadow-[0_0_30px_-6px] focus:shadow-accent"
               />
             </div>
             <button
               type="submit"
-              className="rounded-full px-6 py-4 font-medium text-ink transition-colors hover:text-cyan"
+              className="rounded-full px-6 py-4 font-medium text-ink transition-colors hover:text-accent"
             >
               Search
             </button>

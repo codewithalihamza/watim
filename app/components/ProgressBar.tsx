@@ -36,7 +36,7 @@ export default function ProgressBar({
       className={`h-2.5 w-full overflow-hidden rounded-full bg-white/15 ${className}`}
     >
       <div
-        className="h-full rounded-full bg-gradient-to-r from-brand-teal to-cyan transition-[width] duration-[1400ms] ease-out"
+        className="h-full rounded-full bg-gradient-to-r from-brand-teal to-accent transition-[width] duration-[1400ms] ease-out"
         style={{ width: `${w}%` }}
       />
     </div>

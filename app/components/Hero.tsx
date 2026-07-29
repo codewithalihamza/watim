@@ -1,88 +1,76 @@
 import Image from "next/image";
 import HeroBackground from "./HeroBackground";
-import HeroTiles from "./HeroTiles";
-import Parallax from "./Parallax";
-import Reveal from "./Reveal";
 
+/*
+  Desktop follows legacy/watm web homepage/with background.jpg: the subject
+  stands on the right, lit from behind, with the headline occupying the open
+  left half.
+
+  Phone follows legacy/watm web homepage/phone/: the subject is centred and
+  the type sits above him, so the layout stacks rather than shrinking the
+  two-column desktop arrangement.
+*/
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16"
+      className="relative isolate flex min-h-[100svh] flex-col overflow-hidden"
     >
       <HeroBackground />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-4 lg:px-10">
+      <div className="relative mx-auto flex w-full max-w-shell flex-1 flex-col px-6 pt-28 pb-0 sm:px-8 lg:px-10 lg:pt-32">
         {/*
-          Left: the subject standing inside the ring of icon tiles.
-          The back tile row renders beneath the man, the front row above him,
-          which is what gives the PSD its wrap-around depth.
+          minmax(0,…) keeps the tracks from being widened by their content —
+          without it the subject image pushes the grid past the viewport on
+          narrow screens.
         */}
-        <Reveal immediate className="relative">
-          <div className="relative mx-auto aspect-[560/620] w-full max-w-[560px] scale-90 sm:scale-100">
-            <HeroTiles layer="back" />
-
-            <Parallax
-              strength={18}
-              className="absolute inset-x-0 bottom-0 z-10 flex justify-center"
-            >
-              <div className="relative">
-                <div className="animate-pulse-glow absolute inset-x-4 bottom-0 -z-10 h-3/4 rounded-full bg-teal-bright/25 blur-3xl" />
-                <Image
-                  src="/assets/hero-man-phone.png"
-                  alt="A man in traditional Saudi dress holding up a phone showing the WATM app"
-                  width={388}
-                  height={1200}
-                  priority
-                  className="h-auto w-[165px] drop-shadow-[0_36px_60px_rgba(0,0,0,0.5)] sm:w-[196px] lg:w-[218px]"
-                />
-              </div>
-            </Parallax>
-
-            <div className="absolute inset-0 z-20">
-              <HeroTiles layer="front" />
+        <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
+          {/* ---- Copy ---- */}
+          <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
+            <h1 className="display animate-drift delay-2 text-[2.4rem] uppercase sm:text-6xl lg:text-[4.2rem] xl:text-[4.8rem]">
+              <span className="text-lit block">Marketing</span>
+              <span className="text-lit block">Solutions</span>
+              <span className="text-lit block">Start With</span>
+            </h1>
+            <div className="animate-drift delay-3 mt-4 flex items-start justify-center gap-5 lg:gap-10 lg:justify-start">
+              <span className="wordmark text-[3.3rem] leading-none sm:text-5xl lg:text-[6rem] xl:text-[6rem] items-start">
+                WATM
+              </span>
+              <Image
+                src="/assets/glass-w.png"
+                alt=""
+                aria-hidden
+                width={350}
+                height={350}
+                className="h-24 w-auto rotate-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-32 lg:h-40 xl:h-48"
+              />
             </div>
           </div>
-        </Reveal>
 
-        {/* Right: headline + glass W emblem */}
-        <div className="relative">
-          <Reveal immediate delay={1}>
-            <h1 className="text-center font-display text-[2.6rem] font-extrabold uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-[4.6rem]">
-              <span className="block text-gradient-teal">Marketing</span>
-              <span className="block text-gradient-teal">Solutions</span>
-              <span className="block text-gradient-teal">Start With</span>
-            </h1>
-          </Reveal>
+          {/* ---- Subject ---- */}
+          <div className="animate-fade order-1 relative flex w-full min-w-0 justify-center self-end overflow-hidden lg:order-2 lg:justify-end lg:self-end lg:overflow-visible">
+            {/* rim glow behind him, as in the comp */}
+            <div className="animate-bloom absolute bottom-0 h-[70%] w-[80%] rounded-full bg-field-glow/25 blur-[90px]" />
 
-          <Reveal immediate delay={2} className="mt-6 flex justify-center ">
-            <Parallax strength={34} className="animate-floaty">
-              <Image
-                src="/assets/glass-w-psd.png"
-                alt="WATM glass emblem"
-                width={700}
-                height={470}
-                priority
-                className="h-24 w-auto drop-shadow-[0_0_40px_rgba(50,136,155,0.55)] sm:h-32 lg:h-40"
-              />
-            </Parallax>
-          </Reveal>
-
-          <Reveal immediate delay={3} className="mt-10 flex flex-wrap justify-center gap-4">
-            <a
-              href="#about"
-              className="group relative overflow-hidden rounded-full bg-brand-teal px-8 py-3.5 font-medium text-[#062029] transition-all duration-300 hover:shadow-[0_10px_40px_-8px] hover:shadow-brand-teal"
-            >
-              <span className="relative z-10">Get Started</span>
-              <span className="absolute inset-0 -translate-x-full bg-cyan transition-transform duration-500 group-hover:translate-x-0" />
-            </a>
-            <a
-              href="#gallery"
-              className="rounded-full border border-white/25 px-8 py-3.5 font-medium text-ink transition-colors duration-300 hover:border-cyan hover:text-cyan"
-            >
-              View Our Work
-            </a>
-          </Reveal>
+            <Image
+              src="/brand/man-mobile.webp"
+              alt="A man in traditional Saudi dress standing before the Riyadh skyline"
+              width={737}
+              height={1116}
+              priority
+              sizes="(max-width: 1024px) 60vw, 42vw"
+              className="relative hidden h-auto w-full max-w-[420px] object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)] sm:block lg:max-w-[520px]"
+            />
+            <Image
+              src="/brand/man-mobile.webp"
+              alt="A man in traditional Saudi dress standing before the Riyadh skyline"
+              width={712}
+              height={1076}
+              priority
+              sizes="80vw"
+              className="relative h-auto w-full max-w-[340px] object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:hidden"
+            />
+          </div>
         </div>
       </div>
     </section>
