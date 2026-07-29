@@ -32,18 +32,17 @@ export default function Hero() {
               <span className="text-lit block">Solutions</span>
               <span className="text-lit block">Start With</span>
             </h1>
-
-            <div className="animate-drift delay-3 mt-2 flex items-center justify-center gap-3 sm:gap-5 lg:justify-start">
-              <span className="wordmark text-[3.4rem] leading-none sm:text-7xl lg:text-[6.2rem] xl:text-[7rem]">
+            <div className="animate-drift delay-3 mt-4 flex items-start justify-center gap-5 lg:gap-10 lg:justify-start">
+              <span className="wordmark text-[3.3rem] leading-none sm:text-5xl lg:text-[6rem] xl:text-[6rem] items-start">
                 WATM
               </span>
               <Image
                 src="/assets/glass-w.png"
                 alt=""
                 aria-hidden
-                width={280}
-                height={280}
-                className="h-16 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-24 lg:h-28 xl:h-32"
+                width={350}
+                height={350}
+                className="h-24 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-32 lg:h-40 xl:h-48"
               />
             </div>
           </div>

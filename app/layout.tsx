@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Montserrat, Inter } from "next/font/google";
+import { Montserrat, Inter, Luckiest_Guy } from "next/font/google";
 import "./globals.css";
 
 /*
-  Headline ("MARKETING SOLUTIONS START WITH") and the "WATM" wordmark both
-  use Montserrat per spec — 800 ExtraBold for the headline, 900 Black for
-  the wordmark — with Inter carrying body copy.
+  Headline ("MARKETING SOLUTIONS START WITH") uses Montserrat 800 ExtraBold.
+  The "WATM" wordmark uses a wobbly comic/sticker display face per the
+  reference art — Luckiest Guy is the closest widely-available match.
+  Inter carries body copy.
 */
 const montserrat = Montserrat({
   variable: "--font-display",
@@ -16,6 +17,12 @@ const montserrat = Montserrat({
 const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
+});
+
+const luckiestGuy = Luckiest_Guy({
+  variable: "--font-wordmark",
+  subsets: ["latin"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${inter.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${inter.variable} ${luckiestGuy.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>
