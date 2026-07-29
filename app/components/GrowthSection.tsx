@@ -12,11 +12,6 @@ const stats = [
 export default function GrowthSection() {
   return (
     <section id="about" className="relative py-24">
-      {/* subtle W watermark */}
-      <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden opacity-[0.04]">
-        <div className="mt-20 h-[600px] w-[900px] bg-[conic-gradient(from_180deg,transparent,#88d7e1_30%,transparent_60%)] [clip-path:polygon(0_0,20%_0,50%_100%,80%_0,100%_0,65%_100%,35%_100%)]" />
-      </div>
-
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Left text + stats */}
         <div>
