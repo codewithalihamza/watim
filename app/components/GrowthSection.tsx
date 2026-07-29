@@ -58,6 +58,7 @@ export default function GrowthSection() {
 
         {/* Right: course card */}
         <Reveal delay={2} className="relative">
+          <div className="pointer-events-none absolute inset-0 -z-10 scale-95 rounded-3xl bg-[radial-gradient(circle,rgba(255,255,255,0.35),rgba(136,215,225,0.18)_45%,transparent_70%)] blur-3xl" />
           <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#113b49]/70 p-4 shadow-[0_0_60px_-15px_rgba(47,152,148,0.55)] backdrop-blur-md">
             {/* thumbnail */}
             <div className="relative h-52 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a6472] to-[#1ca1ac]">
@@ -104,7 +105,7 @@ export default function GrowthSection() {
               </div>
 
               <div className="mt-4 flex items-center justify-between">
-                <span className="rounded-full border border-amber-400/80 px-4 py-1.5 text-sm text-amber-300">
+                <span className="rounded-full border border-amber-400/80 bg-amber-400/15 px-4 py-1.5 text-sm text-amber-300">
                   Intermediate
                 </span>
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-teal/40 text-xs font-semibold text-white ring-2 ring-[#113b49]">
