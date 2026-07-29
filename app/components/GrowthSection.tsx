@@ -12,11 +12,6 @@ const stats = [
 export default function GrowthSection() {
   return (
     <section id="about" className="relative py-24">
-      {/* subtle W watermark */}
-      <div className="pointer-events-none absolute inset-0 flex items-start justify-center overflow-hidden opacity-[0.04]">
-        <div className="mt-20 h-[600px] w-[900px] bg-[conic-gradient(from_180deg,transparent,#88d7e1_30%,transparent_60%)] [clip-path:polygon(0_0,20%_0,50%_100%,80%_0,100%_0,65%_100%,35%_100%)]" />
-      </div>
-
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Left text + stats */}
         <div>
@@ -58,6 +53,7 @@ export default function GrowthSection() {
 
         {/* Right: course card */}
         <Reveal delay={2} className="relative">
+          <div className="pointer-events-none absolute inset-0 -z-10 scale-95 rounded-3xl bg-[radial-gradient(circle,rgba(255,255,255,0.35),rgba(136,215,225,0.18)_45%,transparent_70%)] blur-3xl" />
           <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#113b49]/70 p-4 shadow-[0_0_60px_-15px_rgba(47,152,148,0.55)] backdrop-blur-md">
             {/* thumbnail */}
             <div className="relative h-52 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a6472] to-[#1ca1ac]">
@@ -104,7 +100,7 @@ export default function GrowthSection() {
               </div>
 
               <div className="mt-4 flex items-center justify-between">
-                <span className="rounded-full border border-amber-400/80 px-4 py-1.5 text-sm text-amber-300">
+                <span className="rounded-full border border-amber-400/80 bg-amber-400/15 px-4 py-1.5 text-sm text-amber-300">
                   Intermediate
                 </span>
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-teal/40 text-xs font-semibold text-white ring-2 ring-[#113b49]">

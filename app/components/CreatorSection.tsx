@@ -1,6 +1,6 @@
-import Reveal from "./Reveal";
 import CountUp from "./CountUp";
 import ProgressBar from "./ProgressBar";
+import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 
 const benefits = [
@@ -12,7 +12,7 @@ const benefits = [
 
 function Check() {
   return (
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal/25 text-accent">
+    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal text-[#33070a]">
       <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="3">
         <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -22,12 +22,7 @@ function Check() {
 
 export default function CreatorSection() {
   return (
-    <section className="relative overflow-hidden border-t border-white/5 py-24">
-      {/* big faint V/W geometry */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.05]">
-        <div className="absolute left-1/2 top-0 h-full w-[70%] -translate-x-1/2 bg-[linear-gradient(180deg,#88d7e1,transparent)] [clip-path:polygon(0_0,15%_0,50%_100%,85%_0,100%_0,50%_60%)]" />
-      </div>
-
+    <section className="relative overflow-hidden border-t-2 border-white py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Left: revenue cards */}
         <div className="space-y-8">
@@ -78,7 +73,7 @@ export default function CreatorSection() {
                 </svg>
               </p>
               <div className="mt-6 flex justify-end">
-                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-[#0b2735]">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">
                   2K+
                 </span>
               </div>

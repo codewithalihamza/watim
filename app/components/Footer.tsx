@@ -22,7 +22,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative overflow-hidden bg-gradient-to-b from-[#1a6472] via-[#2f9894] to-[#3197a3] pt-20"
+      className="relative overflow-hidden bg-gradient-to-b from-[#2f9894] to-[#3197a3] pt-20"
     >
       {/* faint W geometry */}
       <div className="pointer-events-none absolute inset-0 opacity-[0.08]">
