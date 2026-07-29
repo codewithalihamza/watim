@@ -21,22 +21,35 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // keep the page from scrolling behind the open mobile sheet
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled
-          ? "border-b border-white/5 bg-[#0a2331]/80 backdrop-blur-xl"
-          : "bg-transparent"
-        }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+        scrolled || open
+          ? "border-b border-white/10 bg-field-dark/85 backdrop-blur-xl"
+          : "border-b border-transparent bg-transparent"
+      }`}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#home" className="transition-transform hover:scale-105">
+      <nav className="mx-auto flex max-w-shell items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
+        <a
+          href="#home"
+          aria-label="WATM — home"
+          className="transition-transform duration-300 hover:scale-105"
+        >
           <Image
-            src="/assets/headerlogo.png"
+            src="/brand/mark.png"
             alt="WATM"
-            width={140}
-            height={36}
-            className="h-9 w-auto"
+            width={1176}
+            height={818}
             priority
+            className="h-8 w-auto sm:h-9"
           />
         </a>
 
@@ -45,48 +58,57 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="group relative text-[15px] font-medium text-ink/90 transition-colors hover:text-cyan"
+              className="group relative text-[0.95rem] font-medium text-ink/90 transition-colors duration-300 hover:text-accent"
             >
               {l.label}
-              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-cyan transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-         
+          <a
+            href="#contact"
+            className="btn-primary rounded-full px-6 py-2.5 text-sm font-semibold transition-shadow duration-300"
+          >
+            Get in Touch
+          </a>
         </div>
 
-        {/* mobile toggle */}
         <button
           onClick={() => setOpen((o) => !o)}
-          className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 lg:hidden"
-          aria-label="Toggle menu"
+          className="-mr-2 flex h-11 w-11 flex-col items-center justify-center gap-1.5 lg:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
         >
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""
-              }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
+              open ? "translate-y-2 rotate-45" : ""
+            }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "opacity-0" : ""
-              }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
+              open ? "opacity-0" : ""
+            }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""
-              }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
+              open ? "-translate-y-2 -rotate-45" : ""
+            }`}
           />
         </button>
       </nav>
 
-      {/* mobile menu */}
+      {/* mobile sheet */}
       <div
-        className={`overflow-hidden border-t border-white/5 bg-[#0a2331]/95 backdrop-blur-xl transition-all duration-500 lg:hidden ${open ? "max-h-96" : "max-h-0"
-          }`}
+        className={`overflow-hidden bg-field-dark/95 backdrop-blur-xl transition-[max-height,opacity] duration-500 lg:hidden ${
+          open ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
-        <div className="flex flex-col gap-1 px-6 py-4">
+        <div className="flex flex-col gap-1 px-6 pb-6 pt-2 sm:px-8">
           {links.map((l) => (
             <a
               key={l.label}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="rounded-lg px-4 py-3 text-ink/90 transition-colors hover:bg-white/5 hover:text-cyan"
+              className="rounded-xl px-4 py-3.5 text-base text-ink/90 transition-colors hover:bg-white/5 hover:text-accent"
             >
               {l.label}
             </a>
@@ -94,9 +116,9 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 rounded-full border border-white/40 px-4 py-3 text-center text-ink transition-colors hover:bg-cyan hover:text-[#0b2735]"
+            className="btn-primary mt-3 rounded-full px-6 py-3.5 text-center font-semibold"
           >
-            Login
+            Get in Touch
           </a>
         </div>
       </div>

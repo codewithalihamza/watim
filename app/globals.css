@@ -1,62 +1,56 @@
 @import "tailwindcss";
 
+/*
+  Palette sampled directly from legacy/watm web homepage/with background.jpg
+  and the brand mark in legacy/new logo/. The composition is a teal duotone:
+  a deep slate-teal field that lifts to a lit aqua bloom on the right, with
+  the Riyadh skyline and a large "WA" watermark sitting inside it.
+*/
 :root {
-  /* Sampled from legacy/a1.psd — brand swatch layer + background scans */
+  /* Brand mark gradient (the WA monogram: light teal -> deep navy-teal) */
+  --brand-teal: #2f8f96;
+  --brand-teal-light: #3d9aa1;
+  --brand-navy: #164154;
+  --brand-deep: #14455a;
 
-  /* Brand swatches (authoritative, from the PSD's own palette layer) */
-  --brand-teal: #2f9894;
-  --brand-cyan: #3197a3;
-  --brand-navy: #0b2735;
-  --brand-slate: #0e3144;
+  /* Hero field — sampled from the composite */
+  --field-dark: #102f3d; /* outer corners / vignette */
+  --field-base: #164152; /* left + mid body */
+  --field-mid: #1c5461; /* center */
+  --field-glow: #35838f; /* the aqua bloom, right of centre */
+  --field-glow-hot: #4aa0a9; /* bloom core */
 
-  /* Backgrounds — PSD reads deep teal-black, not blue */
-  --bg-deep: #0a2331;
-  --bg-hero: #113b49;
-  --bg-mid: #14394a;
-  --bg-glow: #2b909b;
+  /* Type */
+  --ink: #f2fafb;
+  --ink-soft: #cfe4e8;
+  --muted: #9dbcc4;
+  --accent: #6fd0da;
 
-  /* Accents */
-  --teal: #1a6472;
-  --teal-bright: #32889b;
-  --cyan: #88d7e1;
-  --heading-teal: #113d4a;
-
-  /* Headline gradient stops (from the PSD headline glyphs) */
-  --headline-top: #88d7e1;
-  --headline-bottom: #2f8e9e;
-
-  /* Card / tile gradient (icon tiles in the hero orbit) */
-  --tile-top: #1a6472;
-  --tile-bottom: #1ca1ac;
-
-  /* Footer band */
-  --footer-teal: #2f9894;
-  --footer-teal-top: #1a6472;
-
-  --ink: #eaf6f6;
-  --muted: #93b3ba;
+  --shell: 1280px;
 }
 
 @theme inline {
-  --color-bg-deep: var(--bg-deep);
-  --color-bg-hero: var(--bg-hero);
-  --color-bg-mid: var(--bg-mid);
-  --color-teal: var(--teal);
-  --color-teal-bright: var(--teal-bright);
-  --color-cyan: var(--cyan);
-  --color-ink: var(--ink);
-  --color-muted: var(--muted);
+  --color-field-dark: var(--field-dark);
+  --color-field-base: var(--field-base);
+  --color-field-mid: var(--field-mid);
+  --color-field-glow: var(--field-glow);
+  --color-field-glow-hot: var(--field-glow-hot);
   --color-brand-teal: var(--brand-teal);
-  --color-brand-cyan: var(--brand-cyan);
+  --color-brand-teal-light: var(--brand-teal-light);
   --color-brand-navy: var(--brand-navy);
-  --color-brand-slate: var(--brand-slate);
-  --color-bg-glow: var(--bg-glow);
-  --font-display: var(--font-poppins);
-  --font-sans: var(--font-inter);
+  --color-brand-deep: var(--brand-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --container-shell: var(--shell);
 }
 
 * {
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -64,142 +58,166 @@ html {
 }
 
 body {
-  background: var(--bg-deep);
+  background: var(--field-dark);
   color: var(--ink);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
   overflow-x: hidden;
 }
 
-/* ---------- Scrollbar ---------- */
-::-webkit-scrollbar { width: 10px; }
-::-webkit-scrollbar-track { background: #071b26; }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0c2634;
+}
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(var(--brand-teal), var(--teal));
+  background: linear-gradient(var(--field-glow), var(--brand-navy));
   border-radius: 10px;
 }
 
-/* ---------- Selection ---------- */
-::selection { background: var(--brand-teal); color: #0b2735; }
-
-/* ---------- Animations ---------- */
-@keyframes floaty {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-18px) rotate(3deg); }
-}
-@keyframes floatySlow {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-12px); }
-}
-@keyframes pulseGlow {
-  0%, 100% { opacity: 0.55; transform: scale(1); }
-  50% { opacity: 0.9; transform: scale(1.08); }
-}
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-@keyframes gridDrift {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(60px); }
-}
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@keyframes spinSlow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+::selection {
+  background: var(--field-glow);
+  color: #06222c;
 }
 
-.animate-floaty { animation: floaty 6s ease-in-out infinite; }
-.animate-floaty-slow { animation: floatySlow 7s ease-in-out infinite; }
-.animate-pulse-glow { animation: pulseGlow 5s ease-in-out infinite; }
-.animate-spin-slow { animation: spinSlow 26s linear infinite; }
+/* ---------- Typography ---------- */
+.display {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+/*
+  Headline treatment from the source art: a near-white top edge falling to
+  the aqua of the field, so the type reads as lit from above.
+*/
+.text-lit {
+  background: linear-gradient(180deg, #ffffff 0%, #d7f0f3 42%, #8fd0d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Motion ---------- */
+@keyframes bloom {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+@keyframes driftUp {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-bloom {
+  animation: bloom 9s ease-in-out infinite;
+}
+.animate-drift {
+  animation: driftUp 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.animate-fade {
+  animation: fadeIn 1.4s ease both;
+}
+.delay-1 {
+  animation-delay: 0.12s;
+}
+.delay-2 {
+  animation-delay: 0.24s;
+}
+.delay-3 {
+  animation-delay: 0.36s;
+}
+.delay-4 {
+  animation-delay: 0.48s;
+}
 
 /* ---------- Reveal on scroll ---------- */
 .reveal {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transform: translateY(38px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 .reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
-  .animate-floaty, .animate-floaty-slow, .animate-pulse-glow, .animate-spin-slow { animation: none; }
-  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .animate-bloom,
+  .animate-drift,
+  .animate-fade {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
 
-/* ---------- Utility: gradient text ---------- */
-/* PSD headline: bright cyan at the top edge falling to mid teal */
-.text-gradient-teal {
+/* ---------- Surfaces ---------- */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Primary CTA — brand teal with a lit top edge */
+.btn-primary {
   background: linear-gradient(
     180deg,
-    var(--headline-top) 0%,
-    #5cb6c6 45%,
-    var(--headline-bottom) 100%
+    var(--brand-teal-light) 0%,
+    var(--brand-teal) 55%,
+    #216d78 100%
   );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* ---------- Hero icon tiles (the orbiting ring in the PSD) ---------- */
-.hero-tile {
-  background: linear-gradient(160deg, var(--tile-top) 0%, var(--tile-bottom) 100%);
-  border-radius: 18px;
+  color: #052027;
   box-shadow:
-    0 24px 50px -18px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
+    0 18px 40px -16px rgba(53, 131, 143, 0.85),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
 }
-/* faint back-row tiles that sit behind the subject */
-.hero-tile-back {
-  background: linear-gradient(160deg, #14515f 0%, #17707c 100%);
-  border-radius: 18px;
-  box-shadow: 0 20px 44px -20px rgba(0, 0, 0, 0.5);
-}
-/* the warm rim-light streak the PSD puts along the top edge of the tiles */
-.hero-tile-rim::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: linear-gradient(
-    100deg,
-    transparent 8%,
-    rgba(255, 226, 170, 0.85) 28%,
-    rgba(255, 255, 255, 0.35) 38%,
-    transparent 55%
-  );
-  height: 2px;
-  top: -1px;
-  bottom: auto;
-  filter: blur(0.5px);
-}
-
-@keyframes tileFloat {
-  0%, 100% { transform: translate3d(0, 0, 0); }
-  50% { transform: translate3d(0, -14px, 0); }
-}
-.animate-tile-float { animation: tileFloat 7s ease-in-out infinite; }
-
-/* ---------- Glass card ---------- */
-.glass {
-  background: rgba(255, 255, 255, 0.04);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* ---------- Shimmer border for search ---------- */
-.shimmer-border {
-  position: relative;
+.btn-primary:hover {
+  box-shadow:
+    0 22px 52px -14px rgba(74, 160, 169, 0.95),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }

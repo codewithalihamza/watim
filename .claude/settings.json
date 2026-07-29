@@ -18,7 +18,41 @@
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --window-size=390,844 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\mobile.png\" http://localhost:3111/)",
       "Bash(\"/c/Program Files/Google/Chrome/Application/chrome.exe\" --headless --disable-gpu --hide-scrollbars --force-prefers-reduced-motion --window-size=390,844 --virtual-time-budget=8000 \"--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\c9c1c825-b5b6-46ee-bd61-ffba8087a93e\\\\scratchpad\\\\mobile2.png\" http://localhost:3111/)",
       "Bash(echo \"EXIT:$?\")",
-      "Bash(taskkill //F //FI \"WINDOWTITLE eq *\" //IM chrome.exe)"
+      "Bash(taskkill //F //FI \"WINDOWTITLE eq *\" //IM chrome.exe)",
+      "Bash(cp __TRACKED_VAR__/source.png public/brand/skyline.png)",
+      "Bash(cp '__TRACKED_VAR__/background gradeint.png' public/brand/gradient.png)",
+      "Bash(cp __TRACKED_VAR__/pattern.png public/brand/pattern.png)",
+      "Bash(cp __TRACKED_VAR__/man.png public/brand/man.png)",
+      "Bash(cp __TRACKED_VAR__/phone/source.webp public/brand/skyline-mobile.webp)",
+      "Bash(node -e ' *)",
+      "Bash(grep -iE \"^\\(sharp|jimp|pngjs\\)$\")",
+      "Bash(node -e \"console.log\\(require.resolve\\('sharp'\\)\\)\")",
+      "Bash(grep -ohE \"\\\\b\\(bg|text|border|from|to|via|shadow|fill|ring\\)-\\(bg-deep|bg-hero|bg-mid|bg-glow|teal-bright|cyan|teal|brand-cyan|brand-slate|brand-navy|brand-teal|heading-teal\\)\\(\\\\/[0-9]+\\)?\\\\b|text-gradient-teal|hero-tile[a-z-]*|animate-\\(floaty|floaty-slow|pulse-glow|spin-slow|tile-float\\)\" app/components/*.tsx)",
+      "Bash(npx next dev -p 3111 > /tmp/dev.log 2>&1 & *)",
+      "Bash(node -e \"try{console.log\\(require.resolve\\('puppeteer'\\)\\)}catch\\(e\\){console.log\\('no puppeteer'\\)}\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3111/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=390,844 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\mobile2.png' --virtual-time-budget=7000 http://localhost:3111/)",
+      "Bash(curl -s \"http://localhost:3111/_next/static/chunks/%5Broot-of-the-server%5D__1fxsif3._.css\")",
+      "Bash(grep -o \"\\\\.min-h-\\\\\\\\\\\\\\\\\\\\[100svh\\\\\\\\\\\\\\\\\\\\]{[^}]*}\" /tmp/app.css)",
+      "Bash(taskkill //F //IM node.exe)",
+      "Bash(curl -s \"http://localhost:3112/_next/static/chunks/%5Broot-of-the-server%5D__1fxsif3._.css\")",
+      "Bash(node -e \"console.log\\(require\\('tailwindcss/package.json'\\).version\\)\")",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=390,844 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\m3.png' --virtual-time-budget=8000 http://localhost:3112/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=360,1400 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\m360.png' --virtual-time-budget=8000 http://localhost:3112/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=390,844 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\m4.png' --virtual-time-budget=8000 http://localhost:3112/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3112/_probe)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless=new --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --window-size=390,844 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\new390.png' --virtual-time-budget=8000 http://localhost:3112/probe)",
+      "Bash(grep -B2 -A3 \"\\\\.sm\\\\\\\\\\\\\\\\:block\" /tmp/c.css)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\final-desktop.png' --virtual-time-budget=9000 http://localhost:3112/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:3113/)",
+      "Bash(curl -s -o /dev/null -w \"3000=%{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 '--screenshot=C:\\\\Users\\\\DELL\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--Github-watim\\\\64033184-3cd6-4280-a9d5-db6a054cfda3\\\\scratchpad\\\\pat-d.png' --virtual-time-budget=9000 http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s \"http://localhost:3000/_next/image?url=%2Fbrand%2Fpattern.webp&w=1920&q=75\" -o /tmp/opt.webp)",
+      "Bash(taskkill //F //PID 11780)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
     ]
   }
 }

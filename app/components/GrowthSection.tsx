@@ -21,12 +21,12 @@ export default function GrowthSection() {
         {/* Left text + stats */}
         <div>
           <Reveal>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-bright">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
               Start Learning Today
             </p>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="font-display text-4xl font-bold leading-tight text-ink sm:text-5xl">
+            <h2 className="display text-4xl font-bold leading-tight text-ink sm:text-5xl">
               Your Path to Professional Growth Starts Here!
             </h2>
           </Reveal>
@@ -47,7 +47,7 @@ export default function GrowthSection() {
                   <CountUp
                     value={s.value}
                     suffix={s.suffix}
-                    className="font-display text-4xl font-bold text-teal-bright sm:text-5xl"
+                    className="display text-4xl font-bold text-accent sm:text-5xl"
                   />
                   <p className="mt-1 text-sm text-muted">{s.label}</p>
                 </div>
@@ -86,10 +86,10 @@ export default function GrowthSection() {
             <div className="px-2 pb-2 pt-5">
               <div className="flex items-start justify-between">
                 <div>
-                  <h3 className="font-display text-xl font-bold text-white">
+                  <h3 className="display text-xl font-bold text-white">
                     Build Digital Asset
                   </h3>
-                  <p className="text-sm text-teal-bright">by purepearl studio</p>
+                  <p className="text-sm text-accent">by purepearl studio</p>
                 </div>
                 <span className="flex items-center gap-1 text-sm text-white">
                   4.5
@@ -113,11 +113,11 @@ export default function GrowthSection() {
               </div>
 
               <div className="mt-5 flex items-center justify-between">
-                <span className="text-2xl font-bold text-teal-bright">
+                <span className="text-2xl font-bold text-accent">
                   $12
                   <span className="text-base font-normal text-muted">/month</span>
                 </span>
-                <button className="rounded-full bg-brand-teal px-6 py-2.5 text-sm font-medium text-[#0b2735] transition-all hover:scale-105 hover:bg-cyan">
+                <button className="rounded-full bg-brand-teal px-6 py-2.5 text-sm font-medium text-[#0b2735] transition-all hover:scale-105 hover:bg-accent">
                   Enroll Now
                 </button>
               </div>
@@ -131,7 +131,7 @@ export default function GrowthSection() {
               <CountUp
                 value={55}
                 suffix="%"
-                className="font-display text-2xl font-bold text-white"
+                className="display text-2xl font-bold text-white"
               />
               <ProgressBar value={55} className="flex-1" />
             </div>

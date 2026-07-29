@@ -12,7 +12,7 @@ const benefits = [
 
 function Check() {
   return (
-    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal/25 text-teal-bright">
+    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal/25 text-accent">
       <svg viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="3">
         <path d="M5 13l4 4L19 7" strokeLinecap="round" strokeLinejoin="round" />
       </svg>
@@ -40,9 +40,9 @@ export default function CreatorSection() {
                   value={120.29}
                   decimals={2}
                   prefix="$"
-                  className="font-display text-3xl font-bold text-white"
+                  className="display text-3xl font-bold text-white"
                 />
-                <span className="rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-teal-bright">
+                <span className="rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-accent">
                   +12$
                 </span>
               </div>
@@ -59,10 +59,10 @@ export default function CreatorSection() {
                   value={1200.38}
                   decimals={2}
                   prefix="$"
-                  className="font-display text-3xl font-bold text-white"
+                  className="display text-3xl font-bold text-white"
                 />
               </div>
-              <span className="mt-3 inline-block rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-teal-bright">
+              <span className="mt-3 inline-block rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-accent">
                 +12$
               </span>
             </div>
@@ -89,12 +89,12 @@ export default function CreatorSection() {
         {/* Right: copy */}
         <div>
           <Reveal>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-bright">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
               Be a Creator
             </p>
           </Reveal>
           <Reveal delay={1}>
-            <h2 className="font-display text-4xl font-bold leading-tight text-white sm:text-5xl">
+            <h2 className="display text-4xl font-bold leading-tight text-white sm:text-5xl">
               Create &amp; Manage Courses Easily.
             </h2>
           </Reveal>
