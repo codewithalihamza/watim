@@ -31,11 +31,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled || open
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled || open
           ? "border-b border-white/10 bg-field-dark/85 backdrop-blur-xl"
           : "border-b border-transparent bg-transparent"
-      }`}
+        }`}
     >
       <nav className="mx-auto flex max-w-shell items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
         <a
@@ -64,12 +63,7 @@ export default function Navbar() {
               <span className="absolute -bottom-1.5 left-0 h-px w-0 bg-accent transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a
-            href="#contact"
-            className="btn-primary rounded-full px-6 py-2.5 text-sm font-semibold transition-shadow duration-300"
-          >
-            Get in Touch
-          </a>
+
         </div>
 
         <button
@@ -79,28 +73,24 @@ export default function Navbar() {
           aria-expanded={open}
         >
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "translate-y-2 rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "translate-y-2 rotate-45" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "opacity-0" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "opacity-0" : ""
+              }`}
           />
           <span
-            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${
-              open ? "-translate-y-2 -rotate-45" : ""
-            }`}
+            className={`h-0.5 w-6 bg-ink transition-all duration-300 ${open ? "-translate-y-2 -rotate-45" : ""
+              }`}
           />
         </button>
       </nav>
 
       {/* mobile sheet */}
       <div
-        className={`overflow-hidden bg-field-dark/95 backdrop-blur-xl transition-[max-height,opacity] duration-500 lg:hidden ${
-          open ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`overflow-hidden bg-field-dark/95 backdrop-blur-xl transition-[max-height,opacity] duration-500 lg:hidden ${open ? "max-h-[70vh] opacity-100" : "max-h-0 opacity-0"
+          }`}
       >
         <div className="flex flex-col gap-1 px-6 pb-6 pt-2 sm:px-8">
           {links.map((l) => (

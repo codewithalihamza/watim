@@ -42,7 +42,7 @@ export default function Hero() {
                 aria-hidden
                 width={350}
                 height={350}
-                className="h-24 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-32 lg:h-40 xl:h-48"
+                className="h-24 w-auto rotate-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-32 lg:h-40 xl:h-48"
               />
             </div>
           </div>
