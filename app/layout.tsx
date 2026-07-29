@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Sora, Inter } from "next/font/google";
+import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
 
 /*
-  The comp sets its headline in a tight geometric sans with near-flat
-  terminals; Sora is the closest widely-available match, with Inter carrying
-  body copy.
+  Headline ("MARKETING SOLUTIONS START WITH") and the "WATM" wordmark both
+  use Montserrat per spec — 800 ExtraBold for the headline, 900 Black for
+  the wordmark — with Inter carrying body copy.
 */
-const sora = Sora({
+const montserrat = Montserrat({
   variable: "--font-display",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: ["800", "900"],
 });
 
 const inter = Inter({
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sora.variable} ${inter.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full">{children}</body>
     </html>

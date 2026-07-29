@@ -55,7 +55,9 @@
       "Skill(update-config)",
       "Skill(update-config:*)",
       "Bash(mkdir -p /d/Github/watim/.claude/skills/legacy-redesign)",
-      "Edit(/.claude/skills/legacy-redesign/**)"
+      "Edit(/.claude/skills/legacy-redesign/**)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot=C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/64033184-3cd6-4280-a9d5-db6a054cfda3/scratchpad/wordmark-d.png --virtual-time-budget=9000 http://localhost:3500/)",
+      "Bash('/c/Program Files/Google/Chrome/Application/chrome.exe' --headless --disable-gpu --hide-scrollbars --window-size=1440,900 --screenshot=C:/Users/DELL/AppData/Local/Temp/claude/d--Github-watim/64033184-3cd6-4280-a9d5-db6a054cfda3/scratchpad/mont-d.png --virtual-time-budget=9000 http://localhost:3600/)"
     ],
     "additionalDirectories": [
       "\\tmp",

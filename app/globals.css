@@ -83,20 +83,27 @@ body {
 /* ---------- Typography ---------- */
 .display {
   font-family: var(--font-display), system-ui, sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 0.97;
 }
 
 /*
-  Headline treatment from the source art: a near-white top edge falling to
-  the aqua of the field, so the type reads as lit from above.
+  "MARKETING SOLUTIONS START WITH" — Montserrat 800, solid #37B8BF per spec.
 */
 .text-lit {
-  background: linear-gradient(180deg, #ffffff 0%, #d7f0f3 42%, #8fd0d8 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #37b8bf;
+}
+
+/*
+  "WATM" wordmark — Montserrat 900 Black, solid white, per spec.
+*/
+.wordmark {
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #ffffff;
 }
 
 /* ---------- Motion ---------- */

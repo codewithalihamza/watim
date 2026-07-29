@@ -27,34 +27,24 @@ export default function Hero() {
         <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           {/* ---- Copy ---- */}
           <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
-            <p className="animate-drift delay-1 text-[0.7rem] font-medium uppercase tracking-[0.34em] text-accent/90 sm:text-xs">
-              Marketing Solutions
-            </p>
-
-            <h1 className="display animate-drift delay-2 mt-5 text-[2.65rem] uppercase sm:text-6xl lg:text-[4.6rem] xl:text-[5.2rem]">
-              <span className="text-lit block">Start</span>
-              <span className="text-lit block">With WATM</span>
+            <h1 className="display animate-drift delay-2 text-[2.4rem] uppercase sm:text-6xl lg:text-[4.2rem] xl:text-[4.8rem]">
+              <span className="text-lit block">Marketing</span>
+              <span className="text-lit block">Solutions</span>
+              <span className="text-lit block">Start With</span>
             </h1>
 
-            <p className="animate-drift delay-3 mx-auto mt-6 max-w-lg text-[0.95rem] leading-relaxed text-ink-soft/85 sm:text-base lg:mx-0">
-              We build brands that move — strategy, creative and media that put
-              your business in front of the people who matter across the
-              Kingdom.
-            </p>
-
-            <div className="animate-drift delay-4 mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
-              <a
-                href="#contact"
-                className="btn-primary rounded-full px-8 py-3.5 text-center text-[0.95rem] font-semibold transition-shadow duration-300"
-              >
-                Start a Project
-              </a>
-              <a
-                href="#gallery"
-                className="rounded-full border border-white/25 px-8 py-3.5 text-center text-[0.95rem] font-medium text-ink backdrop-blur-sm transition-colors duration-300 hover:border-accent hover:text-accent"
-              >
-                View Our Work
-              </a>
+            <div className="animate-drift delay-3 mt-2 flex items-center justify-center gap-3 sm:gap-5 lg:justify-start">
+              <span className="wordmark text-[3.4rem] leading-none sm:text-7xl lg:text-[6.2rem] xl:text-[7rem]">
+                WATM
+              </span>
+              <Image
+                src="/assets/glass-w.png"
+                alt=""
+                aria-hidden
+                width={280}
+                height={280}
+                className="h-16 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-24 lg:h-28 xl:h-32"
+              />
             </div>
           </div>
 
