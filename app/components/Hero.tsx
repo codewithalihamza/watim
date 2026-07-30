@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           {/* ---- Copy ---- */}
           <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
-            <h1 className="display animate-drift delay-2 text-[2.4rem] uppercase sm:text-6xl lg:text-[4.2rem] xl:text-[4.8rem]">
+            <h1 className="display animate-drift delay-2 text-[2.4rem] uppercase sm:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] [text-shadow:0_4px_18px_rgba(0,0,0,0.55),0_1px_4px_rgba(0,0,0,0.6)]">
               <span className="text-lit block">Marketing</span>
               <span className="text-lit block">Solutions</span>
               <span className="text-lit block">Start With</span>
@@ -59,7 +59,7 @@ export default function Hero() {
               height={1116}
               priority
               sizes="(max-width: 1024px) 60vw, 42vw"
-              className="relative hidden h-auto w-full max-w-[420px] object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)] sm:block lg:max-w-[520px]"
+              className="relative hidden h-auto w-full max-w-[320px] object-contain object-bottom drop-shadow-[0_30px_60px_rgba(0,0,0,0.45)] sm:block lg:max-w-[420px]"
             />
             <Image
               src="/brand/man-mobile.webp"
@@ -68,7 +68,7 @@ export default function Hero() {
               height={1076}
               priority
               sizes="80vw"
-              className="relative h-auto w-full max-w-[340px] object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:hidden"
+              className="relative h-auto w-full max-w-[300px] object-contain object-bottom drop-shadow-[0_24px_50px_rgba(0,0,0,0.45)] sm:hidden"
             />
           </div>
         </div>
