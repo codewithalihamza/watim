@@ -1,22 +1,24 @@
-"use client";
-
 import Image from "next/image";
 import Reveal from "./Reveal";
 
-const columns = [
-  {
-    title: "Browse",
-    links: ["Featured Courses", "Featured Categories", "Business", "IT", "Design"],
-  },
-  {
-    title: "Categories",
-    links: ["Development", "Marketing", "Photography", "Finance", "Sport"],
-  },
-  {
-    title: "Platform",
-    links: ["Become a Creator", "Affiliate Program", "Contact", "Help", "About"],
-  },
+const quickLinks = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
+  { label: "Contact", href: "#contact" },
 ];
+
+const serviceLinks = [
+  "Social Media",
+  "Paid Media",
+  "Content & Copy",
+  "Websites & Apps",
+  "SEO & Growth",
+];
+
+// Fill these with real profile URLs before launch.
+const socials = ["Instagram", "TikTok", "X", "LinkedIn", "WhatsApp"];
 
 export default function Footer() {
   return (
@@ -30,71 +32,101 @@ export default function Footer() {
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Left: brand + newsletter */}
+        {/* Final call to action */}
+        <Reveal className="mx-auto max-w-2xl text-center">
+          <h2 className="display text-4xl font-bold text-white sm:text-5xl">
+            Let us build something worth remembering.
+          </h2>
+          <p className="mx-auto mt-5 max-w-xl leading-relaxed text-[#dff2f2]">
+            Tell us where you intend to be, and we will show you the path —
+            and whether Watm is the right partner for the journey. The first
+            conversation is always without obligation.
+          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="#"
+              className="rounded-full bg-[#0e3144] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0b2735]"
+            >
+              Request a consultation
+            </a>
+            <a
+              href="#"
+              className="rounded-full border border-white/50 px-8 py-3.5 font-medium text-white transition-colors hover:border-white hover:bg-white/10"
+            >
+              Reach us on WhatsApp
+            </a>
+          </div>
+        </Reveal>
+
+        <div className="mt-20 grid grid-cols-1 gap-12 lg:grid-cols-2">
+          {/* Left: brand + tagline */}
           <Reveal>
             <Image
               src="/assets/watm-logo-white.png"
-              alt="WATM Marketing Solutions"
+              alt="Watm Marketing Solutions"
               width={901}
               height={342}
               unoptimized
               className="h-16 w-auto sm:h-20"
             />
             <p className="mt-6 max-w-sm text-[#dff2f2]">
-              Stay up to date with our latest features and releases by joining
-              our newsletter.
-            </p>
-
-            <form
-              className="mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
-              onSubmit={(e) => e.preventDefault()}
-            >
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 rounded-full border border-white/40 bg-white/10 px-6 py-3.5 text-white placeholder:text-white/70 outline-none transition-all focus:border-white focus:bg-white/20"
-              />
-              <button
-                type="submit"
-                className="rounded-full bg-[#0e3144] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0b2735]"
-              >
-                Subscribe
-              </button>
-            </form>
-            <p className="mt-4 max-w-md text-xs text-[#cfeaea]">
-              By subscribing, you agree to our Privacy Policy and consent to
-              receive updates from our company.
+              Watm — a mark that endures.
             </p>
           </Reveal>
 
           {/* Right: link columns */}
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            {columns.map((col, i) => (
-              <Reveal key={col.title} delay={(i + 1) as 1 | 2 | 3}>
-                <h4 className="mb-5 display font-semibold text-white">
-                  {col.title}
-                </h4>
-                <ul className="space-y-3">
-                  {col.links.map((l) => (
-                    <li key={l}>
-                      <a
-                        href="#"
-                        className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
-                      >
-                        {l}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            ))}
+            <Reveal delay={1}>
+              <h4 className="mb-5 display font-semibold text-white">Explore</h4>
+              <ul className="space-y-3">
+                {quickLinks.map((l) => (
+                  <li key={l.label}>
+                    <a
+                      href={l.href}
+                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                    >
+                      {l.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={2}>
+              <h4 className="mb-5 display font-semibold text-white">Services</h4>
+              <ul className="space-y-3">
+                {serviceLinks.map((l) => (
+                  <li key={l}>
+                    <a
+                      href="#services"
+                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                    >
+                      {l}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <Reveal delay={3}>
+              <h4 className="mb-5 display font-semibold text-white">Follow</h4>
+              <ul className="space-y-3">
+                {socials.map((s) => (
+                  <li key={s}>
+                    <a
+                      href="#"
+                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                    >
+                      {s}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
           </div>
         </div>
 
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-white/25 py-8 sm:flex-row">
           <p className="text-sm text-[#dff2f2]">
-            © {new Date().getFullYear()} WATM. All rights reserved.
+            © 2026 Watm. All rights reserved.
           </p>
           <div className="flex gap-8 text-sm text-[#dff2f2]">
             <a href="#" className="transition-colors hover:text-white hover:underline">
@@ -102,9 +134,6 @@ export default function Footer() {
             </a>
             <a href="#" className="transition-colors hover:text-white hover:underline">
               Terms of Service
-            </a>
-            <a href="#" className="transition-colors hover:text-white hover:underline">
-              Cookies Settings
             </a>
           </div>
         </div>

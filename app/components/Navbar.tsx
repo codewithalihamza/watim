@@ -5,8 +5,9 @@ import { useEffect, useState } from "react";
 
 const links = [
   { label: "Home", href: "#home" },
-  { label: "About us", href: "#about" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "About", href: "#about" },
+  { label: "Services", href: "#services" },
+  { label: "Work", href: "#work" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -43,12 +44,12 @@ export default function Navbar() {
           className="transition-transform duration-300 hover:scale-105"
         >
           <Image
-            src="/brand/mark.png"
+            src="/assets/headerlogo.png"
             alt="WATM"
-            width={1176}
-            height={818}
+            width={324}
+            height={342}
             priority
-            className="h-8 w-auto sm:h-9"
+            className="h-12 w-auto sm:h-14"
           />
         </a>
 

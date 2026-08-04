@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import SearchSection from "./components/SearchSection";
-import GrowthSection from "./components/GrowthSection";
-import CreatorSection from "./components/CreatorSection";
+import OneLiner from "./components/OneLiner";
+import About from "./components/About";
+import Services from "./components/Services";
+import WhyWatm from "./components/WhyWatm";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import CursorGlow from "./components/CursorGlow";
@@ -24,9 +25,10 @@ export default function Home() {
             className="pointer-events-none absolute inset-x-0 top-0 h-full w-full object-cover object-top opacity-[0.06]"
           />
           <div className="relative">
-            <SearchSection />
-            <GrowthSection />
-            <CreatorSection />
+            <OneLiner />
+            <About />
+            <Services />
+            <WhyWatm />
             <Gallery />
           </div>
         </div>

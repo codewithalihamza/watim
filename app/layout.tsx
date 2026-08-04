@@ -26,9 +26,9 @@ const luckiestGuy = Luckiest_Guy({
 });
 
 export const metadata: Metadata = {
-  title: "WATM — Marketing Solutions Start With WATM",
+  title: "Watm — Digital Marketing & Technology Partner, KSA",
   description:
-    "WATM Marketing Solutions. Unlock your creativity, gain valuable knowledge, and grow your business with our wide range of courses, digital products, and physical products.",
+    "Watm is a Saudi digital marketing and development partner. Strategy, media, content, websites, and apps that build trusted brands and measurable growth.",
 };
 
 export default function RootLayout({

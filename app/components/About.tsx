@@ -3,13 +3,14 @@ import CountUp from "./CountUp";
 import ProgressBar from "./ProgressBar";
 import Tilt from "./Tilt";
 
+// Placeholder figures — replace with verified numbers before launch.
 const stats = [
-  { value: 12, suffix: "K", label: "Students" },
-  { value: 70, suffix: "+", label: "Courses" },
-  { value: 16, suffix: "", label: "Creators" },
+  { value: 40, suffix: "+", label: "Organizations served" },
+  { value: 120, suffix: "+", label: "Campaigns delivered" },
+  { value: 8, suffix: "M+", label: "Audiences reached" },
 ];
 
-export default function GrowthSection() {
+export default function About() {
   return (
     <section id="about" className="relative py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
@@ -17,25 +18,33 @@ export default function GrowthSection() {
         <div>
           <Reveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Start Learning Today
+              About Watm
             </p>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="display text-4xl font-bold leading-tight text-ink sm:text-5xl">
-              Your Path to Professional Growth Starts Here!
+              A Saudi partner built for ambition.
             </h2>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-lg leading-relaxed text-muted">
-              Explore our curated selection of courses tailored to enhance your
-              capabilities and accelerate your career journey. Whether you are
-              looking to sharpen specific skills, gain industry expertise, or
-              embark on a new career path entirely, we have the resources you
-              need.
+              Our name carries meaning — a <em>wasm</em> is a mark that
+              endures, and that is what we set out to leave behind for every
+              brand we serve. We are strategists, creatives, and engineers who
+              understand the Saudi market and the standard the Kingdom now
+              sets for itself.
+            </p>
+          </Reveal>
+          <Reveal delay={3}>
+            <p className="mt-4 max-w-lg leading-relaxed text-muted">
+              We do not chase trends. We start with your objectives, study
+              your audience, and build every campaign, platform, and product
+              around the outcomes that matter — then we stay until the
+              numbers move.
             </p>
           </Reveal>
 
-          <Reveal delay={3}>
+          <Reveal delay={4}>
             <div className="mt-12 flex gap-10 sm:gap-14">
               {stats.map((s) => (
                 <div key={s.label}>
@@ -51,7 +60,7 @@ export default function GrowthSection() {
           </Reveal>
         </div>
 
-        {/* Right: course card */}
+        {/* Right: campaign snapshot card */}
         <Reveal delay={2} className="relative">
           <div className="pointer-events-none absolute inset-0 -z-10 scale-95 rounded-3xl bg-[radial-gradient(circle,rgba(255,255,255,0.35),rgba(136,215,225,0.18)_45%,transparent_70%)] blur-3xl" />
           <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#113b49]/70 p-4 shadow-[0_0_60px_-15px_rgba(47,152,148,0.55)] backdrop-blur-md">
@@ -68,7 +77,7 @@ export default function GrowthSection() {
                 }}
               />
               <div className="absolute bottom-4 left-4 flex flex-wrap gap-2">
-                {["17 Lessons", "2 hours 16 mins", "59 Comments"].map((t) => (
+                {["Strategy", "Content", "Paid Media"].map((t) => (
                   <span
                     key={t}
                     className="rounded-full bg-white/15 px-3 py-1 text-xs text-white backdrop-blur-sm"
@@ -83,12 +92,12 @@ export default function GrowthSection() {
               <div className="flex items-start justify-between">
                 <div>
                   <h3 className="display text-xl font-bold text-white">
-                    Build Digital Asset
+                    Integrated Brand Campaign
                   </h3>
-                  <p className="text-sm text-accent">by purepearl studio</p>
+                  <p className="text-sm text-accent">for a Riyadh retail brand</p>
                 </div>
                 <span className="flex items-center gap-1 text-sm text-white">
-                  4.5
+                  4.9
                   <svg
                     viewBox="0 0 24 24"
                     className="h-4 w-4 fill-amber-400"
@@ -101,28 +110,34 @@ export default function GrowthSection() {
 
               <div className="mt-4 flex items-center justify-between">
                 <span className="rounded-full border border-amber-400/80 bg-amber-400/15 px-4 py-1.5 text-sm text-amber-300">
-                  Intermediate
+                  Performance
                 </span>
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brand-teal/40 text-xs font-semibold text-white ring-2 ring-[#113b49]">
-                  26+
+                  6 wks
                 </span>
               </div>
 
               <div className="mt-5 flex items-center justify-between">
                 <span className="text-2xl font-bold text-accent">
-                  $12
-                  <span className="text-base font-normal text-muted">/month</span>
+                  3.8×
+                  <span className="text-base font-normal text-muted">
+                    {" "}
+                    return on ad spend
+                  </span>
                 </span>
-                <button className="rounded-full bg-brand-teal px-6 py-2.5 text-sm font-medium text-[#0b2735] transition-all hover:scale-105 hover:bg-accent">
-                  Enroll Now
-                </button>
+                <a
+                  href="#work"
+                  className="rounded-full bg-brand-teal px-6 py-2.5 text-sm font-medium text-[#0b2735] transition-all hover:scale-105 hover:bg-accent"
+                >
+                  See the work
+                </a>
               </div>
             </div>
           </Tilt>
 
-          {/* learning progress */}
+          {/* campaign progress */}
           <Reveal delay={3} className="mt-8">
-            <p className="mb-3 text-sm text-muted">Learning Progress</p>
+            <p className="mb-3 text-sm text-muted">Campaign progress</p>
             <div className="flex items-center gap-4">
               <CountUp
                 value={55}

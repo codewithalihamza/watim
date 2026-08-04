@@ -27,13 +27,12 @@ export default function Hero() {
         <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           {/* ---- Copy ---- */}
           <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
-            <h1 className="display animate-drift delay-2 text-[2.4rem] uppercase sm:text-6xl lg:text-[4.2rem] xl:text-[4.8rem] [text-shadow:0_4px_18px_rgba(0,0,0,0.55),0_1px_4px_rgba(0,0,0,0.6)]">
-              <span className="text-lit block">Marketing</span>
-              <span className="text-lit block">Solutions</span>
-              <span className="text-lit block">Start With</span>
+            <h1 className="display animate-drift delay-2 text-[2.1rem] uppercase sm:text-5xl lg:text-[3.4rem] xl:text-[3.9rem] [text-shadow:0_4px_18px_rgba(0,0,0,0.55),0_1px_4px_rgba(0,0,0,0.6)]">
+              <span className="text-lit block">We build the brands</span>
+              <span className="text-lit block">the Kingdom remembers.</span>
             </h1>
             <div className="animate-drift delay-3 mt-4 flex items-start justify-center gap-5 lg:gap-10 lg:justify-start">
-              <span className="wordmark text-[3.3rem] leading-none sm:text-5xl lg:text-[6rem] xl:text-[6rem] items-start">
+              <span className="wordmark text-[3.3rem] leading-none sm:text-5xl lg:text-[5rem] xl:text-[5.5rem]">
                 WATM
               </span>
               <Image
@@ -42,8 +41,28 @@ export default function Hero() {
                 aria-hidden
                 width={350}
                 height={350}
-                className="h-24 w-auto rotate-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-32 lg:h-40 xl:h-48"
+                className="h-20 w-auto rotate-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-28 lg:h-32 xl:h-36"
               />
+            </div>
+            <p className="animate-drift delay-3 mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] sm:text-lg lg:mx-0">
+              Watm is a Saudi digital marketing and technology partner —
+              strategy, creativity, and engineering under one roof, making the
+              marketing people actually stop scrolling for. No fluff. No
+              vanity metrics. Only results you can measure.
+            </p>
+            <div className="animate-drift delay-4 mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+              <a
+                href="#contact"
+                className="btn-primary rounded-full px-8 py-3.5 font-semibold"
+              >
+                Begin a partnership
+              </a>
+              <a
+                href="#work"
+                className="rounded-full border border-white/30 px-8 py-3.5 font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+              >
+                View our work
+              </a>
             </div>
           </div>
 
@@ -53,7 +72,7 @@ export default function Hero() {
             <div className="animate-bloom absolute bottom-0 h-[70%] w-[80%] rounded-full bg-field-glow/25 blur-[90px]" />
 
             <Image
-              src="/brand/man-mobile.webp"
+              src="/brand/man.webp"
               alt="A man in traditional Saudi dress standing before the Riyadh skyline"
               width={737}
               height={1116}
