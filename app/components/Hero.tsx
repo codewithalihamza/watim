@@ -36,7 +36,7 @@ export default function Hero() {
                 WATM
               </span>
               <Image
-                src="/assets/glass-w.png"
+                src="/assets/whiteicon.png"
                 alt=""
                 aria-hidden
                 width={350}

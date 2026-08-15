@@ -1,3 +1,5 @@
+'use client';
+
 import CountUp from "./CountUp";
 import ProgressBar from "./ProgressBar";
 import Reveal from "./Reveal";
@@ -26,6 +28,17 @@ const standards = [
   },
 ];
 
+// Client logos - update with your actual image names
+const clientLogos = [
+  { id: 1, src: "/clients/images.png" },
+  { id: 2, src: "/clients/mallah.webp" },
+  { id: 3, src: "/clients/images (1).png" },
+  { id: 4, src: "/clients/tikka.jpg" },
+  { id: 5, src: "/clients/bawaai.png" },
+  { id: 6, src: "/clients/nevox-logo.avif" },
+  { id: 7, src: "/clients/images (2).png" },
+];
+
 function Check() {
   return (
     <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-brand-teal text-[#33070a]">
@@ -36,10 +49,43 @@ function Check() {
   );
 }
 
+// Logo Carousel - clean version with circular images
+function LogoCarousel() {
+  // Duplicate logos for seamless infinite scroll
+  const allLogos = [...clientLogos, ...clientLogos, ...clientLogos];
+
+  return (
+    <div className="relative w-full overflow-hidden">
+      <div className="flex animate-[scroll_20s_linear_infinite] items-center gap-8 py-4 hover:[animation-play-state:paused] [width:max-content]">
+        {allLogos.map((logo, index) => (
+          <div
+            key={`${logo.id}-${index}`}
+            className="h-16 w-16 shrink-0 overflow-hidden rounded-full bg-white/[0.03] transition-all hover:scale-110 hover:border-brand-teal/40"
+          >
+            <img
+              src={logo.src}
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function WhyWatm() {
   return (
     <section className="relative overflow-hidden border-t-2 border-white py-24">
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
+      {/* Keyframes defined in global CSS or tailwind config */}
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-33.33%); }
+        }
+      `}</style>
+
+      <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-start gap-16 px-6 lg:grid-cols-2 lg:px-10">
         {/* Left: reporting cards — the transparency we promise, shown */}
         <div className="space-y-8">
           <Reveal>
@@ -94,6 +140,13 @@ export default function WhyWatm() {
                 </span>
               </div>
             </Tilt>
+          </Reveal>
+
+          {/* Client Logos Carousel - clean circular images */}
+          <Reveal delay={3}>
+            <div className="max-w-lg">
+              <LogoCarousel />
+            </div>
           </Reveal>
         </div>
 
