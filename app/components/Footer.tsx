@@ -63,72 +63,76 @@ export default function Footer() {
           </div>
         </Reveal>
 
-        <div className="mt-20 grid grid-cols-1 gap-12 lg:grid-cols-2">
-          {/* Left: brand + tagline */}
-          <Reveal>
-            <div className="flex flex-col items-center lg:items-start">
-              <Image
-                src="/brand/footer2.png"
-                alt="Watm Marketing Solutions"
-                width={1001}
-                height={342}
-                className="h-36 w-50"
-              />
-              <p className="mt-4 text-[#dff2f2] text-center lg:text-left">
-                Watm — a mark that endures.
-              </p>
-            </div>
-          </Reveal>
+        <div className="mt-20 grid grid-cols-1 gap-12 lg:grid-cols-12">
+          {/* Left: brand + tagline - takes 4 columns */}
+          <div className="lg:col-span-5">
+            <Reveal>
+              <div className="flex flex-col items-center lg:items-start">
+                <Image
+                  src="/brand/footer2.png"
+                  alt="Watm Marketing Solutions"
+                  width={1001}
+                  height={342}
+                  className="h-36 w-50"
+                />
+                <p className="mt-4 text-[#dff2f2] text-center lg:text-left">
+                  Watm — a mark that endures.
+                </p>
+              </div>
+            </Reveal>
+          </div>
 
-          {/* Right: link columns */}
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            <Reveal delay={1}>
-              <h4 className="mb-5 display font-semibold text-white">Explore</h4>
-              <ul className="space-y-3">
-                {quickLinks.map((l) => (
-                  <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
-                    >
-                      {l.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={2}>
-              <h4 className="mb-5 display font-semibold text-white">Services</h4>
-              <ul className="space-y-3">
-                {serviceLinks.map((l) => (
-                  <li key={l}>
-                    <a
-                      href="#services"
-                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
-                    >
-                      {l}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
-            <Reveal delay={3}>
-              <h4 className="mb-5 display font-semibold text-white">Follow</h4>
-              <ul className="space-y-3">
-                {socials.map((s) => (
-                  <li key={s.label}>
-                    <a
-                      href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
-                    >
-                      {s.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
+          {/* Right: link columns - takes 8 columns */}
+          <div className="lg:col-span-7">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+              <Reveal delay={1}>
+                <h4 className="mb-5 display font-semibold text-white">Explore</h4>
+                <ul className="space-y-3">
+                  {quickLinks.map((l) => (
+                    <li key={l.label}>
+                      <a
+                        href={l.href}
+                        className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                      >
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+              <Reveal delay={2}>
+                <h4 className="mb-5 display font-semibold text-white">Services</h4>
+                <ul className="space-y-3">
+                  {serviceLinks.map((l) => (
+                    <li key={l}>
+                      <a
+                        href="#services"
+                        className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                      >
+                        {l}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+              <Reveal delay={3}>
+                <h4 className="mb-5 display font-semibold text-white">Follow</h4>
+                <ul className="space-y-3">
+                  {socials.map((s) => (
+                    <li key={s.label}>
+                      <a
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
+                      >
+                        {s.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            </div>
           </div>
         </div>
 
