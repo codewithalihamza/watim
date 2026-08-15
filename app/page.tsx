@@ -1,13 +1,12 @@
 import Image from "next/image";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import OneLiner from "./components/OneLiner";
 import About from "./components/About";
+import CursorGlow from "./components/CursorGlow";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import OneLiner from "./components/OneLiner";
 import Services from "./components/Services";
 import WhyWatm from "./components/WhyWatm";
-import Gallery from "./components/Gallery";
-import Footer from "./components/Footer";
-import CursorGlow from "./components/CursorGlow";
 
 export default function Home() {
   return (
@@ -29,7 +28,7 @@ export default function Home() {
             <About />
             <Services />
             <WhyWatm />
-            <Gallery />
+            {/* <Gallery /> */}
           </div>
         </div>
       </main>
