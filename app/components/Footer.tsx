@@ -17,8 +17,11 @@ const serviceLinks = [
   "SEO & Growth",
 ];
 
-// Fill these with real profile URLs before launch.
-const socials = ["Instagram", "TikTok", "X", "LinkedIn", "WhatsApp"];
+// Social media links with URLs
+const socials = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/watm/" },
+  { label: "WhatsApp", href: "https://wa.me/966507499351?text=Hello" },
+];
 
 export default function Footer() {
   return (
@@ -50,7 +53,9 @@ export default function Footer() {
               Request a consultation
             </a>
             <a
-              href="#"
+              href="https://wa.me/966507499351?text=Hello"
+              target="_blank"
+              rel="noopener noreferrer"
               className="rounded-full border border-white/50 px-8 py-3.5 font-medium text-white transition-colors hover:border-white hover:bg-white/10"
             >
               Reach us on WhatsApp
@@ -110,12 +115,14 @@ export default function Footer() {
               <h4 className="mb-5 display font-semibold text-white">Follow</h4>
               <ul className="space-y-3">
                 {socials.map((s) => (
-                  <li key={s}>
+                  <li key={s.label}>
                     <a
-                      href="#"
+                      href={s.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-[#dff2f2] transition-colors hover:text-white hover:underline"
                     >
-                      {s}
+                      {s.label}
                     </a>
                   </li>
                 ))}

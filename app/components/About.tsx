@@ -1,7 +1,5 @@
-import Reveal from "./Reveal";
 import CountUp from "./CountUp";
-import ProgressBar from "./ProgressBar";
-import Tilt from "./Tilt";
+import Reveal from "./Reveal";
 
 // Placeholder figures — replace with verified numbers before launch.
 const stats = [
@@ -61,10 +59,9 @@ export default function About() {
         </div>
 
         {/* Right: campaign snapshot card */}
-        <Reveal delay={2} className="relative">
+        {/* <Reveal delay={2} className="relative">
           <div className="pointer-events-none absolute inset-0 -z-10 scale-95 rounded-3xl bg-[radial-gradient(circle,rgba(255,255,255,0.35),rgba(136,215,225,0.18)_45%,transparent_70%)] blur-3xl" />
           <Tilt max={7} className="group rounded-3xl border border-white/10 bg-[#113b49]/70 p-4 shadow-[0_0_60px_-15px_rgba(47,152,148,0.55)] backdrop-blur-md">
-            {/* thumbnail */}
             <div className="relative h-52 overflow-hidden rounded-2xl bg-gradient-to-br from-[#1a6472] to-[#1ca1ac]">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_25%,rgba(255,255,255,0.22),transparent_60%)]" />
               <div
@@ -135,7 +132,6 @@ export default function About() {
             </div>
           </Tilt>
 
-          {/* campaign progress */}
           <Reveal delay={3} className="mt-8">
             <p className="mb-3 text-sm text-muted">Campaign progress</p>
             <div className="flex items-center gap-4">
@@ -147,7 +143,7 @@ export default function About() {
               <ProgressBar value={55} className="flex-1" />
             </div>
           </Reveal>
-        </Reveal>
+        </Reveal> */}
       </div>
     </section>
   );

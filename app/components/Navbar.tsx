@@ -33,8 +33,8 @@ export default function Navbar() {
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${scrolled || open
-          ? "border-b border-white/10 bg-field-dark/85 backdrop-blur-xl"
-          : "border-b border-transparent bg-transparent"
+        ? "border-b border-white/10 bg-field-dark/85 backdrop-blur-xl"
+        : "border-b border-transparent bg-transparent"
         }`}
     >
       <nav className="mx-auto flex max-w-shell items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
@@ -44,7 +44,7 @@ export default function Navbar() {
           className="transition-transform duration-300 hover:scale-105"
         >
           <Image
-            src="/assets/headerlogo.png"
+            src="/assets/icon.png"
             alt="WATM"
             width={324}
             height={342}
