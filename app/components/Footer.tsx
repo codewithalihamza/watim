@@ -66,17 +66,18 @@ export default function Footer() {
         <div className="mt-20 grid grid-cols-1 gap-12 lg:grid-cols-2">
           {/* Left: brand + tagline */}
           <Reveal>
-            <Image
-              src="/assets/watm-logo-white.png"
-              alt="Watm Marketing Solutions"
-              width={901}
-              height={342}
-              unoptimized
-              className="h-16 w-auto sm:h-20"
-            />
-            <p className="mt-6 max-w-sm text-[#dff2f2]">
-              Watm — a mark that endures.
-            </p>
+            <div className="flex flex-col items-center lg:items-start">
+              <Image
+                src="/brand/footer2.png"
+                alt="Watm Marketing Solutions"
+                width={1001}
+                height={342}
+                className="h-36 w-50"
+              />
+              <p className="mt-4 text-[#dff2f2] text-center lg:text-left">
+                Watm — a mark that endures.
+              </p>
+            </div>
           </Reveal>
 
           {/* Right: link columns */}
