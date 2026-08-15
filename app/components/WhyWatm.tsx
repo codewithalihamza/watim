@@ -3,11 +3,27 @@ import ProgressBar from "./ProgressBar";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 
-const benefits = [
-  "Share Your Expertise",
-  "Monetize Your Passion",
-  "Flexibility and Autonomy",
-  "Build a Community",
+const standards = [
+  {
+    title: "Responsiveness",
+    body: "A clear point of contact and a timely reply, always.",
+  },
+  {
+    title: "Transparency",
+    body: "Plain reporting: what we did, what it cost, what it delivered.",
+  },
+  {
+    title: "Measured growth",
+    body: "We test before we scale, so your budget goes to what is proven.",
+  },
+  {
+    title: "Outcomes above all",
+    body: "Pretty campaigns are nice. Profitable campaigns are better.",
+  },
+  {
+    title: "One integrated team",
+    body: "Strategist, designer, engineer, media specialist — nothing is lost between disciplines.",
+  },
 ];
 
 function Check() {
@@ -20,15 +36,15 @@ function Check() {
   );
 }
 
-export default function CreatorSection() {
+export default function WhyWatm() {
   return (
     <section className="relative overflow-hidden border-t-2 border-white py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
-        {/* Left: revenue cards */}
+        {/* Left: reporting cards — the transparency we promise, shown */}
         <div className="space-y-8">
           <Reveal>
             <div className="max-w-sm">
-              <p className="text-muted">Total Revenue</p>
+              <p className="text-muted">Campaign Revenue</p>
               <p className="text-xs text-muted/70">July 1–28</p>
               <div className="mt-2 flex items-center gap-3">
                 <CountUp
@@ -38,7 +54,7 @@ export default function CreatorSection() {
                   className="display text-3xl font-bold text-white"
                 />
                 <span className="rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-accent">
-                  +12$
+                  +12%
                 </span>
               </div>
               <ProgressBar value={62} className="mt-3" />
@@ -48,7 +64,7 @@ export default function CreatorSection() {
           <Reveal delay={1}>
             <div className="max-w-sm">
               <p className="text-muted">Year to Date</p>
-              <p className="text-xs text-muted/70">2023</p>
+              <p className="text-xs text-muted/70">2026</p>
               <div className="mt-2 flex items-center gap-3">
                 <CountUp
                   value={1200.38}
@@ -58,23 +74,23 @@ export default function CreatorSection() {
                 />
               </div>
               <span className="mt-3 inline-block rounded-full bg-brand-teal/20 px-3 py-1 text-xs font-medium text-accent">
-                +12$
+                +12%
               </span>
             </div>
           </Reveal>
 
           <Reveal delay={2}>
             <Tilt max={6} className="max-w-sm rounded-3xl border border-brand-teal/40 bg-white/[0.03] p-6 backdrop-blur-sm">
-              <p className="text-lg text-white">Happy Students</p>
+              <p className="text-lg text-white">Happy Partners</p>
               <p className="mt-1 flex items-center gap-1 text-sm text-muted">
-                4.5 (240)
+                4.9 (86)
                 <svg viewBox="0 0 24 24" className="h-4 w-4 fill-amber-400" aria-hidden>
                   <path d="M12 2l3 6.5 7 .6-5.3 4.6L18.2 21 12 17.3 5.8 21l1.5-7.3L2 9.1l7-.6z" />
                 </svg>
               </p>
               <div className="mt-6 flex justify-end">
                 <span className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-teal text-sm font-bold text-white">
-                  2K+
+                  40+
                 </span>
               </div>
             </Tilt>
@@ -85,28 +101,34 @@ export default function CreatorSection() {
         <div>
           <Reveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Be a Creator
+              Why Watm
             </p>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="display text-4xl font-bold leading-tight text-white sm:text-5xl">
-              Create &amp; Manage Courses Easily.
+              The standards our partners rely on.
             </h2>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-md leading-relaxed text-muted">
-              <span className="font-semibold text-white">WATM</span> supports
-              individuals or entities in the creation, and administration of
-              educational courses.
+              We treat your budget like our own money — and hold ourselves to
+              standards you can measure.
             </p>
           </Reveal>
 
           <ul className="mt-10 space-y-5">
-            {benefits.map((b, i) => (
-              <Reveal as="li" key={b} delay={(i + 1) as 1 | 2 | 3 | 4}>
-                <span className="flex items-center gap-4 text-lg text-ink">
+            {standards.map((s, i) => (
+              <Reveal as="li" key={s.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <span className="flex items-start gap-4">
                   <Check />
-                  {b}
+                  <span>
+                    <span className="block text-lg font-semibold text-ink">
+                      {s.title}
+                    </span>
+                    <span className="block text-sm leading-relaxed text-muted">
+                      {s.body}
+                    </span>
+                  </span>
                 </span>
               </Reveal>
             ))}
