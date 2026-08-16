@@ -37,6 +37,15 @@ const socials = [
       </svg>
     ),
   },
+  {
+    label: "Email",
+    href: "mailto:marhaba@watm.com.sa",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden>
+        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+      </svg>
+    ),
+  },
 ];
 
 export default function Footer() {
@@ -63,7 +72,7 @@ export default function Footer() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#"
+              href="mailto:marhaba@watm.com.sa"
               className="rounded-full bg-[#0e3144] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0b2735]"
             >
               Request a consultation
@@ -138,8 +147,9 @@ export default function Footer() {
                     <a
                       key={s.label}
                       href={s.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      {...(s.href.startsWith("http")
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
                       aria-label={s.label}
                       title={s.label}
                       className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-white/10 text-[#dff2f2] transition-all hover:scale-110 hover:border-white hover:bg-white/20 hover:text-white"
@@ -164,6 +174,15 @@ export default function Footer() {
                 </svg>
                 Riyadh, Kingdom of Saudi Arabia
               </p>
+              <a
+                href="mailto:marhaba@watm.com.sa"
+                className="mt-2 flex items-center justify-center gap-2 text-sm text-[#dff2f2] transition-colors hover:text-white hover:underline sm:justify-start"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden>
+                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                marhaba@watm.com.sa
+              </a>
             </div>
             <div className="flex flex-col items-center gap-4 sm:items-end">
               <div className="flex gap-8 text-sm text-[#dff2f2]">

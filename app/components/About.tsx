@@ -26,9 +26,9 @@ export default function About() {
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-lg leading-relaxed text-muted">
-              Our name carries meaning — a <em>wasm</em> is a mark that
-              endures, and that is what we set out to leave behind for every
-              brand we serve. We are strategists, creatives, and engineers who
+              Our name carries meaning — WATM is a mark that endures, and
+              that is what we set out to leave behind for every brand we
+              serve. We are strategists, creatives, and engineers who
               understand the Saudi market and the standard the Kingdom now
               sets for itself.
             </p>
