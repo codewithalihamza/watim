@@ -31,17 +31,14 @@ export default function Hero() {
               <span className="text-lit block">We build the brands</span>
               <span className="text-lit block">the Kingdom remembers.</span>
             </h1>
-            <div className="animate-drift delay-3 mt-4 flex items-start justify-center gap-5 lg:gap-10 lg:justify-start">
-              <span className="wordmark text-[3.3rem] leading-none sm:text-5xl lg:text-[5rem] xl:text-[5.5rem]">
-                WATM
-              </span>
+            <div className="animate-drift delay-3 mt-4 flex justify-center">
               <Image
                 src="/assets/whiteicon.png"
                 alt=""
                 aria-hidden
                 width={350}
                 height={350}
-                className="h-20 w-auto rotate-6 drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-28 lg:h-32 xl:h-36"
+                className="h-20 w-auto drop-shadow-[0_10px_30px_rgba(0,0,0,0.45)] sm:h-28 lg:h-32 xl:h-36"
               />
             </div>
             <p className="animate-drift delay-3 mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] sm:text-lg lg:mx-0">
