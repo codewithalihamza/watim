@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import HeroBackground from "./HeroBackground";
+import { useLang } from "../lib/i18n";
 
 /*
   Desktop follows legacy/watm web homepage/with background.jpg: the subject
@@ -11,6 +15,8 @@ import HeroBackground from "./HeroBackground";
   two-column desktop arrangement.
 */
 export default function Hero() {
+  const { t } = useLang();
+
   return (
     <section
       id="home"
@@ -26,10 +32,10 @@ export default function Hero() {
         */}
         <div className="grid flex-1 grid-cols-[minmax(0,1fr)] items-end gap-0 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:items-center">
           {/* ---- Copy ---- */}
-          <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-left">
+          <div className="order-2 min-w-0 pb-8 text-center lg:order-1 lg:pb-0 lg:text-start">
             <h1 className="display animate-drift delay-2 text-[2.1rem] uppercase sm:text-5xl lg:text-[3.4rem] xl:text-[3.9rem] [text-shadow:0_4px_18px_rgba(0,0,0,0.55),0_1px_4px_rgba(0,0,0,0.6)]">
-              <span className="text-lit block">We build the brands</span>
-              <span className="text-lit block">the Kingdom remembers.</span>
+              <span className="text-lit block">{t.hero.line1}</span>
+              <span className="text-lit block">{t.hero.line2}</span>
             </h1>
             <div className="animate-drift delay-3 mt-4 flex justify-center">
               <Image
@@ -42,24 +48,21 @@ export default function Hero() {
               />
             </div>
             <p className="animate-drift delay-3 mx-auto mt-6 max-w-xl text-base leading-relaxed text-ink-soft [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] sm:text-lg lg:mx-0">
-              Watm is a Saudi digital marketing and technology partner —
-              strategy, creativity, and engineering under one roof, making the
-              marketing people actually stop scrolling for. No fluff. No
-              vanity metrics. Only results you can measure.
+              {t.hero.sub}
             </p>
             <div className="animate-drift delay-4 mt-8 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="btn-primary rounded-full px-8 py-3.5 font-semibold"
               >
-                Begin a partnership
-              </a>
-              <a
-                href="#work"
+                {t.hero.cta1}
+              </Link>
+              <Link
+                href="/services"
                 className="rounded-full border border-white/30 px-8 py-3.5 font-medium text-ink transition-colors hover:border-accent hover:text-accent"
               >
-                View our work
-              </a>
+                {t.hero.cta2}
+              </Link>
             </div>
           </div>
 
@@ -70,7 +73,7 @@ export default function Hero() {
 
             <Image
               src="/brand/man.webp"
-              alt="A man in traditional Saudi dress standing before the Riyadh skyline"
+              alt={t.hero.alt}
               width={737}
               height={1116}
               priority
@@ -79,7 +82,7 @@ export default function Hero() {
             />
             <Image
               src="/brand/man-mobile.webp"
-              alt="A man in traditional Saudi dress standing before the Riyadh skyline"
+              alt={t.hero.alt}
               width={712}
               height={1076}
               priority

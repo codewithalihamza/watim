@@ -1,14 +1,13 @@
+"use client";
+
 import CountUp from "./CountUp";
 import Reveal from "./Reveal";
+import { useLang } from "../lib/i18n";
 
-// Placeholder figures — replace with verified numbers before launch.
-const stats = [
-  { value: 40, suffix: "+", label: "Organizations served" },
-  { value: 120, suffix: "+", label: "Campaigns delivered" },
-  { value: 8, suffix: "M+", label: "Audiences reached" },
-];
-
+// Stat figures are placeholders — replace with verified numbers before launch.
 export default function About() {
+  const { t } = useLang();
+
   return (
     <section id="about" className="relative py-24">
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:px-10">
@@ -16,35 +15,28 @@ export default function About() {
         <div>
           <Reveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              About Watm
+              {t.about.eyebrow}
             </p>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="display text-4xl font-bold leading-tight text-ink sm:text-5xl">
-              A Saudi partner built for ambition.
+              {t.about.title}
             </h2>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-lg leading-relaxed text-muted">
-              Our name carries meaning — WATM is a mark that endures, and
-              that is what we set out to leave behind for every brand we
-              serve. We are strategists, creatives, and engineers who
-              understand the Saudi market and the standard the Kingdom now
-              sets for itself.
+              {t.about.p1}
             </p>
           </Reveal>
           <Reveal delay={3}>
             <p className="mt-4 max-w-lg leading-relaxed text-muted">
-              We do not chase trends. We start with your objectives, study
-              your audience, and build every campaign, platform, and product
-              around the outcomes that matter — then we stay until the
-              numbers move.
+              {t.about.p2}
             </p>
           </Reveal>
 
           <Reveal delay={4}>
             <div className="mt-12 flex gap-10 sm:gap-14">
-              {stats.map((s) => (
+              {t.about.stats.map((s) => (
                 <div key={s.label}>
                   <CountUp
                     value={s.value}

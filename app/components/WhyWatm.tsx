@@ -1,29 +1,7 @@
 'use client';
 
 import Reveal from "./Reveal";
-
-const standards = [
-  {
-    title: "Responsiveness",
-    body: "A clear point of contact and a timely reply, always.",
-  },
-  {
-    title: "Transparency",
-    body: "Plain reporting: what we did, what it cost, what it delivered.",
-  },
-  {
-    title: "Measured growth",
-    body: "We test before we scale, so your budget goes to what is proven.",
-  },
-  {
-    title: "Outcomes above all",
-    body: "Pretty campaigns are nice. Profitable campaigns are better.",
-  },
-  {
-    title: "One integrated team",
-    body: "Strategist, designer, engineer, media specialist — nothing is lost between disciplines.",
-  },
-];
+import { useLang } from "../lib/i18n";
 
 // Client logos - update with your actual image names
 const clientLogos = [
@@ -72,6 +50,8 @@ function LogoCarousel() {
 }
 
 export default function WhyWatm() {
+  const { t } = useLang();
+
   return (
     <section className="relative overflow-hidden py-24">
       {/* dim inset divider, matching the footer's Contact us rule */}
@@ -100,23 +80,22 @@ export default function WhyWatm() {
         <div>
           <Reveal>
             <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
-              Why Watm
+              {t.why.eyebrow}
             </p>
           </Reveal>
           <Reveal delay={1}>
             <h2 className="display text-4xl font-bold leading-tight text-white sm:text-5xl">
-              The standards our partners rely on.
+              {t.why.title}
             </h2>
           </Reveal>
           <Reveal delay={2}>
             <p className="mt-6 max-w-md leading-relaxed text-muted">
-              We treat your budget like our own money — and hold ourselves to
-              standards you can measure.
+              {t.why.intro}
             </p>
           </Reveal>
 
           <ul className="mt-10 space-y-5">
-            {standards.map((s, i) => (
+            {t.why.standards.map((s, i) => (
               <Reveal as="li" key={s.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
                 <span className="flex items-start gap-4">
                   <Check />
