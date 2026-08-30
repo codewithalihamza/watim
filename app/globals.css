@@ -283,3 +283,49 @@ html[lang="ar"] .wordmark {
   font-family: var(--font-arabic), system-ui, sans-serif;
   transform: none;
 }
+
+/* ---------- Language-switch transition ---------- */
+/*
+  Set on <html> by setLang() for the duration of one sweep: the page fades
+  and slides toward the new reading direction — rightward into Arabic,
+  leftward back into English — masking the LTR/RTL reflow.
+*/
+@keyframes langSweepRight {
+  from {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes langSweepLeft {
+  from {
+    opacity: 0;
+    transform: translateX(36px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+html[data-lang-anim="to-ar"] body {
+  animation: langSweepRight 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+html[data-lang-anim="to-en"] body {
+  animation: langSweepLeft 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  html[data-lang-anim="to-ar"] body,
+  html[data-lang-anim="to-en"] body {
+    animation: none;
+  }
+}

@@ -367,6 +367,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [lang]);
 
   const setLang = (l: Lang) => {
+    if (l !== lang) {
+      // sweep the page toward the new reading direction (see globals.css);
+      // re-setting the attribute restarts the animation on rapid toggles
+      const root = document.documentElement;
+      root.removeAttribute("data-lang-anim");
+      void root.offsetWidth; // flush so the animation can restart
+      root.setAttribute("data-lang-anim", l === "ar" ? "to-ar" : "to-en");
+      window.setTimeout(() => {
+        if (root.getAttribute("data-lang-anim") === (l === "ar" ? "to-ar" : "to-en")) {
+          root.removeAttribute("data-lang-anim");
+        }
+      }, 650);
+    }
     setLangState(l);
     try {
       localStorage.setItem(STORAGE_KEY, l);
