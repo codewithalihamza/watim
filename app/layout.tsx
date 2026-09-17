@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { Montserrat, Inter, Luckiest_Guy, Cairo } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "./lib/i18n";
@@ -60,6 +61,8 @@ export default function RootLayout({
           <Footer />
         </LanguageProvider>
       </body>
+      {/* Google Analytics 4 — client's Measurement ID */}
+      <GoogleAnalytics gaId="G-V4J0EKMT8X" />
     </html>
   );
 }
