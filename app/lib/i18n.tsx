@@ -173,6 +173,57 @@ export const dict = {
       terms: "Terms of Service",
       rights: "© 2026 Watm. All rights reserved.",
     },
+    quotePage: {
+      title: "Get a quote.",
+      sub: "Tell us about your organization and what you need — we will come back with a clear, obligation-free proposal.",
+      note: "This form is for organizations requesting a service quote. For anything else, use the contact page.",
+      org: "Organization name",
+      name: "Full name",
+      email: "Email",
+      phone: "Mobile number",
+      service: "Required service",
+      servicePlaceholder: "Choose a service…",
+      notes: "Notes or inquiries (optional)",
+      submit: "Send via WhatsApp",
+      submitHint: "Opens WhatsApp with your request filled in — or",
+      emailInstead: "email us instead",
+      waIntro: "Quote request from the website",
+    },
+    privacyPage: {
+      title: "Privacy Policy",
+      sub: "How Watm collects, uses, and protects your information on watm.com.sa.",
+      sections: [
+        {
+          h: "Our commitment",
+          body: "Watm respects the privacy of every visitor to this website. This policy explains what information we collect, why we collect it, and how we protect it. By using this website you consent to the practices described here.",
+        },
+        {
+          h: "Information we collect",
+          body: "We only collect personal information you choose to share with us — such as your name, organization, email address, and phone number when you request a quote or contact us by email or WhatsApp. We do not require personal information to browse the website.",
+        },
+        {
+          h: "How we use it",
+          body: "Information you share is used to respond to your inquiry, prepare proposals, and deliver the services you request. We do not sell or rent personal information to anyone.",
+        },
+        {
+          h: "Cookies and analytics",
+          body: "We use Google Analytics to understand how visitors use the website — pages visited, time on site, and general location. This data is aggregated and does not identify you personally. You can disable cookies in your browser settings at any time.",
+        },
+        {
+          h: "Protection of personal information",
+          body: "Access to personal information is restricted to authorized team members who need it to serve you. We apply reasonable technical and organizational safeguards, in line with the Kingdom's Personal Data Protection Law (PDPL).",
+        },
+        {
+          h: "Third parties",
+          body: "We share information only with the service providers required to operate this website and our services — such as hosting and analytics providers — and only to the extent necessary. We never sell your data.",
+        },
+        {
+          h: "Your rights and contact",
+          body: "You may request access to, correction of, or deletion of your personal information at any time by writing to hello@watm.com.sa.",
+        },
+      ],
+      updated: "Last updated: September 2026",
+    },
     whatsappHref:
       "https://wa.me/966554020279?text=Hello%20Watm%20team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services%20and%20discuss%20how%20we%20can%20work%20together.",
   },
@@ -331,6 +382,57 @@ export const dict = {
       privacy: "سياسة الخصوصية",
       terms: "شروط الاستخدام",
       rights: "© 2026 وتم. جميع الحقوق محفوظة.",
+    },
+    quotePage: {
+      title: "اطلب عرض سعر.",
+      sub: "أخبرنا عن منشأتك وما تحتاجه — وسنعود إليك بعرض واضح ودون أي التزام.",
+      note: "هذا النموذج مخصص للمنشآت الراغبة في الحصول على عرض سعر. لأي استفسار آخر، استخدم صفحة التواصل.",
+      org: "اسم المنشأة",
+      name: "الاسم الكامل",
+      email: "البريد الإلكتروني",
+      phone: "رقم الجوال",
+      service: "الخدمة المطلوبة",
+      servicePlaceholder: "اختر الخدمة…",
+      notes: "ملاحظات أو استفسارات (اختياري)",
+      submit: "أرسل عبر واتساب",
+      submitHint: "يفتح واتساب برسالة جاهزة بطلبك — أو",
+      emailInstead: "راسلنا عبر البريد",
+      waIntro: "طلب عرض سعر من الموقع",
+    },
+    privacyPage: {
+      title: "سياسة الخصوصية",
+      sub: "كيف تجمع وتم معلوماتك وتستخدمها وتحميها على موقع watm.com.sa.",
+      sections: [
+        {
+          h: "التزامنا",
+          body: "تحترم وتم خصوصية كل زائر لهذا الموقع. توضح هذه السياسة ما نجمعه من معلومات، ولماذا نجمعه، وكيف نحميه. باستخدامك لهذا الموقع فإنك توافق على الممارسات الموضحة هنا.",
+        },
+        {
+          h: "المعلومات التي نجمعها",
+          body: "لا نجمع إلا المعلومات الشخصية التي تختار مشاركتها معنا — مثل اسمك واسم منشأتك وبريدك الإلكتروني ورقم جوالك عند طلب عرض سعر أو التواصل معنا عبر البريد أو واتساب. تصفح الموقع لا يتطلب أي معلومات شخصية.",
+        },
+        {
+          h: "كيف نستخدمها",
+          body: "تُستخدم المعلومات التي تشاركها للرد على استفسارك وإعداد العروض وتقديم الخدمات التي تطلبها. لا نبيع المعلومات الشخصية ولا نؤجرها لأي جهة.",
+        },
+        {
+          h: "ملفات تعريف الارتباط والتحليلات",
+          body: "نستخدم Google Analytics لفهم كيفية استخدام الزوار للموقع — الصفحات التي تُزار ومدة التصفح والموقع الجغرافي العام. هذه البيانات مجمّعة ولا تحدد هويتك شخصيًا، ويمكنك تعطيل ملفات تعريف الارتباط من إعدادات متصفحك في أي وقت.",
+        },
+        {
+          h: "حماية المعلومات الشخصية",
+          body: "الاطلاع على المعلومات الشخصية مقصور على أعضاء الفريق المصرح لهم ممن يحتاجونها لخدمتك. ونطبق ضوابط تقنية وتنظيمية مناسبة بما يتوافق مع نظام حماية البيانات الشخصية في المملكة.",
+        },
+        {
+          h: "الجهات الخارجية",
+          body: "لا نشارك المعلومات إلا مع مزودي الخدمات اللازمين لتشغيل هذا الموقع وخدماتنا — مثل الاستضافة والتحليلات — وبالقدر الضروري فقط. ولا نبيع بياناتك أبدًا.",
+        },
+        {
+          h: "حقوقك والتواصل",
+          body: "يمكنك في أي وقت طلب الاطلاع على معلوماتك الشخصية أو تصحيحها أو حذفها بمراسلتنا على hello@watm.com.sa.",
+        },
+      ],
+      updated: "آخر تحديث: سبتمبر 2026",
     },
     whatsappHref:
       "https://wa.me/966554020279?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%88%D8%AA%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86.",
