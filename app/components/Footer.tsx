@@ -191,9 +191,12 @@ export default function Footer() {
                 >
                   {t.footer.privacy}
                 </Link>
-                <a href="#" className="transition-colors hover:text-white hover:underline">
+                <Link
+                  href="/terms-of-service"
+                  className="transition-colors hover:text-white hover:underline"
+                >
                   {t.footer.terms}
-                </a>
+                </Link>
               </div>
               <p className="text-sm text-[#dff2f2]">{t.footer.rights}</p>
             </div>

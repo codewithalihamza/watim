@@ -224,6 +224,45 @@ export const dict = {
       ],
       updated: "Last updated: September 2026",
     },
+    termsPage: {
+      title: "Terms of Service",
+      sub: "The terms that govern your use of watm.com.sa and our services.",
+      sections: [
+        {
+          h: "Acceptance of terms",
+          body: "By accessing or using this website, you agree to these Terms of Service. If you do not agree with any part of them, please do not use the website.",
+        },
+        {
+          h: "Use of the website",
+          body: "This website and its content are provided for lawful purposes only. You agree not to misuse the website, attempt to disrupt its operation, or use its content in any way that infringes the rights of Watm or others.",
+        },
+        {
+          h: "Services and proposals",
+          body: "Descriptions of our services on this website are for general information. The scope, pricing, and terms of any engagement are defined only in a written proposal or agreement signed between Watm and the client. A quote request through this website does not create a contractual obligation on either side.",
+        },
+        {
+          h: "Intellectual property",
+          body: "All content on this website — including the Watm name, logo, designs, text, and imagery — is the property of Watm or its licensors. It may not be copied, reproduced, or used commercially without prior written permission.",
+        },
+        {
+          h: "Third-party links and tools",
+          body: "The website may link to external platforms such as WhatsApp, LinkedIn, and analytics providers. Watm is not responsible for the content or practices of third-party services, which are governed by their own terms.",
+        },
+        {
+          h: "Limitation of liability",
+          body: "The website is provided on an as-is basis. While we work to keep its content accurate and available, Watm makes no warranties of any kind and is not liable for any damages arising from the use of, or inability to use, this website.",
+        },
+        {
+          h: "Changes to these terms",
+          body: "We may update these Terms of Service from time to time. The latest version will always be published on this page, and continued use of the website constitutes acceptance of the updated terms.",
+        },
+        {
+          h: "Governing law and contact",
+          body: "These terms are governed by the laws of the Kingdom of Saudi Arabia. For any questions about them, contact us at hello@watm.com.sa.",
+        },
+      ],
+      updated: "Last updated: September 2026",
+    },
     whatsappHref:
       "https://wa.me/966554020279?text=Hello%20Watm%20team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services%20and%20discuss%20how%20we%20can%20work%20together.",
   },
@@ -430,6 +469,45 @@ export const dict = {
         {
           h: "حقوقك والتواصل",
           body: "يمكنك في أي وقت طلب الاطلاع على معلوماتك الشخصية أو تصحيحها أو حذفها بمراسلتنا على hello@watm.com.sa.",
+        },
+      ],
+      updated: "آخر تحديث: سبتمبر 2026",
+    },
+    termsPage: {
+      title: "شروط الاستخدام",
+      sub: "الشروط التي تحكم استخدامك لموقع watm.com.sa وخدماتنا.",
+      sections: [
+        {
+          h: "قبول الشروط",
+          body: "بدخولك إلى هذا الموقع أو استخدامك له فإنك توافق على شروط الاستخدام هذه. إذا كنت لا توافق على أي جزء منها، فنرجو عدم استخدام الموقع.",
+        },
+        {
+          h: "استخدام الموقع",
+          body: "يُتاح هذا الموقع ومحتواه للأغراض المشروعة فقط. وتوافق على عدم إساءة استخدام الموقع أو محاولة تعطيل عمله أو استخدام محتواه بأي شكل ينتهك حقوق وتم أو حقوق الآخرين.",
+        },
+        {
+          h: "الخدمات والعروض",
+          body: "أوصاف خدماتنا في هذا الموقع هي للتعريف العام. ولا يُحدد نطاق أي تعاقد وأسعاره وشروطه إلا في عرض أو اتفاقية مكتوبة وموقعة بين وتم والعميل. وطلب عرض السعر عبر الموقع لا ينشئ أي التزام تعاقدي على أي من الطرفين.",
+        },
+        {
+          h: "الملكية الفكرية",
+          body: "جميع محتويات هذا الموقع — بما فيها اسم وتم وشعارها والتصاميم والنصوص والصور — ملك لوتم أو للمرخصين لها، ولا يجوز نسخها أو إعادة إنتاجها أو استخدامها تجاريًا دون إذن كتابي مسبق.",
+        },
+        {
+          h: "الروابط والأدوات الخارجية",
+          body: "قد يتضمن الموقع روابط لمنصات خارجية مثل واتساب ولينكدإن ومزودي التحليلات. ولا تتحمل وتم مسؤولية محتوى الخدمات الخارجية أو ممارساتها، إذ تحكمها شروطها الخاصة.",
+        },
+        {
+          h: "حدود المسؤولية",
+          body: "يُقدَّم الموقع كما هو. ومع حرصنا على دقة محتواه وتوافره، لا تقدم وتم أي ضمانات من أي نوع، ولا تتحمل مسؤولية أي أضرار تنشأ عن استخدام الموقع أو تعذر استخدامه.",
+        },
+        {
+          h: "تعديل الشروط",
+          body: "قد نحدّث شروط الاستخدام هذه من وقت لآخر، وتُنشر النسخة الأحدث دائمًا في هذه الصفحة. ويُعد استمرارك في استخدام الموقع قبولًا بالشروط المحدثة.",
+        },
+        {
+          h: "القانون المعمول به والتواصل",
+          body: "تخضع هذه الشروط لأنظمة المملكة العربية السعودية. ولأي استفسار عنها، راسلنا على hello@watm.com.sa.",
         },
       ],
       updated: "آخر تحديث: سبتمبر 2026",
