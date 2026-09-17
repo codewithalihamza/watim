@@ -180,6 +180,96 @@ export const dict = {
       terms: "Terms of Service",
       rights: "© 2026 Watm. All rights reserved.",
     },
+    quotePage: {
+      title: "Get a quote.",
+      sub: "Tell us about your organization and what you need — we will come back with a clear, obligation-free proposal.",
+      note: "This form is for organizations requesting a service quote. For anything else, use the contact page.",
+      org: "Organization name",
+      name: "Full name",
+      email: "Email",
+      phone: "Mobile number",
+      service: "Required service",
+      servicePlaceholder: "Choose a service…",
+      notes: "Notes or inquiries (optional)",
+      submit: "Send via WhatsApp",
+      submitHint: "Opens WhatsApp with your request filled in — or",
+      emailInstead: "email us instead",
+      waIntro: "Quote request from the website",
+    },
+    privacyPage: {
+      title: "Privacy Policy",
+      sub: "How Watm collects, uses, and protects your information on watm.com.sa.",
+      sections: [
+        {
+          h: "Our commitment",
+          body: "Watm respects the privacy of every visitor to this website. This policy explains what information we collect, why we collect it, and how we protect it. By using this website you consent to the practices described here.",
+        },
+        {
+          h: "Information we collect",
+          body: "We only collect personal information you choose to share with us — such as your name, organization, email address, and phone number when you request a quote or contact us by email or WhatsApp. We do not require personal information to browse the website.",
+        },
+        {
+          h: "How we use it",
+          body: "Information you share is used to respond to your inquiry, prepare proposals, and deliver the services you request. We do not sell or rent personal information to anyone.",
+        },
+        {
+          h: "Cookies and analytics",
+          body: "We use Google Analytics to understand how visitors use the website — pages visited, time on site, and general location. This data is aggregated and does not identify you personally. You can disable cookies in your browser settings at any time.",
+        },
+        {
+          h: "Protection of personal information",
+          body: "Access to personal information is restricted to authorized team members who need it to serve you. We apply reasonable technical and organizational safeguards, in line with the Kingdom's Personal Data Protection Law (PDPL).",
+        },
+        {
+          h: "Third parties",
+          body: "We share information only with the service providers required to operate this website and our services — such as hosting and analytics providers — and only to the extent necessary. We never sell your data.",
+        },
+        {
+          h: "Your rights and contact",
+          body: "You may request access to, correction of, or deletion of your personal information at any time by writing to hello@watm.com.sa.",
+        },
+      ],
+      updated: "Last updated: September 2026",
+    },
+    termsPage: {
+      title: "Terms of Service",
+      sub: "The terms that govern your use of watm.com.sa and our services.",
+      sections: [
+        {
+          h: "Acceptance of terms",
+          body: "By accessing or using this website, you agree to these Terms of Service. If you do not agree with any part of them, please do not use the website.",
+        },
+        {
+          h: "Use of the website",
+          body: "This website and its content are provided for lawful purposes only. You agree not to misuse the website, attempt to disrupt its operation, or use its content in any way that infringes the rights of Watm or others.",
+        },
+        {
+          h: "Services and proposals",
+          body: "Descriptions of our services on this website are for general information. The scope, pricing, and terms of any engagement are defined only in a written proposal or agreement signed between Watm and the client. A quote request through this website does not create a contractual obligation on either side.",
+        },
+        {
+          h: "Intellectual property",
+          body: "All content on this website — including the Watm name, logo, designs, text, and imagery — is the property of Watm or its licensors. It may not be copied, reproduced, or used commercially without prior written permission.",
+        },
+        {
+          h: "Third-party links and tools",
+          body: "The website may link to external platforms such as WhatsApp, LinkedIn, and analytics providers. Watm is not responsible for the content or practices of third-party services, which are governed by their own terms.",
+        },
+        {
+          h: "Limitation of liability",
+          body: "The website is provided on an as-is basis. While we work to keep its content accurate and available, Watm makes no warranties of any kind and is not liable for any damages arising from the use of, or inability to use, this website.",
+        },
+        {
+          h: "Changes to these terms",
+          body: "We may update these Terms of Service from time to time. The latest version will always be published on this page, and continued use of the website constitutes acceptance of the updated terms.",
+        },
+        {
+          h: "Governing law and contact",
+          body: "These terms are governed by the laws of the Kingdom of Saudi Arabia. For any questions about them, contact us at hello@watm.com.sa.",
+        },
+      ],
+      updated: "Last updated: September 2026",
+    },
     whatsappHref:
       "https://wa.me/966554020279?text=Hello%20Watm%20team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services%20and%20discuss%20how%20we%20can%20work%20together.",
   },
@@ -378,6 +468,96 @@ export const dict = {
       privacy: "سياسة الخصوصية",
       terms: "شروط الاستخدام",
       rights: "© 2026 وتم. جميع الحقوق محفوظة.",
+    },
+    quotePage: {
+      title: "اطلب عرض سعر.",
+      sub: "أخبرنا عن منشأتك وما تحتاجه — وسنعود إليك بعرض واضح ودون أي التزام.",
+      note: "هذا النموذج مخصص للمنشآت الراغبة في الحصول على عرض سعر. لأي استفسار آخر، استخدم صفحة التواصل.",
+      org: "اسم المنشأة",
+      name: "الاسم الكامل",
+      email: "البريد الإلكتروني",
+      phone: "رقم الجوال",
+      service: "الخدمة المطلوبة",
+      servicePlaceholder: "اختر الخدمة…",
+      notes: "ملاحظات أو استفسارات (اختياري)",
+      submit: "أرسل عبر واتساب",
+      submitHint: "يفتح واتساب برسالة جاهزة بطلبك — أو",
+      emailInstead: "راسلنا عبر البريد",
+      waIntro: "طلب عرض سعر من الموقع",
+    },
+    privacyPage: {
+      title: "سياسة الخصوصية",
+      sub: "كيف تجمع وتم معلوماتك وتستخدمها وتحميها على موقع watm.com.sa.",
+      sections: [
+        {
+          h: "التزامنا",
+          body: "تحترم وتم خصوصية كل زائر لهذا الموقع. توضح هذه السياسة ما نجمعه من معلومات، ولماذا نجمعه، وكيف نحميه. باستخدامك لهذا الموقع فإنك توافق على الممارسات الموضحة هنا.",
+        },
+        {
+          h: "المعلومات التي نجمعها",
+          body: "لا نجمع إلا المعلومات الشخصية التي تختار مشاركتها معنا — مثل اسمك واسم منشأتك وبريدك الإلكتروني ورقم جوالك عند طلب عرض سعر أو التواصل معنا عبر البريد أو واتساب. تصفح الموقع لا يتطلب أي معلومات شخصية.",
+        },
+        {
+          h: "كيف نستخدمها",
+          body: "تُستخدم المعلومات التي تشاركها للرد على استفسارك وإعداد العروض وتقديم الخدمات التي تطلبها. لا نبيع المعلومات الشخصية ولا نؤجرها لأي جهة.",
+        },
+        {
+          h: "ملفات تعريف الارتباط والتحليلات",
+          body: "نستخدم Google Analytics لفهم كيفية استخدام الزوار للموقع — الصفحات التي تُزار ومدة التصفح والموقع الجغرافي العام. هذه البيانات مجمّعة ولا تحدد هويتك شخصيًا، ويمكنك تعطيل ملفات تعريف الارتباط من إعدادات متصفحك في أي وقت.",
+        },
+        {
+          h: "حماية المعلومات الشخصية",
+          body: "الاطلاع على المعلومات الشخصية مقصور على أعضاء الفريق المصرح لهم ممن يحتاجونها لخدمتك. ونطبق ضوابط تقنية وتنظيمية مناسبة بما يتوافق مع نظام حماية البيانات الشخصية في المملكة.",
+        },
+        {
+          h: "الجهات الخارجية",
+          body: "لا نشارك المعلومات إلا مع مزودي الخدمات اللازمين لتشغيل هذا الموقع وخدماتنا — مثل الاستضافة والتحليلات — وبالقدر الضروري فقط. ولا نبيع بياناتك أبدًا.",
+        },
+        {
+          h: "حقوقك والتواصل",
+          body: "يمكنك في أي وقت طلب الاطلاع على معلوماتك الشخصية أو تصحيحها أو حذفها بمراسلتنا على hello@watm.com.sa.",
+        },
+      ],
+      updated: "آخر تحديث: سبتمبر 2026",
+    },
+    termsPage: {
+      title: "شروط الاستخدام",
+      sub: "الشروط التي تحكم استخدامك لموقع watm.com.sa وخدماتنا.",
+      sections: [
+        {
+          h: "قبول الشروط",
+          body: "بدخولك إلى هذا الموقع أو استخدامك له فإنك توافق على شروط الاستخدام هذه. إذا كنت لا توافق على أي جزء منها، فنرجو عدم استخدام الموقع.",
+        },
+        {
+          h: "استخدام الموقع",
+          body: "يُتاح هذا الموقع ومحتواه للأغراض المشروعة فقط. وتوافق على عدم إساءة استخدام الموقع أو محاولة تعطيل عمله أو استخدام محتواه بأي شكل ينتهك حقوق وتم أو حقوق الآخرين.",
+        },
+        {
+          h: "الخدمات والعروض",
+          body: "أوصاف خدماتنا في هذا الموقع هي للتعريف العام. ولا يُحدد نطاق أي تعاقد وأسعاره وشروطه إلا في عرض أو اتفاقية مكتوبة وموقعة بين وتم والعميل. وطلب عرض السعر عبر الموقع لا ينشئ أي التزام تعاقدي على أي من الطرفين.",
+        },
+        {
+          h: "الملكية الفكرية",
+          body: "جميع محتويات هذا الموقع — بما فيها اسم وتم وشعارها والتصاميم والنصوص والصور — ملك لوتم أو للمرخصين لها، ولا يجوز نسخها أو إعادة إنتاجها أو استخدامها تجاريًا دون إذن كتابي مسبق.",
+        },
+        {
+          h: "الروابط والأدوات الخارجية",
+          body: "قد يتضمن الموقع روابط لمنصات خارجية مثل واتساب ولينكدإن ومزودي التحليلات. ولا تتحمل وتم مسؤولية محتوى الخدمات الخارجية أو ممارساتها، إذ تحكمها شروطها الخاصة.",
+        },
+        {
+          h: "حدود المسؤولية",
+          body: "يُقدَّم الموقع كما هو. ومع حرصنا على دقة محتواه وتوافره، لا تقدم وتم أي ضمانات من أي نوع، ولا تتحمل مسؤولية أي أضرار تنشأ عن استخدام الموقع أو تعذر استخدامه.",
+        },
+        {
+          h: "تعديل الشروط",
+          body: "قد نحدّث شروط الاستخدام هذه من وقت لآخر، وتُنشر النسخة الأحدث دائمًا في هذه الصفحة. ويُعد استمرارك في استخدام الموقع قبولًا بالشروط المحدثة.",
+        },
+        {
+          h: "القانون المعمول به والتواصل",
+          body: "تخضع هذه الشروط لأنظمة المملكة العربية السعودية. ولأي استفسار عنها، راسلنا على hello@watm.com.sa.",
+        },
+      ],
+      updated: "آخر تحديث: سبتمبر 2026",
     },
     whatsappHref:
       "https://wa.me/966554020279?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%88%D8%AA%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86.",

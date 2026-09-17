@@ -62,12 +62,12 @@ export default function Footer() {
             {t.footer.ctaBody}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-            <a
-              href={`mailto:${EMAIL}`}
+            <Link
+              href="/get-a-quote"
               className="rounded-full bg-[#0e3144] px-8 py-3.5 font-medium text-white transition-all hover:scale-105 hover:bg-[#0b2735]"
             >
               {t.footer.consult}
-            </a>
+            </Link>
             <a
               href={t.whatsappHref}
               target="_blank"
@@ -185,12 +185,18 @@ export default function Footer() {
             </div>
             <div className="flex flex-col items-center gap-4 sm:items-end">
               <div className="flex gap-8 text-sm text-[#dff2f2]">
-                <a href="#" className="transition-colors hover:text-white hover:underline">
+                <Link
+                  href="/privacy-policy"
+                  className="transition-colors hover:text-white hover:underline"
+                >
                   {t.footer.privacy}
-                </a>
-                <a href="#" className="transition-colors hover:text-white hover:underline">
+                </Link>
+                <Link
+                  href="/terms-of-service"
+                  className="transition-colors hover:text-white hover:underline"
+                >
                   {t.footer.terms}
-                </a>
+                </Link>
               </div>
               <p className="text-sm text-[#dff2f2]">{t.footer.rights}</p>
             </div>
