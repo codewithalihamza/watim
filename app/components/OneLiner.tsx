@@ -4,23 +4,39 @@ import Reveal from "./Reveal";
 import { useLang } from "../lib/i18n";
 
 export default function OneLiner() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+
+  const isArabic = lang === "ar";
 
   return (
-    <section className="relative overflow-hidden py-20">
-      <div className="mx-auto max-w-4xl px-6 text-center">
+   <section
+  aria-labelledby="one-liner-heading"
+  dir={isArabic ? "rtl" : "ltr"}
+  className="relative overflow-hidden py-12 sm:py-16"
+>
+      <div className="mx-auto max-w-5xl px-6 text-center">
         <Reveal>
-          <p className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-lg font-semibold text-ink sm:text-xl">
-            {t.oneLiner.items.map((d, i) => (
-              <span key={d} className="flex items-center gap-4">
-                {i > 0 && (
-                  <span className="h-1.5 w-1.5 rounded-full bg-accent/70" aria-hidden />
-                )}
-                {d}
+          <h2
+            id="one-liner-heading"
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 text-lg font-semibold leading-relaxed text-ink sm:text-xl"
+          >
+            {t.oneLiner.items.map((item) => (
+              <span
+                key={item}
+                dir={isArabic ? "rtl" : "ltr"}
+                className="inline-flex shrink-0 items-center gap-3 whitespace-nowrap"
+              >
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70"
+                />
+
+                <span>{item}</span>
               </span>
             ))}
-          </p>
+          </h2>
         </Reveal>
+
         <Reveal delay={1}>
           <p className="mt-4 text-lg text-muted">{t.oneLiner.tail}</p>
         </Reveal>

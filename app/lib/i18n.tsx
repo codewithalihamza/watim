@@ -25,27 +25,40 @@ export const dict = {
       getInTouch: "Get in Touch",
     },
     hero: {
-      line1: "We build the brands",
-      line2: "the Kingdom remembers.",
+      line1: "WE BUILD BRANDS",
+      line2: "THE KINGDOM REMEMBERS.",
       sub: "Watm is a Saudi digital marketing and technology partner — strategy, creativity, and engineering under one roof, making the marketing people actually stop scrolling for. No fluff. No vanity metrics. Only results you can measure.",
       cta1: "Begin a partnership",
       cta2: "Explore our services",
       alt: "A man in traditional Saudi dress standing before the Riyadh skyline",
     },
     oneLiner: {
-      items: ["Strategy", "Content", "Media", "Websites", "Applications", "Growth"],
+      items: [
+        "Strategy",
+        "Content",
+        "Media",
+        "Websites",
+        "Applications",
+        "Growth",
+      ],
       tail: "One partner, one vision, one measurable standard.",
     },
     about: {
-      eyebrow: "About Watm",
+      eyebrow: "ABOUT WATIM",
+
       title: "A Saudi partner built for ambition.",
+
       p1: "Our name carries meaning — WATM is a mark that endures, and that is what we set out to leave behind for every brand we serve. We are strategists, creatives, and engineers who understand the Saudi market and the standard the Kingdom now sets for itself.",
+
       p2: "We do not chase trends. We start with your objectives, study your audience, and build every campaign, platform, and product around the outcomes that matter — then we stay until the numbers move.",
+
       stats: [
         { value: 40, suffix: "+", label: "Organizations served" },
         { value: 120, suffix: "+", label: "Campaigns delivered" },
         { value: 8, suffix: "M+", label: "Audiences reached" },
       ],
+
+      cta: "Learn more about Watim",
     },
     services: {
       eyebrow: "Our Services",
@@ -83,6 +96,12 @@ export const dict = {
         },
       ],
     },
+    partners: {
+      eyebrow: "Our Partners",
+      title: "Built on trusted partnerships.",
+      intro:
+        "We work alongside ambitious organizations and trusted partners to create meaningful digital experiences and measurable growth.",
+    },
     why: {
       eyebrow: "Why Watm",
       title: "The standards our partners rely on.",
@@ -108,6 +127,56 @@ export const dict = {
         {
           title: "One integrated team",
           body: "Strategist, designer, engineer, media specialist — nothing is lost between disciplines.",
+        },
+      ],
+    },
+    team: {
+      eyebrow: "Our Team",
+      title: "A team creating impact beyond boundaries.",
+      intro:
+        "Our team brings together creativity, experience, and technology to create meaningful digital experiences and solutions.",
+
+      showDetails: "View full bio",
+      hideDetails: "Back to profile",
+      members: [
+        {
+          id: 1,
+          name: "Wadha Alharbi",
+          role: "Founder & CEO of WATM",
+          bio: "Founder of WATM for Digital Marketing and Information Technology Solutions. Through WATM, she aims to provide innovative marketing and technology solutions focused on developing brands and strengthening their market presence. WATM believes that originality comes first, creating unique and distinctive work tailored to each brand’s identity and needs.",
+          image: "/team/watim-female.png",
+        },
+
+        {
+          id: 2,
+          name: "Mohammed Almutari",
+          role: "Marketing Consultant",
+          bio: "Marketing Consultant contributing to the development of marketing strategies and plans that support brand growth and strengthen market presence. Focused on understanding audience needs and translating business objectives into clear and actionable marketing initiatives.",
+          image: "/team/watim-male.png",
+        },
+
+        {
+          id: 3,
+          name: "Malak Sadek",
+          role: "Graphic Designer & Marketing Strategist",
+          bio: "I have a creative and marketing-driven vision that allows me to transform ideas into impactful visual solutions that serve brand objectives. I believe that design is a means of communication and influence, not merely a visual element.",
+          image: "/team/Malak-Sadek.jpeg",
+        },
+
+        {
+          id: 4,
+          name: "Mohammed Nasser",
+          role: "Creative Graphic Designer & Social Media and Branding Specialist",
+          bio: "Creative Graphic Designer and Social Media & Branding Specialist with 6+ years of experience in Photoshop, Illustrator, and Premiere. Helping brands tell their stories through meaningful and impactful visual communication.",
+          image: "/team/Mohammed-Nasser.jpeg",
+        },
+
+        {
+          id: 5,
+          name: "Roua Smisem",
+          role: "UI/UX & QA Specialist",
+          bio: "UI/UX and QA Specialist focused on transforming ideas into clear, intuitive, and user-friendly digital experiences. Combining visual design thinking with detailed product testing to improve usability, consistency, and overall digital product quality.",
+          image: "/team/Roua-Smisem.png",
         },
       ],
     },
@@ -275,112 +344,208 @@ export const dict = {
       getInTouch: "تواصل معنا",
     },
     hero: {
-      line1: "نبني العلامات",
-      line2: "التي تبقى في ذاكرة المملكة.",
-      sub: "وتم شريك سعودي في التسويق الرقمي والتقنية — استراتيجية وإبداع وهندسة تحت سقف واحد، نصنع تسويقًا يستحق أن يتوقف عنده الجمهور. بلا حشو، بلا أرقام شكلية، نتائج تُقاس فقط.",
-      cta1: "ابدأ شراكتك",
-      cta2: "استكشف خدماتنا",
+      line1: "نصنع علامات تجارية",
+      line2: "يتذكرها الجميع.",
+
+      sub: "واتم شريكك السعودي في بناء العلامات التجارية وصناعة التجارب الرقمية. نجمع الاستراتيجية، والإبداع، والتقنية، والابتكار تحت سقف واحد، لنساعد المؤسسات الطموحة على تعزيز حضورها، وكسب ثقة جماهيرها، وتحقيق نتائج ملموسة تواكب طموحات رؤية المملكة العربية السعودية 2030.",
+
+      cta1: "ابدأ شراكتك معنا",
+      cta2: "اكتشف أعمالنا",
+
       alt: "رجل بالزي السعودي التقليدي أمام أفق مدينة الرياض",
     },
     oneLiner: {
-      items: ["استراتيجية", "محتوى", "ميديا", "مواقع", "تطبيقات", "نمو"],
-      tail: "شريك واحد، رؤية واحدة، ومعيار واحد يُقاس.",
+      items: [
+        "الاستراتجيات والخطط التسويقية",
+        "المحتوى الإبداعي",
+        "بنـاء وتطوير المواقع الإلكترونية التفاعـلية",
+        "تصميم وتطوير المواقعبناء وتطوير التطبيقات ",
+        "الحملات الإعـلانية ",
+      ],
+      tail: "شريك واحد، رؤية واحدة، معيار واحد قابل للقياس",
     },
     about: {
-      eyebrow: "عن وتم",
+      eyebrow: "عن واتم",
       title: "شريك سعودي بُني للطموح.",
-      p1: "اسمنا يحمل معنى — فوتم أثرٌ يدوم، وهذا ما نسعى لتركه في كل علامة نخدمها. نحن استراتيجيون ومبدعون ومهندسون نفهم السوق السعودي والمعيار الذي ترسمه المملكة لنفسها اليوم.",
-      p2: "لا نلاحق الصيحات. نبدأ من أهدافك، وندرس جمهورك، ونبني كل حملة ومنصة ومنتج حول النتائج التي تهمّك — ثم نبقى حتى تتحرك الأرقام.",
+      p1: "تأسست واتم على قناعة واضحة بأن كل منظمة تستحق تواصلاً طموحاً بقدر أهدافها وهذا بالضبط ما نسعى لتركه مع كل علامة تجارية نخدمها",
+      p2: "نحن استراتيجيون ومبدعون ومهندسون نفهم السوق السعودي وجمهوره والمعايير العالية التي تضعها المملكة لنفسها. نبدأ بأهدافك، ندرس جمهورك بعناية، ونبني كل حملة لهـدف واضح والنتائج التي تهم عملك فعلاً.",
       stats: [
         { value: 40, suffix: "+", label: "جهة خدمناها" },
         { value: 120, suffix: "+", label: "حملة أطلقناها" },
         { value: 8, suffix: "M+", label: "جمهور وصلنا إليه" },
       ],
+      cta: "تعرّف على واتم أكثر",
     },
     services: {
       eyebrow: "خدماتنا",
-      title: "قدرات متكاملة، بمعيار واحد.",
+
+      title: "قدرات متكاملة، يتم تقديمها بمعيار واحد.",
+
       intro:
-        "اعمل معنا في تخصص واحد، أو أوكل إلينا الرحلة كاملة — كل خدمة مصممة لتعمل بتناغم مع البقية.",
+        "تعامل معنا لخدمة واحدة، أو ائتمـنّا بالرحلة كاملة، كل خدمة مصممة للعمل بتناغم مع البقية.",
+
       items: [
         {
           title: "إدارة وسائل التواصل الاجتماعي",
-          body: "ندير قنواتك بانضباط غرفة الأخبار وعناية حارس العلامة — محتوى مصمم لكل منصة، وحضور ثابت وموثوق.",
+
+          body: "ندير قنواتك بكل سلاسة من التصميم الى كتابة المحتوى لكل منصة وجمهور، تفاعل المجتمع يعكس قيمك، وحضور ثابت وموثوق.",
         },
+
         {
-          title: "الإعلانات المدفوعة",
-          body: "إعلانات دقيقة وخاضعة للمساءلة عبر Google وMeta وTikTok وغيرها. نستثمر حيث يثبت الأداء، ونحاسب أنفسنا على كل ريال بشفافية كاملة.",
+          title: "الإعلانات المدفوعة (تسويق الأداء)",
+
+          body: "إعلانات دقيقة وقابلة للقياس عبر Google و Meta و TikTok وغيرها. نستثمر حيث تثبت الأداء، نعدّل بانضباط، ونحاسب على كل ريال برؤية كاملة.",
         },
+
         {
-          title: "المحتوى وكتابة النصوص",
-          body: "كلمات تحمل رسالتك بوضوح وإقناع، بالعربية والإنجليزية — من الحملات والسيناريوهات إلى صفحات الهبوط التي تدفع الجمهور إلى الفعل.",
+          title: "المحتوى والكتابة",
+
+          body: "كلمات تحمل رسالتك بوضوح واقتناع، بالعربية والإنجليزية، من الحملات والمقالات إلى النصوص وصفحات الهبوط، نكتب لنؤثر ونحرك الجمهور الى اتخاذ القرار.",
         },
+
         {
-          title: "تطوير المواقع",
-          body: "مواقع سريعة وآمنة ومتقنة صُممت لتحقق الأداء. منصات شركات ومتاجر إلكترونية وصفحات حملات — تُبنى للجوال أولًا ومحسّنة لمحركات البحث.",
+          title: "تطوير المواقع الإلكترونية",
+
+          body: "مواقع سريعة وآمنة وتفاعلية مصممة للأداء. منصات المؤسسات والتجارة الإلكترونية وصفحات الهبوط للحملات — مبنية بالهاتف أولاً، محسّنة للبحث، وجاهزة لتمثيلك بأعلى معيار وجودة.",
         },
+
         {
           title: "تطوير التطبيقات",
-          body: "تطبيقات iOS وAndroid مصممة حول من سيستخدمها. من الفكرة إلى الإطلاق وما بعده، نتولى كل تفصيلة في الطريق.",
+
+          body: "تطبيقات الهاتف الذكي لـ iOS و Android مصممة حول الأشخاص الذين سيستخدمونها، من المفهوم إلى الإطلاق وما بعده، نمتلك التصميم والهندسة وكل تفصيل بينهما.",
         },
+
         {
-          title: "تحسين محركات البحث والنمو الرقمي",
-          body: "ظهور مستدام في نتائج البحث، بأسس تقنية سليمة ومحتوى مفيد فعلًا. الجمهور الصحيح يجدك — ويستمر في العثور عليك.",
+          title: "البحث عن المحتوى والنمو الرقمي",
+
+          body: "الرؤية المستدامة في البحث، محققة عبر أسس تقنية سليمة ومحتوى حقيقي مفيد، نساعد الجمهور الصحيح في العثور عليك — والاستمرار في العثور عليك وبينهما فرق شاسع.",
         },
+
         {
-          title: "العلامة والهوية",
-          body: "هويات بصرية مدروسة وأنظمة متكاملة تمنح مؤسستك حضورًا يوحي بالريادة ويكسب الثقة من أول نظرة.",
+          title: "العلامة التجارية والهوية",
+
+          body: "هويات العلامة التجارية مدروسة وأنظمة بصرية كاملة، نعطي منظمتك حضوراً يُشير إلى الريادة ويكسب الثقة من النظرة الأولى.",
         },
       ],
     },
     why: {
-      eyebrow: "لماذا وتم",
+      eyebrow: "لماذا واتم",
+
       title: "المعايير التي يعتمد عليها شركاؤنا.",
-      intro: "نتعامل مع ميزانيتك كأنها أموالنا — ونلزم أنفسنا بمعايير يمكنك قياسها.",
+
+      intro:
+        "نتعامل مع ميزانيتك كأنها أموالنا، ونلزم أنفسنا بمعايير واضحة يمكنك قياسها.",
+
       standards: [
         {
-          title: "سرعة الاستجابة",
-          body: "جهة تواصل واضحة ورد في الوقت المناسب، دائمًا.",
+          title: "الاستجابة السريعة",
+
+          body: "ستحصل دائمًا على نقطة اتصال واضحة ورد سريع. نعتبر التواصل أساس كل شراكة، وليس فكرة ثانوية.",
         },
+
         {
           title: "الشفافية",
-          body: "تقارير واضحة: ماذا فعلنا، وكم كلّف، وماذا حقق.",
+
+          body: "نقدم التقارير بلغة واضحة. ستفهم دائمًا ما فعلناه، وما كلفه، وما حققه.",
         },
+
         {
-          title: "نمو مدروس",
-          body: "نختبر قبل أن نتوسع، لتذهب ميزانيتك إلى ما ثبت نجاحه.",
+          title: "النمو المقاس",
+
+          body: "نتحقق قبل أن نُوسّع، موجهين استثمارك نحو ما ثبت أداؤه.",
         },
+
         {
-          title: "النتائج قبل كل شيء",
-          body: "الحملات الجميلة جيدة. الحملات المربحة أفضل.",
+          title: "نتائج الأعمال قبل كل شيء",
+
+          body: "الاعتراف مرحب، لكن النتائج ضرورية. نقيس نجاحنا بنجاحك.",
         },
+
         {
           title: "فريق واحد متكامل",
-          body: "استراتيجي ومصمم ومهندس ومختص ميديا — لا شيء يضيع بين التخصصات.",
+
+          body: "الاستراتيجي والمصمم والمهندس ومتخصص الإعلانات يعملون كواحد. لا شيء يضيع بين التخصصات.",
+        },
+      ],
+    },
+    team: {
+      eyebrow: "فريقنا",
+      title: "فريق يصنع أثرًا يتجاوز الحدود.",
+      intro:
+        "يجمع فريقنا بين الإبداع والخبرة والتقنية لصناعة تجارب وحلول تصنع أثرًا حقيقيًا.",
+
+      showDetails: "عرض التفاصيل",
+      hideDetails: "العودة إلى الملف",
+
+      members: [
+        {
+          id: 1,
+          name: "وضحى الحربي",
+          role: "المؤسسة والرئيسة التنفيذية لشركة واتم",
+          bio: "مؤسسة شركة واتم لحلول التسويق الرقمي وتقنية المعلومات، تسعى من خلال واتم إلى تقديم حلول تسويقية وتقنية مبتكرة تركز على تطوير العلامات التجارية والارتقاء بحضورها في السوق. وتؤمن واتم بأن الأصالة تأتي أولًا؛ لذلك تحرص على تقديم أعمال منفردة وغير مكررة، بعيدة عن التقليد، ومصممة بما يتناسب مع هوية كل علامة تجارية واحتياجاتها.",
+          image: "/team/watim-female.png",
+        },
+
+        {
+          id: 2,
+          name: "محمد المطيري",
+          role: "استشاري تسويق",
+          bio: "استشاري تسويق يساهم في تطوير الاستراتيجيات التسويقية وبناء الخطط التي تدعم نمو العلامات التجارية وتعزز حضورها في السوق. يركز على فهم احتياجات الجمهور، وتحويل الأهداف التجارية إلى مبادرات تسويقية واضحة وقابلة للتنفيذ.",
+          image: "/team/watim-male.png",
+        },
+
+        {
+          id: 3,
+          name: "ملك صادق",
+          role: "مصممة جرافيك واستراتيجية تسويق",
+          bio: "أمتلك رؤية إبداعية وتسويقية تمكّنني من تحويل الأفكار إلى حلول بصرية مؤثرة تخدم أهداف العلامة التجارية، انطلاقًا من إيماني بأن التصميم هو وسيلة للتواصل والتأثير وليس مجرد عنصر بصري.",
+          image: "/team/Malak-Sadek.jpeg",
+        },
+
+        {
+          id: 4,
+          name: "محمد ناصر",
+          role: "مصمم جرافيك إبداعي ومتخصص في السوشال ميديا والهوية البصرية",
+          bio: "مصمم جرافيك إبداعي ومتخصص في وسائل التواصل الاجتماعي وبناء الهويات البصرية، يمتلك خبرة تزيد عن 6 سنوات في Photoshop وIllustrator وPremiere، ويساعد العلامات التجارية على سرد قصصها بطريقة بصرية مؤثرة.",
+          image: "/team/Mohammed-Nasser.jpeg",
+        },
+
+        {
+          id: 5,
+          name: "رؤى سميسم",
+          role: "أخصائية UI/UX وضمان الجودة",
+          bio: "أخصائية في تصميم تجارب المستخدم وواجهات الاستخدام وضمان الجودة، تهتم بتحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام. تجمع بين الحس البصري والدقة في اختبار المنتجات، مع التركيز على التفاصيل وتحسين تجربة المستخدم وجودة الحلول الرقمية.",
+          image: "/team/Roua-Smisem.png",
         },
       ],
     },
     process: {
       eyebrow: "كيف نعمل",
-      title: "منهجية واضحة، من أول حديث إلى أثر يدوم.",
+      title: "منهجية واضحة، من أول محادثة إلى نتيجة دائمة.",
       steps: [
         {
-          title: "نفهم",
-          body: "نتعرف على مؤسستك وجمهورك وطموحك قبل أن نقترح فكرة واحدة.",
+          title: "الفهم",
+          body: ". نأخذ الوقت لندرس أهدافك ومنتجك وجمهورك وطموحاتك قبل أن نقترح فكرة واحدة.",
         },
         {
-          title: "نخطط",
-          body: "نضع استراتيجية واضحة بأهداف قابلة للقياس وجدول زمني تحاسبنا عليه.",
+          title: "التخطيط",
+          body: "نحدد استراتيجية واضحة مع أهداف قابلة للقياس وجدول زمني يمكنك محاسبتنا عليه.",
         },
         {
-          title: "ننفّذ",
-          body: "تنطلق الحملات، وتُطلق المنصات والتطبيقات، ويسير التنفيذ بدقة.",
+          title: "التسليم",
+          body: "نراقب الأداء بشكل مستمر ونُحسّن ما يعمل ،النمو بالنسبة لنا هو انضباط واستمرارية  — وليس مرحلة واحدة.",
         },
         {
-          title: "نحسّن",
+          title: "التحسين",
           body: "نراقب الأداء باستمرار ونطوّر ما ينجح. النمو عندنا منهج مستمر، لا محطة واحدة.",
         },
       ],
+    },
+    partners: {
+      eyebrow: "شركاؤنا",
+      title: "نمو نبنيه مع شركاء نثق بهم.",
+      intro:
+        "نعمل إلى جانب جهات طموحة وشركاء موثوقين لبناء تجارب رقمية مؤثرة وتحقيق نمو قابل للقياس.",
     },
     servicesPage: {
       title: "كل ما تحتاجه لتنمو.",
@@ -400,21 +565,23 @@ export const dict = {
       linkedinNote: "أخبار الشركة وأعمالنا",
     },
     footer: {
-      ctaTitle: "لنبنِ معًا أثرًا يستحق أن يُذكر.",
+      ctaTitle: "دعنا نبني شيئاً يستحق التذكر.",
       ctaBody:
-        "أخبرنا أين تريد أن تصل، وسنريك الطريق — وما إذا كانت وتم الشريك الصحيح للرحلة. الحديث الأول دائمًا دون أي التزام.",
+        "أخبرنا أين تنوي أن تكون، وسنريك الطريق — وما إذا كانت واتم الشريك المناسب للرحلة، المحادثة الأولى دائماً متعتنا، وبدون التزام.",
       consult: "اطلب استشارة",
-      whatsapp: "تواصل عبر واتساب",
-      tagline: "وتم — أثرٌ يدوم.",
+      whatsapp: "تواصل معنا على واتس آب",
+      tagline: "واتم — حين تبحث عن الكمال والتمـام .",
       explore: "استكشف",
       servicesCol: "خدماتنا",
       follow: "تابعنا",
       serviceLinks: [
-        "وسائل التواصل",
-        "الإعلانات المدفوعة",
-        "المحتوى والنصوص",
-        "المواقع والتطبيقات",
-        "السيو والنمو",
+        "إدارة وسائل التواصل الاجتماعي",
+        "الإعلانات المدفوعة (تسويق الأداء)",
+        "المحتوى والكتابة",
+        " تطوير المواقع الإلكترونية",
+        "تطوير التطبيقات",
+        "البحث عن المحتوى والنمو الرقمي",
+        "العلامة التجارية والهوية",
       ],
       contactUs: "تواصل معنا",
       location: "الرياض، المملكة العربية السعودية",

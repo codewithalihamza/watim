@@ -1,19 +1,27 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Montserrat, Inter, Luckiest_Guy, Cairo } from "next/font/google";
+
 import "./globals.css";
+
 import { LanguageProvider } from "./lib/i18n";
+
 import Navbar from "./components/Navbar";
+
 import Footer from "./components/Footer";
+
 import CursorGlow from "./components/CursorGlow";
 
-/*
-  Headline ("MARKETING SOLUTIONS START WITH") uses Montserrat 800 ExtraBold.
-  The "WATM" wordmark uses a wobbly comic/sticker display face per the
-  reference art — Luckiest Guy is the closest widely-available match.
-  Inter carries body copy. Cairo carries all Arabic text (body + display)
-  when the site is switched to العربية.
-*/
+/**
+ * Headline ("MARKETING SOLUTIONS START WITH") uses Montserrat 800 ExtraBold.
+ *
+ * The "WATM" wordmark uses a wobbly comic/sticker display face per the
+ * reference art — Luckiest Guy is the closest widely-available match.
+ *
+ * Inter carries body copy. Cairo carries all Arabic text (body + display)
+ * when the site is switched to العربية.
+ */
+
 const montserrat = Montserrat({
   variable: "--font-display",
   subsets: ["latin"],
@@ -38,9 +46,51 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Watm — Digital Marketing & Technology Partner, KSA",
+  metadataBase: new URL("https://watm.com.sa"),
+
+  title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+
   description:
-    "Watm is a Saudi digital marketing and development partner. Strategy, media, content, websites, and apps that build trusted brands and measurable growth.",
+    "واتم هو شريك التسويق الرقمي والتطوير السعودي. الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات التي تبني علامات تجارية موثوقة ونموًا قابلًا للقياس.",
+
+  keywords: [
+    "واتم",
+    "التسويق الرقمي",
+    "التسويق الإلكتروني",
+    "التسويق في السعودية",
+    "تطوير المواقع",
+    "تطوير التطبيقات",
+    "الإعلانات المدفوعة",
+    "صناعة المحتوى",
+    "العلامة التجارية",
+    "النمو الرقمي",
+  ],
+
+  alternates: {
+    canonical: "https://watm.com.sa",
+  },
+
+  openGraph: {
+    title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+    description:
+      "واتم هو شريك التسويق الرقمي والتطوير السعودي. الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات التي تبني علامات تجارية موثوقة ونموًا قابلًا للقياس.",
+    url: "https://watm.com.sa",
+    siteName: "واتم",
+    locale: "ar_SA",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+    description:
+      "شريكك في الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات في السعودية.",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
