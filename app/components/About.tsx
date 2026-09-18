@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CountUp from "./CountUp";
 import Reveal from "./Reveal";
 import { useLang } from "../lib/i18n";
@@ -62,6 +63,27 @@ export default function About() {
                   </p>
                 </div>
               ))}
+            </div>
+          </Reveal>
+
+          {/* About page CTA */}
+          <Reveal delay={4}>
+            <div className="mt-8 flex justify-center sm:mt-10">
+              <Link
+                href="/about"
+                className="group inline-flex items-center justify-center rounded-full border border-accent/60 px-6 py-3 text-sm font-semibold text-accent transition-all duration-300 hover:bg-accent hover:text-[#171616] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+              >
+                <span>{t.about.cta}</span>
+
+                <span
+                  aria-hidden="true"
+                  className={`ms-2 transition-transform duration-300 group-hover:translate-x-1 ${
+                    isArabic ? "rotate-180 group-hover:-translate-x-1" : ""
+                  }`}
+                >
+                  →
+                </span>
+              </Link>
             </div>
           </Reveal>
         </div>

@@ -44,15 +44,21 @@ export const dict = {
       tail: "One partner, one vision, one measurable standard.",
     },
     about: {
-      eyebrow: "About Watm",
+      eyebrow: "ABOUT WATIM",
+
       title: "A Saudi partner built for ambition.",
+
       p1: "Our name carries meaning — WATM is a mark that endures, and that is what we set out to leave behind for every brand we serve. We are strategists, creatives, and engineers who understand the Saudi market and the standard the Kingdom now sets for itself.",
+
       p2: "We do not chase trends. We start with your objectives, study your audience, and build every campaign, platform, and product around the outcomes that matter — then we stay until the numbers move.",
+
       stats: [
         { value: 40, suffix: "+", label: "Organizations served" },
         { value: 120, suffix: "+", label: "Campaigns delivered" },
         { value: 8, suffix: "M+", label: "Audiences reached" },
       ],
+
+      cta: "Learn more about Watim",
     },
     services: {
       eyebrow: "Our Services",
@@ -90,6 +96,12 @@ export const dict = {
         },
       ],
     },
+    partners: {
+      eyebrow: "Our Partners",
+      title: "Built on trusted partnerships.",
+      intro:
+        "We work alongside ambitious organizations and trusted partners to create meaningful digital experiences and measurable growth.",
+    },
     why: {
       eyebrow: "Why Watm",
       title: "The standards our partners rely on.",
@@ -115,6 +127,56 @@ export const dict = {
         {
           title: "One integrated team",
           body: "Strategist, designer, engineer, media specialist — nothing is lost between disciplines.",
+        },
+      ],
+    },
+    team: {
+      eyebrow: "Our Team",
+      title: "A team creating impact beyond boundaries.",
+      intro:
+        "Our team brings together creativity, experience, and technology to create meaningful digital experiences and solutions.",
+
+      showDetails: "View full bio",
+      hideDetails: "Back to profile",
+      members: [
+        {
+          id: 1,
+          name: "Wadha Alharbi",
+          role: "Founder & CEO of WATM",
+          bio: "Founder of WATM for Digital Marketing and Information Technology Solutions. Through WATM, she aims to provide innovative marketing and technology solutions focused on developing brands and strengthening their market presence. WATM believes that originality comes first, creating unique and distinctive work tailored to each brand’s identity and needs.",
+          image: "/team/watim-female.png",
+        },
+
+        {
+          id: 2,
+          name: "Mohammed Almutari",
+          role: "Marketing Consultant",
+          bio: "Marketing Consultant contributing to the development of marketing strategies and plans that support brand growth and strengthen market presence. Focused on understanding audience needs and translating business objectives into clear and actionable marketing initiatives.",
+          image: "/team/watim-male.png",
+        },
+
+        {
+          id: 3,
+          name: "Malak Sadek",
+          role: "Graphic Designer & Marketing Strategist",
+          bio: "I have a creative and marketing-driven vision that allows me to transform ideas into impactful visual solutions that serve brand objectives. I believe that design is a means of communication and influence, not merely a visual element.",
+          image: "/team/Malak-Sadek.jpeg",
+        },
+
+        {
+          id: 4,
+          name: "Mohammed Nasser",
+          role: "Creative Graphic Designer & Social Media and Branding Specialist",
+          bio: "Creative Graphic Designer and Social Media & Branding Specialist with 6+ years of experience in Photoshop, Illustrator, and Premiere. Helping brands tell their stories through meaningful and impactful visual communication.",
+          image: "/team/Mohammed-Nasser.jpeg",
+        },
+
+        {
+          id: 5,
+          name: "Roua Smisem",
+          role: "UI/UX & QA Specialist",
+          bio: "UI/UX and QA Specialist focused on transforming ideas into clear, intuitive, and user-friendly digital experiences. Combining visual design thinking with detailed product testing to improve usability, consistency, and overall digital product quality.",
+          image: "/team/Roua-Smisem.png",
         },
       ],
     },
@@ -312,6 +374,7 @@ export const dict = {
         { value: 120, suffix: "+", label: "حملة أطلقناها" },
         { value: 8, suffix: "M+", label: "جمهور وصلنا إليه" },
       ],
+      cta: "تعرّف على واتم أكثر",
     },
     services: {
       eyebrow: "خدماتنا",
@@ -405,27 +468,84 @@ export const dict = {
         },
       ],
     },
+    team: {
+      eyebrow: "فريقنا",
+      title: "فريق يصنع أثرًا يتجاوز الحدود.",
+      intro:
+        "يجمع فريقنا بين الإبداع والخبرة والتقنية لصناعة تجارب وحلول تصنع أثرًا حقيقيًا.",
+
+      showDetails: "عرض التفاصيل",
+      hideDetails: "العودة إلى الملف",
+
+      members: [
+        {
+          id: 1,
+          name: "وضحى الحربي",
+          role: "المؤسسة والرئيسة التنفيذية لشركة واتم",
+          bio: "مؤسسة شركة واتم لحلول التسويق الرقمي وتقنية المعلومات، تسعى من خلال واتم إلى تقديم حلول تسويقية وتقنية مبتكرة تركز على تطوير العلامات التجارية والارتقاء بحضورها في السوق. وتؤمن واتم بأن الأصالة تأتي أولًا؛ لذلك تحرص على تقديم أعمال منفردة وغير مكررة، بعيدة عن التقليد، ومصممة بما يتناسب مع هوية كل علامة تجارية واحتياجاتها.",
+          image: "/team/watim-female.png",
+        },
+
+        {
+          id: 2,
+          name: "محمد المطيري",
+          role: "استشاري تسويق",
+          bio: "استشاري تسويق يساهم في تطوير الاستراتيجيات التسويقية وبناء الخطط التي تدعم نمو العلامات التجارية وتعزز حضورها في السوق. يركز على فهم احتياجات الجمهور، وتحويل الأهداف التجارية إلى مبادرات تسويقية واضحة وقابلة للتنفيذ.",
+          image: "/team/watim-male.png",
+        },
+
+        {
+          id: 3,
+          name: "ملك صادق",
+          role: "مصممة جرافيك واستراتيجية تسويق",
+          bio: "أمتلك رؤية إبداعية وتسويقية تمكّنني من تحويل الأفكار إلى حلول بصرية مؤثرة تخدم أهداف العلامة التجارية، انطلاقًا من إيماني بأن التصميم هو وسيلة للتواصل والتأثير وليس مجرد عنصر بصري.",
+          image: "/team/Malak-Sadek.jpeg",
+        },
+
+        {
+          id: 4,
+          name: "محمد ناصر",
+          role: "مصمم جرافيك إبداعي ومتخصص في السوشال ميديا والهوية البصرية",
+          bio: "مصمم جرافيك إبداعي ومتخصص في وسائل التواصل الاجتماعي وبناء الهويات البصرية، يمتلك خبرة تزيد عن 6 سنوات في Photoshop وIllustrator وPremiere، ويساعد العلامات التجارية على سرد قصصها بطريقة بصرية مؤثرة.",
+          image: "/team/Mohammed-Nasser.jpeg",
+        },
+
+        {
+          id: 5,
+          name: "رؤى سميسم",
+          role: "أخصائية UI/UX وضمان الجودة",
+          bio: "أخصائية في تصميم تجارب المستخدم وواجهات الاستخدام وضمان الجودة، تهتم بتحويل الأفكار إلى تجارب رقمية واضحة وسهلة الاستخدام. تجمع بين الحس البصري والدقة في اختبار المنتجات، مع التركيز على التفاصيل وتحسين تجربة المستخدم وجودة الحلول الرقمية.",
+          image: "/team/Roua-Smisem.png",
+        },
+      ],
+    },
     process: {
       eyebrow: "كيف نعمل",
-      title: "منهجية واضحة، من أول حديث إلى أثر يدوم.",
+      title: "منهجية واضحة، من أول محادثة إلى نتيجة دائمة.",
       steps: [
         {
-          title: "نفهم",
-          body: "نتعرف على مؤسستك وجمهورك وطموحك قبل أن نقترح فكرة واحدة.",
+          title: "الفهم",
+          body: ". نأخذ الوقت لندرس أهدافك ومنتجك وجمهورك وطموحاتك قبل أن نقترح فكرة واحدة.",
         },
         {
-          title: "نخطط",
-          body: "نضع استراتيجية واضحة بأهداف قابلة للقياس وجدول زمني تحاسبنا عليه.",
+          title: "التخطيط",
+          body: "نحدد استراتيجية واضحة مع أهداف قابلة للقياس وجدول زمني يمكنك محاسبتنا عليه.",
         },
         {
-          title: "ننفّذ",
-          body: "تنطلق الحملات، وتُطلق المنصات والتطبيقات، ويسير التنفيذ بدقة.",
+          title: "التسليم",
+          body: "نراقب الأداء بشكل مستمر ونُحسّن ما يعمل ،النمو بالنسبة لنا هو انضباط واستمرارية  — وليس مرحلة واحدة.",
         },
         {
-          title: "نحسّن",
+          title: "التحسين",
           body: "نراقب الأداء باستمرار ونطوّر ما ينجح. النمو عندنا منهج مستمر، لا محطة واحدة.",
         },
       ],
+    },
+    partners: {
+      eyebrow: "شركاؤنا",
+      title: "نمو نبنيه مع شركاء نثق بهم.",
+      intro:
+        "نعمل إلى جانب جهات طموحة وشركاء موثوقين لبناء تجارب رقمية مؤثرة وتحقيق نمو قابل للقياس.",
     },
     servicesPage: {
       title: "كل ما تحتاجه لتنمو.",
@@ -461,7 +581,7 @@ export const dict = {
         " تطوير المواقع الإلكترونية",
         "تطوير التطبيقات",
         "البحث عن المحتوى والنمو الرقمي",
-        "العلامة التجارية والهوية"
+        "العلامة التجارية والهوية",
       ],
       contactUs: "تواصل معنا",
       location: "الرياض، المملكة العربية السعودية",
