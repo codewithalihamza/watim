@@ -51,6 +51,7 @@ export default function Navbar() {
     { label: t.nav.home, href: "/" },
     { label: t.nav.about, href: "/about" },
     { label: t.nav.services, href: "/services" },
+    { label: t.nav.ourWork, href: "/our-work" },
     { label: t.nav.contact, href: "/contact" },
   ];
 

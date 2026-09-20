@@ -12,6 +12,8 @@ import Footer from "./components/Footer";
 
 import CursorGlow from "./components/CursorGlow";
 
+import WhatsAppFloat from "./components/WhatsAppFloat";
+
 /**
  * Headline ("MARKETING SOLUTIONS START WITH") uses Montserrat 800 ExtraBold.
  *
@@ -109,6 +111,7 @@ export default function RootLayout({
           <Navbar />
           {children}
           <Footer />
+          <WhatsAppFloat />
         </LanguageProvider>
       </body>
       {/* Google Analytics 4 — client's Measurement ID */}

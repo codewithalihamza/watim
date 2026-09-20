@@ -6,10 +6,6 @@ import Reveal from "./Reveal";
 
 import { useLang } from "../lib/i18n";
 
-import { EMAIL } from "./Footer";
-
-const WHATSAPP_NUMBER = "966554020279";
-
 const inputClass =
   "w-full rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-4 text-ink placeholder:text-muted/60 outline-none transition-all duration-300 focus:border-accent focus:bg-white/[0.08]";
 
@@ -22,45 +18,44 @@ export default function QuotePageContent({
 }: QuotePageContentProps) {
   const { t } = useLang();
 
-  const [form, setForm] = useState({
+  const emptyForm = {
     org: "",
     name: "",
     email: "",
     phone: "",
     service: "",
     notes: "",
-  });
+    website: "", // honeypot — hidden from real users, only bots fill it
+  };
+
+  const [form, setForm] = useState(emptyForm);
+  const [status, setStatus] = useState<
+    "idle" | "sending" | "success" | "error"
+  >("idle");
 
   const set = (k: keyof typeof form) => (v: string) =>
     setForm((f) => ({ ...f, [k]: v }));
 
-  // The site has no backend: submitting composes a structured WhatsApp
-  // message to the business number, so the lead lands where the team works.
-  const onSubmit = (e: FormEvent) => {
+  // Submissions POST to /api/quote, which emails the company mailbox over
+  // SMTP — the visitor stays on the page and sees an inline status message.
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
+    if (status === "sending") return;
 
-    const q = t.quotePage;
-
-    const lines = [
-      q.waIntro,
-      `${q.org}: ${form.org}`,
-      `${q.name}: ${form.name}`,
-      `${q.email}: ${form.email}`,
-      `${q.phone}: ${form.phone}`,
-      `${q.service}: ${form.service}`,
-      form.notes ? `${q.notes}: ${form.notes}` : "",
-    ].filter(Boolean);
-
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
-      lines.join("\n"),
-    )}`;
-
-    window.open(url, "_blank", "noopener,noreferrer");
+    setStatus("sending");
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error(String(res.status));
+      setStatus("success");
+      setForm(emptyForm);
+    } catch {
+      setStatus("error");
+    }
   };
-
-  const emailBody = encodeURIComponent(
-    `${t.quotePage.waIntro}\n\n${t.quotePage.org}: \n${t.quotePage.name}: \n${t.quotePage.phone}: \n${t.quotePage.service}: \n`,
-  );
 
   const content = (
     <section
@@ -208,26 +203,45 @@ export default function QuotePageContent({
               />
             </label>
 
+            {/* Honeypot — visually hidden, ignored by the server if empty */}
+            <label className="sr-only" aria-hidden="true">
+              Website
+              <input
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={form.website}
+                onChange={(e) => set("website")(e.target.value)}
+              />
+            </label>
+
             {/* Submit */}
             <div className="flex flex-col items-center pt-2 text-center">
               <button
                 type="submit"
-                className="btn-primary rounded-full px-12 py-4 font-semibold transition-transform duration-300 hover:-translate-y-1"
+                disabled={status === "sending"}
+                className="btn-primary rounded-full px-12 py-4 font-semibold transition-transform duration-300 hover:-translate-y-1 disabled:cursor-not-allowed disabled:opacity-60"
               >
-                {t.quotePage.submit}
+                {status === "sending"
+                  ? t.quotePage.sending
+                  : t.quotePage.submit}
               </button>
 
-              <p className="mt-4 text-sm text-muted">
-                {t.quotePage.submitHint}{" "}
-                <a
-                  href={`mailto:${EMAIL}?subject=${encodeURIComponent(
-                    t.quotePage.waIntro,
-                  )}&body=${emailBody}`}
-                  className="text-accent transition-colors hover:underline"
-                >
-                  {t.quotePage.emailInstead}
-                </a>
-              </p>
+              <div aria-live="polite" className="mt-4 w-full max-w-xl">
+                {status === "success" && (
+                  <p className="rounded-2xl border border-brand-teal/40 bg-brand-teal/15 px-5 py-3 text-sm leading-relaxed text-ink">
+                    {t.quotePage.successMsg}
+                  </p>
+                )}
+                {status === "error" && (
+                  <p className="rounded-2xl border border-red-400/40 bg-red-400/10 px-5 py-3 text-sm leading-relaxed text-ink">
+                    {t.quotePage.errorMsg}
+                  </p>
+                )}
+                {(status === "idle" || status === "sending") && (
+                  <p className="text-sm text-muted">{t.quotePage.afterNote}</p>
+                )}
+              </div>
             </div>
           </form>
         </div>
