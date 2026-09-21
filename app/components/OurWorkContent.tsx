@@ -8,6 +8,7 @@ import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 import { useLang } from "../lib/i18n";
 import {
+  aiUseCases,
   featuredProjects,
   testimonials,
   workItems,
@@ -114,9 +115,9 @@ export default function OurWorkContent() {
       <section aria-labelledby="ow-featured" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <Reveal className="mb-10 max-w-2xl">
           <h2 id="ow-featured" className="display text-3xl font-bold text-ink sm:text-4xl">
-            {ow.featuredTitle}
+            {ow.devTitle}
           </h2>
-          <p className="mt-4 leading-relaxed text-muted">{ow.featuredIntro}</p>
+          <p className="mt-4 leading-relaxed text-muted">{ow.devIntro}</p>
         </Reveal>
         <div className="space-y-10 lg:space-y-14">
           {featuredProjects.map((proj, i) => (
@@ -181,6 +182,41 @@ export default function OurWorkContent() {
                       </span>
                     ))}
                   </div>
+                </div>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* ---- AI & Integration ---- */}
+      <section aria-labelledby="ow-ai" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
+        <Reveal className="mb-10 max-w-2xl">
+          <h2 id="ow-ai" className="display text-3xl font-bold text-ink sm:text-4xl">
+            {ow.aiTitle}
+          </h2>
+          <p className="mt-4 leading-relaxed text-muted">{ow.aiIntro}</p>
+        </Reveal>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+          {aiUseCases.map((uc, i) => (
+            <Reveal key={uc.id} delay={((i % 3) + 1) as 1 | 2 | 3}>
+              <article className="group h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-colors hover:border-brand-teal/50">
+                <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
+                  <Image
+                    src={uc.image}
+                    alt={uc.alt[lang]}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="display text-lg font-bold text-white">
+                    {uc.title[lang]}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-muted">
+                    {uc.body[lang]}
+                  </p>
                 </div>
               </article>
             </Reveal>

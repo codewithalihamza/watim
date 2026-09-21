@@ -208,3 +208,62 @@ export const featuredProjects: FeaturedProject[] = [
     kind: "mobile",
   },
 ];
+
+export type AiUseCase = {
+  id: string;
+  image: string;
+  width: number;
+  height: number;
+  title: { en: string; ar: string };
+  body: { en: string; ar: string };
+  alt: { en: string; ar: string };
+};
+
+/* AI & Integration use cases — shown as cards on /our-work. */
+export const aiUseCases: AiUseCase[] = [
+  {
+    id: "ai-supervisor",
+    image: "/work/panda-ai-chat.png",
+    width: 1008,
+    height: 767,
+    title: { en: "Panda AI Supervisor", ar: "مشرف بنده الذكي" },
+    body: {
+      en: "An Arabic AI assistant the store team can ask anything — it answers from the live database with real numbers and photo evidence.",
+      ar: "مساعد ذكي بالعربية يسأله فريق المتجر عن أي شيء — فيجيب من قاعدة البيانات مباشرة بالأرقام والأدلة المصورة.",
+    },
+    alt: {
+      en: "Arabic AI supervisor chat answering a question about staff phone use with data and photo evidence",
+      ar: "محادثة المشرف الذكي بالعربية تجيب عن سؤال حول استخدام الجوال بالبيانات والأدلة المصورة",
+    },
+  },
+  {
+    id: "cashier-absence",
+    image: "/work/panda-cashier-absence.webp",
+    width: 1201,
+    height: 859,
+    title: { en: "Cashier Absence Detection", ar: "كشف غياب الكاشير" },
+    body: {
+      en: "Alerts the moment a cashier station is left unattended beyond a set window — straight from the store's own cameras.",
+      ar: "تنبيه فوري عندما تبقى محطة الكاشير شاغرة أكثر من المدة المحددة — مباشرة من كاميرات المتجر نفسها.",
+    },
+    alt: {
+      en: "Live camera view of an empty cashier station with an automatic 'work area vacant' alert",
+      ar: "لقطة مباشرة لمحطة كاشير شاغرة مع تنبيه آلي بأن منطقة العمل خالية",
+    },
+  },
+  {
+    id: "phone-detection",
+    image: "/work/panda-phone-detection.webp",
+    width: 1319,
+    height: 1045,
+    title: { en: "Staff Phone-Use Detection", ar: "كشف استخدام الجوال أثناء العمل" },
+    body: {
+      en: "A vision model spots phone use on duty and logs each case with visual evidence and a plain-language description.",
+      ar: "نموذج رؤية يرصد استخدام الجوال أثناء الدوام ويسجل كل حالة بدليل مرئي ووصف واضح.",
+    },
+    alt: {
+      en: "AI detection view flagging phone use at a control-room desk with a confidence score and description",
+      ar: "شاشة كشف بالذكاء الاصطناعي ترصد استخدام الجوال في غرفة التحكم مع درجة الثقة والوصف",
+    },
+  },
+];

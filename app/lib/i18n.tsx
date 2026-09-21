@@ -358,6 +358,12 @@ export const dict = {
       featuredIntro:
         "Real products we designed, engineered, and shipped with our clients.",
       builtFor: "Built for",
+      devTitle: "Development",
+      devIntro:
+        "Web and mobile products we engineered end to end — front-end, back-end, and everything between.",
+      aiTitle: "AI & Integration",
+      aiIntro:
+        "Computer-vision use cases and AI agents we build and integrate into our clients' operations — including chat and voice bots that answer from live business data.",
       libraryTitle: "Our Work Library",
       libraryIntro:
         "Browse the library by category — every piece shown here is our own work.",
@@ -763,6 +769,12 @@ export const dict = {
       featuredTitle: "أعمال مختارة",
       featuredIntro: "منتجات حقيقية صممناها وبنيناها وأطلقناها مع عملائنا.",
       builtFor: "بنيناه لـ",
+      devTitle: "التطوير",
+      devIntro:
+        "منتجات ويب وجوال بنيناها من البداية إلى النهاية — واجهات أمامية وأنظمة خلفية وكل ما بينهما.",
+      aiTitle: "الذكاء الاصطناعي والتكامل",
+      aiIntro:
+        "حالات استخدام لرؤية الحاسب ووكلاء ذكاء اصطناعي نبنيها وندمجها في عمليات عملائنا — ومنها بوتات محادثة وصوت تجيب من بيانات العمل مباشرة.",
       libraryTitle: "مكتبة أعمالنا",
       libraryIntro:
         "تصفح المكتبة حسب الفئة — كل ما يُعرض هنا من أعمالنا الخاصة.",
