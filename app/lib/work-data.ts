@@ -48,9 +48,9 @@ export const workItems: WorkItem[] = [
   },
   {
     id: "mallah-delivery-app",
-    src: "/work/mallah-app.webp",
+    src: "/work/mallah-app-v2.webp",
     width: 790,
-    height: 1668,
+    height: 1618,
     category: "technology",
     title: {
       en: "Mallah — Food Delivery & Price Comparison App",
@@ -200,7 +200,7 @@ export const featuredProjects: FeaturedProject[] = [
       { en: "Back-end", ar: "أنظمة خلفية" },
       { en: "UI/UX", ar: "تصميم تجربة وواجهات" },
     ],
-    image: "/work/mallah-app.webp",
+    image: "/work/mallah-app-v2.webp",
     imageAlt: {
       en: "Mallah mobile app home screen with restaurants, price comparison, and delivery deals",
       ar: "الشاشة الرئيسية لتطبيق ملاح تعرض المطاعم ومقارنة الأسعار وعروض التوصيل",

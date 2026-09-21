@@ -64,7 +64,7 @@ export default function OurWorkContent() {
   const projectItems: ViewerItem[] = featuredProjects.map((p) => ({
     src: p.image,
     width: p.kind === "web" ? 2000 : 790,
-    height: p.kind === "web" ? 1038 : 1668,
+    height: p.kind === "web" ? 1038 : 1618,
     alt: p.imageAlt[lang],
     title: p.title[lang],
     label: `${ow.builtFor} ${p.client[lang]}`,
@@ -205,7 +205,7 @@ export default function OurWorkContent() {
                           src={proj.image}
                           alt={proj.imageAlt[lang]}
                           width={790}
-                          height={1668}
+                          height={1618}
                           sizes="224px"
                           className="h-auto w-full"
                         />
