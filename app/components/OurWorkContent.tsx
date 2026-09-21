@@ -71,7 +71,7 @@ export default function OurWorkContent() {
   }));
 
   const aiItems: ViewerItem[] = aiUseCases.map((uc) => ({
-    src: uc.image,
+    src: lang === "ar" && uc.imageAr ? uc.imageAr : uc.image,
     width: uc.width,
     height: uc.height,
     alt: uc.alt[lang],
@@ -261,7 +261,7 @@ export default function OurWorkContent() {
                   className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   <Image
-                    src={uc.image}
+                    src={lang === "ar" && uc.imageAr ? uc.imageAr : uc.image}
                     alt={uc.alt[lang]}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"

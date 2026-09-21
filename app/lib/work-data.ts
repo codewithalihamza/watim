@@ -212,6 +212,8 @@ export const featuredProjects: FeaturedProject[] = [
 export type AiUseCase = {
   id: string;
   image: string;
+  /** optional Arabic-mode variant of the image (e.g. RTL screenshots) */
+  imageAr?: string;
   width: number;
   height: number;
   title: { en: string; ar: string };
@@ -223,9 +225,10 @@ export type AiUseCase = {
 export const aiUseCases: AiUseCase[] = [
   {
     id: "ai-supervisor",
-    image: "/work/panda-ai-chat.png",
-    width: 1008,
-    height: 767,
+    image: "/work/panda-ai-chat-en.webp",
+    imageAr: "/work/panda-ai-chat-ar.webp",
+    width: 1762,
+    height: 1265,
     title: { en: "Panda AI Supervisor", ar: "مشرف بنده الذكي" },
     body: {
       en: "An Arabic AI assistant the store team can ask anything — it answers from the live database with real numbers and photo evidence.",
@@ -238,9 +241,9 @@ export const aiUseCases: AiUseCase[] = [
   },
   {
     id: "cashier-absence",
-    image: "/work/panda-cashier-absence.webp",
-    width: 1201,
-    height: 859,
+    image: "/work/panda-cashier-absence-v2.webp",
+    width: 1809,
+    height: 1023,
     title: { en: "Cashier Absence Detection", ar: "كشف غياب الكاشير" },
     body: {
       en: "Alerts the moment a cashier station is left unattended beyond a set window — straight from the store's own cameras.",
@@ -253,9 +256,9 @@ export const aiUseCases: AiUseCase[] = [
   },
   {
     id: "phone-detection",
-    image: "/work/panda-phone-detection.webp",
-    width: 1319,
-    height: 1045,
+    image: "/work/panda-phone-detection-v2.webp",
+    width: 1707,
+    height: 1339,
     title: { en: "Staff Phone-Use Detection", ar: "كشف استخدام الجوال أثناء العمل" },
     body: {
       en: "A vision model spots phone use on duty and logs each case with visual evidence and a plain-language description.",
