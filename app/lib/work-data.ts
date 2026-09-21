@@ -7,6 +7,7 @@
 */
 
 export type WorkCategory =
+  | "technology"
   | "campaigns"
   | "branding"
   | "social"
@@ -29,6 +30,47 @@ export type WorkItem = {
 };
 
 export const workItems: WorkItem[] = [
+  /*
+    ── Panda & Mallah tech projects ─────────────────────────────────────
+    ACTIVATION: save the two screenshots into public/work/ as
+      panda-dashboard.png   (the Panda Retail Intelligence dashboard)
+      mallah-app.png        (the Mallah food-delivery app home screen)
+    then uncomment the two entries below. Sizes are read from the files —
+    update width/height if the saved images differ.
+
+  {
+    id: "panda-retail-intelligence",
+    src: "/work/panda-dashboard.png",
+    width: 2000,
+    height: 1038,
+    category: "technology",
+    title: {
+      en: "Panda Retail Intelligence — AI Store Analytics",
+      ar: "بنده لتحليلات المتاجر — ذكاء اصطناعي ورؤية حاسب",
+    },
+    alt: {
+      en: "Panda Retail Intelligence dashboard showing live store visitors, queue analytics, and AI-detected events",
+      ar: "لوحة تحكم بنده لتحليلات المتاجر تعرض الزوار المباشرين وتحليلات الطوابير والأحداث المكتشفة بالذكاء الاصطناعي",
+    },
+    featured: true,
+  },
+  {
+    id: "mallah-delivery-app",
+    src: "/work/mallah-app.png",
+    width: 720,
+    height: 1600,
+    category: "technology",
+    title: {
+      en: "Mallah — Food Delivery & Price Comparison App",
+      ar: "ملاح — تطبيق توصيل الطعام ومقارنة الأسعار",
+    },
+    alt: {
+      en: "Mallah mobile app home screen with restaurant listings, price comparison, and delivery deals",
+      ar: "الشاشة الرئيسية لتطبيق ملاح تعرض المطاعم ومقارنة الأسعار وعروض التوصيل",
+    },
+    featured: true,
+  },
+  ─────────────────────────────────────────────────────────────────────── */
   {
     id: "camel-embrace",
     src: "/portfolio/camel-embrace.jpg",

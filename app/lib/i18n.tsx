@@ -40,6 +40,7 @@ export const dict = {
         "Media",
         "Websites",
         "Applications",
+        "AI & Computer Vision",
         "Growth",
       ],
       tail: "One partner, one vision, one measurable standard.",
@@ -81,11 +82,19 @@ export const dict = {
         },
         {
           title: "Website Development",
-          body: "Fast, secure, refined websites engineered to perform. Corporate platforms, e-commerce, and campaign pages — mobile-first and optimized for search.",
+          body: "Fast, secure, refined websites engineered end to end — front-end and back-end. Corporate platforms, e-commerce, ERP and internal systems, and campaign pages — mobile-first and optimized for search.",
         },
         {
           title: "Application Development",
-          body: "Mobile applications for iOS and Android, designed around the people who will use them. From concept through launch, we own every detail in between.",
+          body: "Mobile applications for iOS and Android, designed around the people who will use them. From concept through launch, we own the design and the full-stack engineering — every detail in between.",
+        },
+        {
+          title: "AI & Computer Vision",
+          body: "Camera-based retail intelligence and analytics — people counting, queue monitoring, shelf and staff insights. We turn live video into decisions with models our own engineers build and deploy.",
+        },
+        {
+          title: "AI Agents & Automation",
+          body: "Voice agents, customer-support agents, and AI assistants that answer from your own business data — automating routine work in Arabic and English alike.",
         },
         {
           title: "SEO & Digital Growth",
@@ -358,6 +367,7 @@ export const dict = {
       ctaBtn: "Start a Project",
       filters: {
         all: "All",
+        technology: "Technology",
         campaigns: "Campaigns",
         branding: "Branding",
         social: "Social Media",
@@ -404,6 +414,7 @@ export const dict = {
         "المحتوى الإبداعي",
         "بنـاء وتطوير المواقع الإلكترونية التفاعـلية",
         "بناء وتطوير التطبيقات",
+        "الذكاء الاصطناعي ورؤية الحاسب",
         "الحملات الإعـلانية",
       ],
       tail: "شريك واحد، رؤية واحدة، معيار واحد قابل للقياس",
@@ -450,13 +461,25 @@ export const dict = {
         {
           title: "تطوير المواقع الإلكترونية",
 
-          body: "مواقع سريعة وآمنة وتفاعلية مصممة للأداء. منصات المؤسسات والتجارة الإلكترونية وصفحات الهبوط للحملات — مبنية بالهاتف أولاً، محسّنة للبحث، وجاهزة لتمثيلك بأعلى معيار وجودة.",
+          body: "مواقع سريعة وآمنة وتفاعلية مصممة للأداء، نبنيها من الطرفين — الواجهات الأمامية والأنظمة الخلفية. منصات المؤسسات والتجارة الإلكترونية وأنظمة ERP الداخلية وصفحات الحملات — مبنية للجوال أولًا ومحسّنة للبحث.",
         },
 
         {
           title: "تطوير التطبيقات",
 
           body: "تطبيقات الهاتف الذكي لـ iOS و Android مصممة حول الأشخاص الذين سيستخدمونها، من المفهوم إلى الإطلاق وما بعده، نمتلك التصميم والهندسة وكل تفصيل بينهما.",
+        },
+
+        {
+          title: "الذكاء الاصطناعي ورؤية الحاسب",
+
+          body: "تحليلات ذكية للمتاجر عبر الكاميرات — عدّ الزوار، ومراقبة الطوابير، ومتابعة الأرفف والموظفين. نحوّل البث المباشر إلى قرارات بنماذج يبنيها وينشرها مهندسونا.",
+        },
+
+        {
+          title: "وكلاء الذكاء الاصطناعي والأتمتة",
+
+          body: "وكلاء صوتيون ووكلاء لخدمة العملاء ومساعدون أذكياء يجيبون من بيانات منشأتك — يؤتمتون الأعمال المتكررة بالعربية والإنجليزية.",
         },
 
         {
@@ -747,6 +770,7 @@ export const dict = {
       ctaBtn: "ابدأ مشروعك",
       filters: {
         all: "الكل",
+        technology: "التقنية",
         campaigns: "حملات",
         branding: "هوية بصرية",
         social: "وسائل التواصل",
