@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import PageShell from "./PageShell";
 import Reveal from "./Reveal";
-import Tilt from "./Tilt";
 import { useLang } from "../lib/i18n";
 import {
   aiUseCases,
@@ -22,10 +21,23 @@ const activeCategories = Array.from(
   new Set(workItems.map((w) => w.category))
 ) as WorkCategory[];
 
+/* One image inside the full-screen viewer, whichever section it came from. */
+type ViewerItem = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+  title: string;
+  label: string;
+};
+
 export default function OurWorkContent() {
   const { t, lang } = useLang();
   const [filter, setFilter] = useState<Filter>("all");
-  const [lightbox, setLightbox] = useState<number | null>(null); // index into `visible`
+  const [viewer, setViewer] = useState<{
+    items: ViewerItem[];
+    i: number;
+  } | null>(null);
   const [slide, setSlide] = useState(0);
 
   const visible = useMemo(
@@ -36,20 +48,53 @@ export default function OurWorkContent() {
     [filter]
   );
 
-  const closeLightbox = useCallback(() => setLightbox(null), []);
+  const ow = t.ourWork;
+
+  /* Every section opens the same viewer; prev/next cycles within the
+     section the image was opened from. */
+  const libraryItems: ViewerItem[] = visible.map((w) => ({
+    src: w.src,
+    width: w.width,
+    height: w.height,
+    alt: w.alt[lang],
+    title: w.title[lang],
+    label: ow.filters[w.category],
+  }));
+
+  const projectItems: ViewerItem[] = featuredProjects.map((p) => ({
+    src: p.image,
+    width: p.kind === "web" ? 2000 : 790,
+    height: p.kind === "web" ? 1038 : 1668,
+    alt: p.imageAlt[lang],
+    title: p.title[lang],
+    label: `${ow.builtFor} ${p.client[lang]}`,
+  }));
+
+  const aiItems: ViewerItem[] = aiUseCases.map((uc) => ({
+    src: uc.image,
+    width: uc.width,
+    height: uc.height,
+    alt: uc.alt[lang],
+    title: uc.title[lang],
+    label: ow.aiTitle,
+  }));
+
+  const closeViewer = useCallback(() => setViewer(null), []);
   const step = useCallback(
     (dir: 1 | -1) =>
-      setLightbox((i) =>
-        i === null ? null : (i + dir + visible.length) % visible.length
+      setViewer((v) =>
+        v === null
+          ? null
+          : { ...v, i: (v.i + dir + v.items.length) % v.items.length }
       ),
-    [visible.length]
+    []
   );
 
-  // Lightbox keyboard support: Esc closes, arrows navigate.
+  // Viewer keyboard support: Esc closes, arrows navigate.
   useEffect(() => {
-    if (lightbox === null) return;
+    if (viewer === null) return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") closeLightbox();
+      if (e.key === "Escape") closeViewer();
       if (e.key === "ArrowRight") step(1);
       if (e.key === "ArrowLeft") step(-1);
     };
@@ -59,13 +104,14 @@ export default function OurWorkContent() {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [lightbox, closeLightbox, step]);
+  }, [viewer, closeViewer, step]);
 
-  const ow = t.ourWork;
   const filters: { key: Filter; label: string }[] = [
     { key: "all", label: ow.filters.all },
     ...activeCategories.map((c) => ({ key: c as Filter, label: ow.filters[c] })),
   ];
+
+  const current = viewer === null ? null : viewer.items[viewer.i];
 
   return (
     <PageShell>
@@ -111,7 +157,7 @@ export default function OurWorkContent() {
         </div>
       </section>
 
-      {/* ---- Featured work ---- */}
+      {/* ---- Development ---- */}
       <section aria-labelledby="ow-featured" className="mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <Reveal className="mb-10 max-w-2xl">
           <h2 id="ow-featured" className="display text-3xl font-bold text-ink sm:text-4xl">
@@ -127,37 +173,45 @@ export default function OurWorkContent() {
                   i % 2 === 1 ? "lg:flex-row-reverse" : ""
                 }`}
               >
-                {/* media panel */}
+                {/* media panel — click opens the full-screen viewer */}
                 <div className="relative flex items-center justify-center bg-[radial-gradient(80%_80%_at_50%_20%,rgba(74,160,169,0.25),transparent_75%)] p-6 sm:p-10 lg:w-3/5">
-                  {proj.kind === "web" ? (
-                    <div className="w-full overflow-hidden rounded-xl border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
-                      {/* browser chrome */}
-                      <div className="flex items-center gap-1.5 bg-[#0b2735] px-4 py-2.5">
-                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                      </div>
-                      <Image
-                        src={proj.image}
-                        alt={proj.imageAlt[lang]}
-                        width={2000}
-                        height={1038}
-                        sizes="(max-width: 1024px) 100vw, 60vw"
-                        className="h-auto w-full"
-                      />
-                    </div>
-                  ) : (
-                    <div className="w-48 overflow-hidden rounded-[1.75rem] border-4 border-[#0b2735] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] sm:w-56">
-                      <Image
-                        src={proj.image}
-                        alt={proj.imageAlt[lang]}
-                        width={720}
-                        height={1600}
-                        sizes="224px"
-                        className="h-auto w-full"
-                      />
-                    </div>
-                  )}
+                  <button
+                    onClick={() => setViewer({ items: projectItems, i })}
+                    aria-label={proj.title[lang]}
+                    className={`group cursor-zoom-in transition-transform duration-500 hover:scale-[1.02] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
+                      proj.kind === "web" ? "w-full" : ""
+                    }`}
+                  >
+                    {proj.kind === "web" ? (
+                      <span className="block w-full overflow-hidden rounded-xl border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+                        {/* browser chrome */}
+                        <span className="flex items-center gap-1.5 bg-[#0b2735] px-4 py-2.5">
+                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                        </span>
+                        <Image
+                          src={proj.image}
+                          alt={proj.imageAlt[lang]}
+                          width={2000}
+                          height={1038}
+                          sizes="(max-width: 1024px) 100vw, 60vw"
+                          className="h-auto w-full"
+                        />
+                      </span>
+                    ) : (
+                      <span className="block w-48 overflow-hidden rounded-[1.75rem] border-4 border-[#0b2735] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] sm:w-56">
+                        <Image
+                          src={proj.image}
+                          alt={proj.imageAlt[lang]}
+                          width={790}
+                          height={1668}
+                          sizes="224px"
+                          className="h-auto w-full"
+                        />
+                      </span>
+                    )}
+                  </button>
                 </div>
 
                 {/* copy panel */}
@@ -201,7 +255,11 @@ export default function OurWorkContent() {
           {aiUseCases.map((uc, i) => (
             <Reveal key={uc.id} delay={((i % 3) + 1) as 1 | 2 | 3}>
               <article className="group h-full overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-colors hover:border-brand-teal/50">
-                <div className="relative aspect-[4/3] overflow-hidden bg-white/5">
+                <button
+                  onClick={() => setViewer({ items: aiItems, i })}
+                  aria-label={uc.title[lang]}
+                  className="relative block aspect-[4/3] w-full cursor-zoom-in overflow-hidden bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                >
                   <Image
                     src={uc.image}
                     alt={uc.alt[lang]}
@@ -209,7 +267,7 @@ export default function OurWorkContent() {
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
                   />
-                </div>
+                </button>
                 <div className="p-6">
                   <h3 className="display text-lg font-bold text-white">
                     {uc.title[lang]}
@@ -241,7 +299,7 @@ export default function OurWorkContent() {
                 key={f.key}
                 onClick={() => {
                   setFilter(f.key);
-                  setLightbox(null);
+                  setViewer(null);
                 }}
                 aria-pressed={filter === f.key}
                 className={`rounded-full px-5 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
@@ -264,9 +322,9 @@ export default function OurWorkContent() {
             {visible.map((w, i) => (
               <button
                 key={w.id}
-                onClick={() => setLightbox(i)}
+                onClick={() => setViewer({ items: libraryItems, i })}
                 aria-label={w.title[lang]}
-                className="group block w-full overflow-hidden rounded-2xl border border-white/10 transition-shadow hover:shadow-[0_20px_50px_-15px_rgba(47,152,148,0.6)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                className="group block w-full cursor-zoom-in overflow-hidden rounded-2xl border border-white/10 transition-shadow hover:shadow-[0_20px_50px_-15px_rgba(47,152,148,0.6)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 <span
                   className={`relative block ${
@@ -274,7 +332,7 @@ export default function OurWorkContent() {
                   }`}
                 >
                   {/* very tall shots (phone screens) show a tidy top crop in
-                      the grid; the lightbox still opens the full image */}
+                      the grid; the viewer still opens the full image */}
                   <Image
                     src={w.src}
                     alt={w.alt[lang]}
@@ -392,64 +450,65 @@ export default function OurWorkContent() {
         </Reveal>
       </section>
 
-      {/* ---- Lightbox ---- */}
-      {lightbox !== null && visible[lightbox] && (
+      {/* ---- Full-screen viewer (shared by all sections) ---- */}
+      {current && viewer && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={visible[lightbox].title[lang]}
+          aria-label={current.title}
           className="fixed inset-0 z-[60] flex items-center justify-center bg-[#06222c]/95 p-4 backdrop-blur-sm"
-          onClick={closeLightbox}
+          onClick={closeViewer}
         >
           <button
-            onClick={closeLightbox}
+            onClick={closeViewer}
             aria-label={ow.lightbox.close}
             className="absolute end-4 top-4 z-10 flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-2xl text-white transition-colors hover:border-accent hover:text-accent"
           >
             ×
           </button>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              step(-1);
-            }}
-            aria-label={ow.lightbox.prev}
-            className="absolute start-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-accent hover:text-accent sm:start-6"
-          >
-            <span aria-hidden className="rtl:rotate-180">←</span>
-          </button>
-          <figure
-            className="max-h-full"
-            onClick={(e) => e.stopPropagation()}
-          >
+          {viewer.items.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                step(-1);
+              }}
+              aria-label={ow.lightbox.prev}
+              className="absolute start-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-accent hover:text-accent sm:start-6"
+            >
+              <span aria-hidden className="rtl:rotate-180">←</span>
+            </button>
+          )}
+          <figure className="max-h-full" onClick={(e) => e.stopPropagation()}>
             <Image
-              src={visible[lightbox].src}
-              alt={visible[lightbox].alt[lang]}
-              width={visible[lightbox].width}
-              height={visible[lightbox].height}
+              src={current.src}
+              alt={current.alt}
+              width={current.width}
+              height={current.height}
               sizes="90vw"
               quality={95}
               className="max-h-[80svh] w-auto rounded-2xl object-contain"
             />
             <figcaption className="mt-3 text-center">
               <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                {ow.filters[visible[lightbox].category]}
+                {current.label}
               </span>
               <p className="mt-1 text-sm font-semibold text-white">
-                {visible[lightbox].title[lang]}
+                {current.title}
               </p>
             </figcaption>
           </figure>
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              step(1);
-            }}
-            aria-label={ow.lightbox.next}
-            className="absolute end-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-accent hover:text-accent sm:end-6"
-          >
-            <span aria-hidden className="rtl:rotate-180">→</span>
-          </button>
+          {viewer.items.length > 1 && (
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                step(1);
+              }}
+              aria-label={ow.lightbox.next}
+              className="absolute end-2 top-1/2 z-10 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 text-white transition-colors hover:border-accent hover:text-accent sm:end-6"
+            >
+              <span aria-hidden className="rtl:rotate-180">→</span>
+            </button>
+          )}
         </div>
       )}
     </PageShell>

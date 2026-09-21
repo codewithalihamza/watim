@@ -49,8 +49,8 @@ export const workItems: WorkItem[] = [
   {
     id: "mallah-delivery-app",
     src: "/work/mallah-app.webp",
-    width: 720,
-    height: 1600,
+    width: 790,
+    height: 1668,
     category: "technology",
     title: {
       en: "Mallah — Food Delivery & Price Comparison App",
