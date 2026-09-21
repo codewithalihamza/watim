@@ -63,6 +63,36 @@ export const workItems: WorkItem[] = [
     featured: true,
   },
   {
+    id: "thetie-bridge-lib",
+    src: "/work/thetie-bridge.webp",
+    width: 2000,
+    height: 1078,
+    category: "technology",
+    title: {
+      en: "The Tie Bridge — Institutional Messenger",
+      ar: "بريدج من The Tie — تطبيق المراسلة المؤسسي",
+    },
+    alt: {
+      en: "The Tie Bridge web messenger showing a team inbox, group chats, and message requests",
+      ar: "تطبيق بريدج من The Tie يعرض صندوق وارد للفريق ومحادثات جماعية وطلبات مراسلة",
+    },
+  },
+  {
+    id: "thetie-terminal-lib",
+    src: "/work/thetie-terminal.webp",
+    width: 2000,
+    height: 999,
+    category: "technology",
+    title: {
+      en: "The Tie Terminal — Market Intelligence",
+      ar: "تيرمينال The Tie — ذكاء الأسواق",
+    },
+    alt: {
+      en: "The Tie Terminal dashboard with crypto ETF KPIs, flows, news, and an AI digest",
+      ar: "لوحة تيرمينال The Tie بمؤشرات وتدفقات صناديق ETF والأخبار وملخص ذكي",
+    },
+  },
+  {
     id: "camel-embrace",
     src: "/portfolio/camel-embrace.jpg",
     width: 1280,
@@ -154,6 +184,8 @@ export type FeaturedProject = {
   /** discipline chips */
   tags: { en: string; ar: string }[];
   image: string;
+  width: number;
+  height: number;
   imageAlt: { en: string; ar: string };
   /** controls the device framing of the screenshot */
   kind: "web" | "mobile";
@@ -169,8 +201,8 @@ export const featuredProjects: FeaturedProject[] = [
       ar: "منصة ذكاء المتاجر",
     },
     description: {
-      en: "An AI platform built for Panda stores that turns existing store cameras into live insight — visitor counting, queue monitoring, shelf and staff analytics, and an AI supervisor the team can question in plain Arabic.",
-      ar: "منصة ذكاء اصطناعي بُنيت لمتاجر بنده تحوّل كاميرات المتجر الحالية إلى رؤى مباشرة — عدّ الزوار، ومراقبة الطوابير، وتحليلات الأرفف والموظفين، مع مشرف ذكي يجيب فريق العمل بالعربية.",
+      en: "An AI platform that turns Panda\u2019s store cameras into live insight — visitor counts, queue monitoring, shelf analytics, and an Arabic AI supervisor.",
+      ar: "منصة ذكاء اصطناعي تحوّل كاميرات متاجر بنده إلى رؤى مباشرة — عدّ الزوار ومراقبة الطوابير وتحليلات الأرفف، مع مشرف ذكي بالعربية.",
     },
     tags: [
       { en: "AI & Computer Vision", ar: "ذكاء اصطناعي ورؤية حاسب" },
@@ -178,6 +210,8 @@ export const featuredProjects: FeaturedProject[] = [
       { en: "Data & Analytics", ar: "بيانات وتحليلات" },
     ],
     image: "/work/panda-dashboard.webp",
+    width: 2000,
+    height: 1038,
     imageAlt: {
       en: "Panda Retail Intelligence dashboard with live visitors, queue analytics, and AI-detected events",
       ar: "لوحة تحكم ذكاء المتاجر لبنده تعرض الزوار المباشرين وتحليلات الطوابير والأحداث المكتشفة",
@@ -192,8 +226,8 @@ export const featuredProjects: FeaturedProject[] = [
       ar: "تطبيق توصيل الطعام ومقارنة الأسعار",
     },
     description: {
-      en: "A delivery app built end to end for Mallah — customers browse restaurants, compare delivery prices across providers, and order in a few taps, backed by a full admin platform.",
-      ar: "تطبيق توصيل بُني بالكامل لملاح — يتصفح العملاء المطاعم ويقارنون أسعار التوصيل بين المزودين ويطلبون بلمسات قليلة، مدعومًا بمنصة إدارة متكاملة.",
+      en: "A food-delivery and price-comparison app built end to end — browse restaurants, compare delivery prices across providers, and order in a few taps.",
+      ar: "تطبيق توصيل ومقارنة أسعار بُني بالكامل — تصفّح المطاعم وقارن أسعار التوصيل واطلب بلمسات قليلة.",
     },
     tags: [
       { en: "Mobile App", ar: "تطبيق جوال" },
@@ -201,11 +235,63 @@ export const featuredProjects: FeaturedProject[] = [
       { en: "UI/UX", ar: "تصميم تجربة وواجهات" },
     ],
     image: "/work/mallah-app-v2.webp",
+    width: 790,
+    height: 1618,
     imageAlt: {
       en: "Mallah mobile app home screen with restaurants, price comparison, and delivery deals",
       ar: "الشاشة الرئيسية لتطبيق ملاح تعرض المطاعم ومقارنة الأسعار وعروض التوصيل",
     },
     kind: "mobile",
+  },
+  {
+    id: "thetie-bridge",
+    client: { en: "The Tie", ar: "The Tie" },
+    title: {
+      en: "Bridge — Institutional Crypto Messenger",
+      ar: "بريدج — تطبيق مراسلة لمؤسسات العملات الرقمية",
+    },
+    description: {
+      en: "A secure messenger for the digital-asset industry on web, Android, and iOS — team inboxes, group chats, and broadcasts with institutional compliance.",
+      ar: "تطبيق مراسلة آمن لقطاع الأصول الرقمية على الويب وAndroid وiOS — محادثات فرق وبث جماعي بمعايير التزام مؤسسية.",
+    },
+    tags: [
+      { en: "Web Platform", ar: "منصة ويب" },
+      { en: "iOS & Android", ar: "iOS وAndroid" },
+      { en: "Real-time Messaging", ar: "مراسلة لحظية" },
+    ],
+    image: "/work/thetie-bridge.webp",
+    width: 2000,
+    height: 1078,
+    imageAlt: {
+      en: "The Tie Bridge web messenger showing a team inbox, group chats, and message requests",
+      ar: "تطبيق بريدج من The Tie على الويب يعرض صندوق وارد للفريق ومحادثات جماعية وطلبات مراسلة",
+    },
+    kind: "web",
+  },
+  {
+    id: "thetie-terminal",
+    client: { en: "The Tie", ar: "The Tie" },
+    title: {
+      en: "The Tie Terminal — Crypto Market Intelligence",
+      ar: "تيرمينال The Tie — ذكاء أسواق العملات الرقمية",
+    },
+    description: {
+      en: "An institutional crypto-intelligence dashboard — real-time ETF flows and KPIs, curated news, and AI-generated market digests.",
+      ar: "لوحة ذكاء مؤسسية لأسواق العملات الرقمية — تدفقات ومؤشرات ETF لحظية وأخبار منسقة وملخصات مولّدة بالذكاء الاصطناعي.",
+    },
+    tags: [
+      { en: "Web Platform", ar: "منصة ويب" },
+      { en: "Data & Analytics", ar: "بيانات وتحليلات" },
+      { en: "AI Integration", ar: "تكامل ذكاء اصطناعي" },
+    ],
+    image: "/work/thetie-terminal.webp",
+    width: 2000,
+    height: 999,
+    imageAlt: {
+      en: "The Tie Terminal dashboard with crypto ETF KPIs, flows, news, and an AI narrative digest",
+      ar: "لوحة تيرمينال The Tie تعرض مؤشرات وتدفقات صناديق ETF والأخبار وملخصًا سرديًا بالذكاء الاصطناعي",
+    },
+    kind: "web",
   },
 ];
 

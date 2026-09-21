@@ -63,8 +63,8 @@ export default function OurWorkContent() {
 
   const projectItems: ViewerItem[] = featuredProjects.map((p) => ({
     src: p.image,
-    width: p.kind === "web" ? 2000 : 790,
-    height: p.kind === "web" ? 1038 : 1618,
+    width: p.width,
+    height: p.height,
     alt: p.imageAlt[lang],
     title: p.title[lang],
     label: `${ow.builtFor} ${p.client[lang]}`,
@@ -165,16 +165,12 @@ export default function OurWorkContent() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted">{ow.devIntro}</p>
         </Reveal>
-        <div className="space-y-10 lg:space-y-14">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {featuredProjects.map((proj, i) => (
             <Reveal key={proj.id} delay={((i % 2) + 1) as 1 | 2}>
-              <article
-                className={`flex flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm lg:flex-row ${
-                  i % 2 === 1 ? "lg:flex-row-reverse" : ""
-                }`}
-              >
-                {/* media panel — click opens the full-screen viewer */}
-                <div className="relative flex items-center justify-center bg-[radial-gradient(80%_80%_at_50%_20%,rgba(74,160,169,0.25),transparent_75%)] p-6 sm:p-10 lg:w-3/5">
+              <article className="flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] backdrop-blur-sm transition-colors hover:border-brand-teal/50">
+                {/* media — click opens the full-screen viewer */}
+                <div className="flex items-center justify-center bg-[radial-gradient(80%_80%_at_50%_20%,rgba(74,160,169,0.22),transparent_75%)] p-5 sm:p-7">
                   <button
                     onClick={() => setViewer({ items: projectItems, i })}
                     aria-label={proj.title[lang]}
@@ -183,30 +179,30 @@ export default function OurWorkContent() {
                     }`}
                   >
                     {proj.kind === "web" ? (
-                      <span className="block w-full overflow-hidden rounded-xl border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+                      <span className="block w-full overflow-hidden rounded-xl border border-white/15 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)]">
                         {/* browser chrome */}
-                        <span className="flex items-center gap-1.5 bg-[#0b2735] px-4 py-2.5">
-                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
-                          <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                        <span className="flex items-center gap-1.5 bg-[#0b2735] px-3 py-2">
+                          <span className="h-2 w-2 rounded-full bg-white/20" />
+                          <span className="h-2 w-2 rounded-full bg-white/20" />
+                          <span className="h-2 w-2 rounded-full bg-white/20" />
                         </span>
                         <Image
                           src={proj.image}
                           alt={proj.imageAlt[lang]}
-                          width={2000}
-                          height={1038}
-                          sizes="(max-width: 1024px) 100vw, 60vw"
+                          width={proj.width}
+                          height={proj.height}
+                          sizes="(max-width: 1024px) 100vw, 50vw"
                           className="h-auto w-full"
                         />
                       </span>
                     ) : (
-                      <span className="block w-48 overflow-hidden rounded-[1.75rem] border-4 border-[#0b2735] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] sm:w-56">
+                      <span className="block w-36 overflow-hidden rounded-[1.5rem] border-4 border-[#0b2735] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.6)] sm:w-40">
                         <Image
                           src={proj.image}
                           alt={proj.imageAlt[lang]}
-                          width={790}
-                          height={1618}
-                          sizes="224px"
+                          width={proj.width}
+                          height={proj.height}
+                          sizes="160px"
                           className="h-auto w-full"
                         />
                       </span>
@@ -214,23 +210,23 @@ export default function OurWorkContent() {
                   </button>
                 </div>
 
-                {/* copy panel */}
-                <div className="flex flex-col justify-center p-7 sm:p-10 lg:w-2/5">
-                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+                {/* copy */}
+                <div className="flex flex-1 flex-col p-6 sm:p-7">
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
                     {ow.builtFor}{" "}
                     <span className="text-ink">{proj.client[lang]}</span>
                   </p>
-                  <h3 className="display mt-3 text-2xl font-bold text-white sm:text-3xl">
+                  <h3 className="display mt-2 text-xl font-bold text-white sm:text-2xl">
                     {proj.title[lang]}
                   </h3>
-                  <p className="mt-4 leading-relaxed text-muted">
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
                     {proj.description[lang]}
                   </p>
-                  <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-auto flex flex-wrap gap-2 pt-5">
                     {proj.tags.map((tag) => (
                       <span
                         key={tag.en}
-                        className="rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3.5 py-1.5 text-xs font-medium text-accent"
+                        className="rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3 py-1 text-xs font-medium text-accent"
                       >
                         {tag[lang]}
                       </span>
