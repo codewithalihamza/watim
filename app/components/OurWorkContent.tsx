@@ -8,6 +8,7 @@ import Reveal from "./Reveal";
 import Tilt from "./Tilt";
 import { useLang } from "../lib/i18n";
 import {
+  featuredProjects,
   testimonials,
   workItems,
   type WorkCategory,
@@ -33,8 +34,6 @@ export default function OurWorkContent() {
         : workItems.filter((w) => w.category === filter),
     [filter]
   );
-
-  const featured = workItems.filter((w) => w.featured).slice(0, 3);
 
   const closeLightbox = useCallback(() => setLightbox(null), []);
   const step = useCallback(
@@ -119,32 +118,71 @@ export default function OurWorkContent() {
           </h2>
           <p className="mt-4 leading-relaxed text-muted">{ow.featuredIntro}</p>
         </Reveal>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3">
-          {featured.map((w, i) => (
-            <Reveal
-              key={w.id}
-              delay={((i % 3) + 1) as 1 | 2 | 3}
-              className={i === 0 ? "sm:col-span-2 sm:row-span-2 lg:col-span-2" : ""}
-            >
-              <Tilt
-                max={5}
-                className="group relative h-full min-h-[260px] overflow-hidden rounded-3xl border border-white/10"
+        <div className="space-y-10 lg:space-y-14">
+          {featuredProjects.map((proj, i) => (
+            <Reveal key={proj.id} delay={((i % 2) + 1) as 1 | 2}>
+              <article
+                className={`flex flex-col overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03] backdrop-blur-sm lg:flex-row ${
+                  i % 2 === 1 ? "lg:flex-row-reverse" : ""
+                }`}
               >
-                <Image
-                  src={w.src}
-                  alt={w.alt[lang]}
-                  fill
-                  sizes={i === 0 ? "(max-width: 640px) 100vw, 60vw" : "(max-width: 640px) 100vw, 30vw"}
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0b2735]/90 via-transparent to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 p-5">
-                  <span className="text-xs font-medium uppercase tracking-wider text-accent">
-                    {ow.filters[w.category]}
-                  </span>
-                  <p className="mt-1 font-semibold text-white">{w.title[lang]}</p>
+                {/* media panel */}
+                <div className="relative flex items-center justify-center bg-[radial-gradient(80%_80%_at_50%_20%,rgba(74,160,169,0.25),transparent_75%)] p-6 sm:p-10 lg:w-3/5">
+                  {proj.kind === "web" ? (
+                    <div className="w-full overflow-hidden rounded-xl border border-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)]">
+                      {/* browser chrome */}
+                      <div className="flex items-center gap-1.5 bg-[#0b2735] px-4 py-2.5">
+                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                        <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+                      </div>
+                      <Image
+                        src={proj.image}
+                        alt={proj.imageAlt[lang]}
+                        width={2000}
+                        height={1038}
+                        sizes="(max-width: 1024px) 100vw, 60vw"
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  ) : (
+                    <div className="w-48 overflow-hidden rounded-[1.75rem] border-4 border-[#0b2735] shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] sm:w-56">
+                      <Image
+                        src={proj.image}
+                        alt={proj.imageAlt[lang]}
+                        width={720}
+                        height={1600}
+                        sizes="224px"
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  )}
                 </div>
-              </Tilt>
+
+                {/* copy panel */}
+                <div className="flex flex-col justify-center p-7 sm:p-10 lg:w-2/5">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+                    {ow.builtFor}{" "}
+                    <span className="text-ink">{proj.client[lang]}</span>
+                  </p>
+                  <h3 className="display mt-3 text-2xl font-bold text-white sm:text-3xl">
+                    {proj.title[lang]}
+                  </h3>
+                  <p className="mt-4 leading-relaxed text-muted">
+                    {proj.description[lang]}
+                  </p>
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {proj.tags.map((tag) => (
+                      <span
+                        key={tag.en}
+                        className="rounded-full border border-brand-teal/40 bg-brand-teal/10 px-3.5 py-1.5 text-xs font-medium text-accent"
+                      >
+                        {tag[lang]}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </article>
             </Reveal>
           ))}
         </div>

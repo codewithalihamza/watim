@@ -144,3 +144,67 @@ export const testimonials: Testimonial[] = [
     company: { en: "Company", ar: "اسم الشركة" },
   },
 ];
+
+export type FeaturedProject = {
+  id: string;
+  /** client / brand name, shown as the headline credit */
+  client: { en: string; ar: string };
+  title: { en: string; ar: string };
+  description: { en: string; ar: string };
+  /** discipline chips */
+  tags: { en: string; ar: string }[];
+  image: string;
+  imageAlt: { en: string; ar: string };
+  /** controls the device framing of the screenshot */
+  kind: "web" | "mobile";
+};
+
+/* Featured client projects — shown as spotlight rows on /our-work. */
+export const featuredProjects: FeaturedProject[] = [
+  {
+    id: "panda",
+    client: { en: "Panda", ar: "بنده" },
+    title: {
+      en: "Retail Intelligence Platform",
+      ar: "منصة ذكاء المتاجر",
+    },
+    description: {
+      en: "An AI platform built for Panda stores that turns existing store cameras into live insight — visitor counting, queue monitoring, shelf and staff analytics, and an AI supervisor the team can question in plain Arabic.",
+      ar: "منصة ذكاء اصطناعي بُنيت لمتاجر بنده تحوّل كاميرات المتجر الحالية إلى رؤى مباشرة — عدّ الزوار، ومراقبة الطوابير، وتحليلات الأرفف والموظفين، مع مشرف ذكي يجيب فريق العمل بالعربية.",
+    },
+    tags: [
+      { en: "AI & Computer Vision", ar: "ذكاء اصطناعي ورؤية حاسب" },
+      { en: "Web Platform", ar: "منصة ويب" },
+      { en: "Data & Analytics", ar: "بيانات وتحليلات" },
+    ],
+    image: "/work/panda-dashboard.webp",
+    imageAlt: {
+      en: "Panda Retail Intelligence dashboard with live visitors, queue analytics, and AI-detected events",
+      ar: "لوحة تحكم ذكاء المتاجر لبنده تعرض الزوار المباشرين وتحليلات الطوابير والأحداث المكتشفة",
+    },
+    kind: "web",
+  },
+  {
+    id: "mallah",
+    client: { en: "Mallah", ar: "ملاح" },
+    title: {
+      en: "Food Delivery & Price Comparison App",
+      ar: "تطبيق توصيل الطعام ومقارنة الأسعار",
+    },
+    description: {
+      en: "A delivery app built end to end for Mallah — customers browse restaurants, compare delivery prices across providers, and order in a few taps, backed by a full admin platform.",
+      ar: "تطبيق توصيل بُني بالكامل لملاح — يتصفح العملاء المطاعم ويقارنون أسعار التوصيل بين المزودين ويطلبون بلمسات قليلة، مدعومًا بمنصة إدارة متكاملة.",
+    },
+    tags: [
+      { en: "Mobile App", ar: "تطبيق جوال" },
+      { en: "Back-end", ar: "أنظمة خلفية" },
+      { en: "UI/UX", ar: "تصميم تجربة وواجهات" },
+    ],
+    image: "/work/mallah-app.webp",
+    imageAlt: {
+      en: "Mallah mobile app home screen with restaurants, price comparison, and delivery deals",
+      ar: "الشاشة الرئيسية لتطبيق ملاح تعرض المطاعم ومقارنة الأسعار وعروض التوصيل",
+    },
+    kind: "mobile",
+  },
+];

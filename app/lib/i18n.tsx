@@ -356,7 +356,8 @@ export const dict = {
         "Six disciplines, one integrated team. Explore any of them in depth on the services page.",
       featuredTitle: "Featured Work",
       featuredIntro:
-        "A selection of recent work we are proud of.",
+        "Real products we designed, engineered, and shipped with our clients.",
+      builtFor: "Built for",
       libraryTitle: "Our Work Library",
       libraryIntro:
         "Browse the library by category — every piece shown here is our own work.",
@@ -760,7 +761,8 @@ export const dict = {
       whatWeDoIntro:
         "تخصصات متكاملة يقدمها فريق واحد. استكشف أيًا منها بالتفصيل في صفحة الخدمات.",
       featuredTitle: "أعمال مختارة",
-      featuredIntro: "مختارات من أحدث أعمالنا التي نفخر بها.",
+      featuredIntro: "منتجات حقيقية صممناها وبنيناها وأطلقناها مع عملائنا.",
+      builtFor: "بنيناه لـ",
       libraryTitle: "مكتبة أعمالنا",
       libraryIntro:
         "تصفح المكتبة حسب الفئة — كل ما يُعرض هنا من أعمالنا الخاصة.",
