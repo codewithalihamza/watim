@@ -30,17 +30,9 @@ export type WorkItem = {
 };
 
 export const workItems: WorkItem[] = [
-  /*
-    ── Panda & Mallah tech projects ─────────────────────────────────────
-    ACTIVATION: save the two screenshots into public/work/ as
-      panda-dashboard.png   (the Panda Retail Intelligence dashboard)
-      mallah-app.png        (the Mallah food-delivery app home screen)
-    then uncomment the two entries below. Sizes are read from the files —
-    update width/height if the saved images differ.
-
   {
     id: "panda-retail-intelligence",
-    src: "/work/panda-dashboard.png",
+    src: "/work/panda-dashboard.webp",
     width: 2000,
     height: 1038,
     category: "technology",
@@ -56,7 +48,7 @@ export const workItems: WorkItem[] = [
   },
   {
     id: "mallah-delivery-app",
-    src: "/work/mallah-app.png",
+    src: "/work/mallah-app.webp",
     width: 720,
     height: 1600,
     category: "technology",
@@ -70,7 +62,6 @@ export const workItems: WorkItem[] = [
     },
     featured: true,
   },
-  ─────────────────────────────────────────────────────────────────────── */
   {
     id: "camel-embrace",
     src: "/portfolio/camel-embrace.jpg",

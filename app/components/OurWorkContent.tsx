@@ -194,14 +194,25 @@ export default function OurWorkContent() {
                 aria-label={w.title[lang]}
                 className="group block w-full overflow-hidden rounded-2xl border border-white/10 transition-shadow hover:shadow-[0_20px_50px_-15px_rgba(47,152,148,0.6)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
-                <span className="relative block">
+                <span
+                  className={`relative block ${
+                    w.height / w.width > 1.4 ? "aspect-[3/4]" : ""
+                  }`}
+                >
+                  {/* very tall shots (phone screens) show a tidy top crop in
+                      the grid; the lightbox still opens the full image */}
                   <Image
                     src={w.src}
                     alt={w.alt[lang]}
-                    width={w.width}
-                    height={w.height}
+                    {...(w.height / w.width > 1.4
+                      ? { fill: true }
+                      : { width: w.width, height: w.height })}
                     sizes="(max-width: 768px) 50vw, 33vw"
-                    className="h-auto w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`transition-transform duration-700 group-hover:scale-105 ${
+                      w.height / w.width > 1.4
+                        ? "object-cover object-top"
+                        : "h-auto w-full object-cover"
+                    }`}
                   />
                   <span className="absolute inset-0 flex items-end bg-gradient-to-t from-[#0b2735]/90 via-transparent to-transparent p-4 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
                     <span className="text-start">
