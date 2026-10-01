@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import FaqSection from "./FaqSection";
 import PageShell from "./PageShell";
 import Reveal from "./Reveal";
 import { useLang } from "../lib/i18n";
@@ -430,6 +431,9 @@ export default function OurWorkContent() {
           </div>
         </Reveal>
       </section>
+
+      {/* ---- FAQ ---- */}
+      <FaqSection items={t.faq.work} />
 
       {/* ---- CTA ---- */}
       <section className="mx-auto max-w-4xl px-6 py-20 text-center lg:px-10">

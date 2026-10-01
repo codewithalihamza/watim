@@ -3,6 +3,7 @@ import About from "./components/About";
 import Hero from "./components/Hero";
 import OneLiner from "./components/OneLiner";
 import Services from "./components/Services";
+import FaqHome from "./components/FaqHome";
 import WhyWatm from "./components/WhyWatm";
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
           <Services />
           <WhyWatm />
           {/* <Gallery /> */}
+          <FaqHome />
         </div>
       </div>
     </main>

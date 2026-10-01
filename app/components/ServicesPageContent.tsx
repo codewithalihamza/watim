@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 
+import FaqSection from "./FaqSection";
 import PageShell from "./PageShell";
 import Reveal from "./Reveal";
 import Services from "./Services";
@@ -57,6 +58,8 @@ export default function ServicesPageContent() {
           </Link>
         </Reveal>
       </section>
+
+      <FaqSection items={t.faq.services} />
     </PageShell>
   );
 }

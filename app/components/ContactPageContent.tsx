@@ -1,5 +1,6 @@
 "use client";
 
+import FaqSection from "./FaqSection";
 import PageShell from "./PageShell";
 import Reveal from "./Reveal";
 import Tilt from "./Tilt";
@@ -139,9 +140,11 @@ export default function ContactPageContent() {
       </section>
 
       {/* Contact Form */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 lg:px-10">
+      <section className="mx-auto max-w-7xl px-6 pb-12 lg:px-10">
         <QuotePageContent />
       </section>
+
+      <FaqSection items={t.faq.contact} />
     </PageShell>
   );
 }

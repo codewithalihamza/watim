@@ -391,6 +391,90 @@ export const dict = {
       empty: "No work in this category yet.",
     },
     waFloatLabel: "Chat with WATM on WhatsApp",
+    faq: {
+      eyebrow: "FAQ",
+      title: "Frequently Asked Questions",
+      home: [
+        {
+          q: "What services does WATM provide?",
+          a: "WATM is a Saudi digital marketing and technology partner. We handle social media management, paid media, content and copywriting, branding, SEO, and full web and mobile app development — plus AI and computer-vision solutions — all delivered by one integrated team in Riyadh.",
+        },
+        {
+          q: "Where is WATM located and which markets do you serve?",
+          a: "We are based in Riyadh and serve organizations across the Kingdom of Saudi Arabia, with full support in both Arabic and English. We also work with regional and international clients remotely.",
+        },
+        {
+          q: "What makes WATM different from other marketing agencies?",
+          a: "We combine marketing and engineering under one roof. Beyond campaigns, we build real technology — AI retail analytics, mobile apps, and web platforms — and we measure everything, so you always know what your budget delivered.",
+        },
+        {
+          q: "How do I start working with WATM?",
+          a: "Request a quote through the website or message us on WhatsApp. The first consultation is free and without obligation — we listen to your goals and come back with a clear, scoped proposal.",
+        },
+        {
+          q: "Do you work in Arabic and English?",
+          a: "Yes. Our strategists and writers produce native Arabic and English content, and every campaign, website, and report we deliver can be fully bilingual.",
+        },
+      ],
+      services: [
+        {
+          q: "Can I hire WATM for a single service only?",
+          a: "Yes. Engage us for one discipline — for example social media management or SEO — or entrust us with the full journey. Every service is designed to work on its own or in concert with the rest.",
+        },
+        {
+          q: "How much do your services cost?",
+          a: "Pricing depends on scope. Tell us what you need through the Get a Quote form and we will reply with a transparent, itemized proposal — no hidden fees and no obligation.",
+        },
+        {
+          q: "How long does a website or mobile app take to build?",
+          a: "A campaign landing page typically takes 1–2 weeks, a full corporate website 4–8 weeks, and mobile apps from 8 weeks upward depending on features. We agree on a timeline you can hold us to before we start.",
+        },
+        {
+          q: "Do you build AI solutions for businesses?",
+          a: "Yes. We build and deploy AI and computer-vision systems — such as camera-based retail analytics, and AI chat and voice agents that answer from your own business data in Arabic and English.",
+        },
+        {
+          q: "Will I receive reports on results?",
+          a: "Always. We report in plain language on a regular schedule: what we did, what it cost, and what it delivered — with the numbers to back it up.",
+        },
+      ],
+      work: [
+        {
+          q: "What kinds of projects has WATM delivered?",
+          a: "Both marketing and technology: AI retail-intelligence platforms, food-delivery apps, institutional messaging and data platforms, brand campaigns, and creative production — for clients ranging from retail chains to fintech companies.",
+        },
+        {
+          q: "Are the projects shown here real client work?",
+          a: "Yes. Everything in our work library was designed, engineered, or produced by the WATM team for real clients. We never present stock or borrowed work as our own.",
+        },
+        {
+          q: "Can WATM build something similar for my company?",
+          a: "Absolutely. The same team behind these projects will work on yours. Start with the Get a Quote form, tell us your goal, and we will propose the right approach.",
+        },
+        {
+          q: "Do you share detailed results and case studies?",
+          a: "We share what our clients approve publicly, and in a private consultation we can walk you through relevant case details, numbers, and lessons that match your industry.",
+        },
+      ],
+      contact: [
+        {
+          q: "What is the fastest way to reach WATM?",
+          a: "WhatsApp is fastest — message us at +966 55 402 0279. You can also email hello@watm.com.sa or send the quote form, and your request goes straight to our team inbox.",
+        },
+        {
+          q: "How quickly do you respond?",
+          a: "Within one business day, and usually much faster during Saudi business hours. Responsiveness is one of the standards we hold ourselves to.",
+        },
+        {
+          q: "Is the first consultation free?",
+          a: "Yes. The first conversation is always free and without obligation — we use it to understand your goals and whether we are the right partner for the journey.",
+        },
+        {
+          q: "Do you work with clients outside Riyadh?",
+          a: "Yes. We are based in Riyadh and work with clients across the Kingdom and beyond — meetings, reporting, and collaboration all work smoothly remotely.",
+        },
+      ],
+    },
     whatsappHref:
       "https://wa.me/966554020279?text=Hello%20Watm%20team%2C%20I%20would%20like%20to%20learn%20more%20about%20your%20services%20and%20discuss%20how%20we%20can%20work%20together.",
   },
@@ -817,6 +901,90 @@ export const dict = {
       empty: "لا توجد أعمال في هذه الفئة حتى الآن.",
     },
     waFloatLabel: "تحدث مع واتم عبر واتساب",
+    faq: {
+      eyebrow: "الأسئلة الشائعة",
+      title: "أسئلة يكثر طرحها",
+      home: [
+        {
+          q: "ما الخدمات التي تقدمها واتم؟",
+          a: "واتم شريك سعودي في التسويق الرقمي والتقنية. نقدم إدارة وسائل التواصل الاجتماعي، والإعلانات المدفوعة، والمحتوى وكتابة النصوص، والهوية البصرية، وتحسين محركات البحث، وتطوير المواقع والتطبيقات بالكامل — إضافة إلى حلول الذكاء الاصطناعي ورؤية الحاسب — عبر فريق واحد متكامل في الرياض.",
+        },
+        {
+          q: "أين يقع مقر واتم وما الأسواق التي تخدمونها؟",
+          a: "مقرنا في الرياض ونخدم المنشآت في جميع أنحاء المملكة العربية السعودية بالعربية والإنجليزية، كما نعمل مع عملاء إقليميين ودوليين عن بُعد.",
+        },
+        {
+          q: "ما الذي يميز واتم عن وكالات التسويق الأخرى؟",
+          a: "نجمع التسويق والهندسة تحت سقف واحد. فإلى جانب الحملات، نبني تقنية حقيقية — تحليلات ذكاء اصطناعي للمتاجر وتطبيقات ومنصات ويب — ونقيس كل شيء، لتعرف دائمًا ما الذي حققته ميزانيتك.",
+        },
+        {
+          q: "كيف أبدأ العمل مع واتم؟",
+          a: "اطلب عرض سعر عبر الموقع أو راسلنا على واتساب. الاستشارة الأولى مجانية ودون أي التزام — نستمع لأهدافك ثم نعود إليك بعرض واضح ومحدد.",
+        },
+        {
+          q: "هل تعملون بالعربية والإنجليزية؟",
+          a: "نعم. يكتب فريقنا محتوى عربيًا وإنجليزيًا أصيلًا، وكل حملة أو موقع أو تقرير نقدمه يمكن أن يكون ثنائي اللغة بالكامل.",
+        },
+      ],
+      services: [
+        {
+          q: "هل يمكنني التعاقد مع واتم لخدمة واحدة فقط؟",
+          a: "نعم. يمكنك العمل معنا في تخصص واحد — كإدارة وسائل التواصل أو تحسين محركات البحث — أو أن توكل إلينا الرحلة كاملة. كل خدمة مصممة لتعمل منفردة أو بتناغم مع البقية.",
+        },
+        {
+          q: "كم تبلغ تكلفة خدماتكم؟",
+          a: "تعتمد التكلفة على نطاق العمل. أخبرنا بما تحتاجه عبر نموذج طلب عرض السعر وسنرد بعرض شفاف ومفصّل البنود — بلا رسوم خفية وبلا أي التزام.",
+        },
+        {
+          q: "كم يستغرق بناء موقع إلكتروني أو تطبيق؟",
+          a: "صفحة الهبوط للحملة عادة من أسبوع إلى أسبوعين، والموقع المؤسسي الكامل من 4 إلى 8 أسابيع، والتطبيقات من 8 أسابيع فأكثر حسب المزايا. نتفق على جدول زمني تحاسبنا عليه قبل البدء.",
+        },
+        {
+          q: "هل تبنون حلول ذكاء اصطناعي للشركات؟",
+          a: "نعم. نبني وننشر أنظمة ذكاء اصطناعي ورؤية حاسب — مثل تحليلات المتاجر عبر الكاميرات، ووكلاء محادثة وصوت يجيبون من بيانات منشأتك بالعربية والإنجليزية.",
+        },
+        {
+          q: "هل سأحصل على تقارير بالنتائج؟",
+          a: "دائمًا. نرفع تقارير دورية بلغة واضحة: ماذا فعلنا، وكم كلّف، وماذا حقق — مع الأرقام التي تثبت ذلك.",
+        },
+      ],
+      work: [
+        {
+          q: "ما نوع المشاريع التي نفذتها واتم؟",
+          a: "تسويق وتقنية معًا: منصات ذكاء اصطناعي لتحليلات المتاجر، وتطبيقات توصيل، ومنصات مراسلة وبيانات مؤسسية، وحملات علامات تجارية وإنتاج إبداعي — لعملاء من سلاسل التجزئة إلى شركات التقنية المالية.",
+        },
+        {
+          q: "هل المشاريع المعروضة هنا أعمال حقيقية لعملاء؟",
+          a: "نعم. كل ما في مكتبة أعمالنا صممه أو برمجه أو أنتجه فريق واتم لعملاء حقيقيين، ولا نعرض أبدًا أعمالًا جاهزة أو مستعارة على أنها أعمالنا.",
+        },
+        {
+          q: "هل تستطيع واتم بناء مشروع مشابه لمنشأتي؟",
+          a: "بالتأكيد. الفريق نفسه الذي أنجز هذه المشاريع سيعمل على مشروعك. ابدأ بنموذج طلب عرض السعر وأخبرنا بهدفك وسنقترح النهج الأنسب.",
+        },
+        {
+          q: "هل تشاركون نتائج ودراسات حالة مفصلة؟",
+          a: "نعرض علنًا ما يوافق عليه عملاؤنا، وفي استشارة خاصة يمكننا استعراض تفاصيل وأرقام الحالات المشابهة لقطاعك وما تعلمناه منها.",
+        },
+      ],
+      contact: [
+        {
+          q: "ما أسرع طريقة للتواصل مع واتم؟",
+          a: "واتساب هو الأسرع — راسلنا على ‎+966 55 402 0279. ويمكنك أيضًا مراسلتنا على hello@watm.com.sa أو إرسال نموذج عرض السعر، وسيصل طلبك مباشرة إلى بريد الفريق.",
+        },
+        {
+          q: "كم تستغرقون في الرد؟",
+          a: "خلال يوم عمل واحد، وغالبًا أسرع بكثير خلال ساعات العمل في السعودية. سرعة الاستجابة من المعايير التي نلزم أنفسنا بها.",
+        },
+        {
+          q: "هل الاستشارة الأولى مجانية؟",
+          a: "نعم. الحديث الأول دائمًا مجاني ودون أي التزام — نستخدمه لفهم أهدافك ومعرفة ما إذا كنا الشريك الصحيح لرحلتك.",
+        },
+        {
+          q: "هل تعملون مع عملاء خارج الرياض؟",
+          a: "نعم. مقرنا الرياض ونعمل مع عملاء في جميع مناطق المملكة وخارجها — فالاجتماعات والتقارير والتعاون تتم كلها عن بُعد بسلاسة.",
+        },
+      ],
+    },
     whatsappHref:
       "https://wa.me/966554020279?text=%D9%85%D8%B1%D8%AD%D8%A8%D9%8B%D8%A7%20%D9%81%D8%B1%D9%8A%D9%82%20%D9%88%D8%AA%D9%85%D8%8C%20%D8%A3%D9%88%D8%AF%20%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%D9%83%D9%85%20%D9%88%D9%85%D9%86%D8%A7%D9%82%D8%B4%D8%A9%20%D8%B3%D8%A8%D9%84%20%D8%A7%D9%84%D8%AA%D8%B9%D8%A7%D9%88%D9%86.",
   },
