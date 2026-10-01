@@ -353,7 +353,7 @@ export const dict = {
         "A closer look at what we deliver — campaigns, brands, platforms, and creative work built for organizations across the Kingdom.",
       whatWeDoTitle: "What we do",
       whatWeDoIntro:
-        "Six disciplines, one integrated team. Explore any of them in depth on the services page.",
+        "Eight disciplines. One integrated team. Explore our areas of expertise and services in more detail on our Services page.",
       featuredTitle: "Featured Work",
       featuredIntro:
         "Real products we designed, engineered, and shipped with our clients.",
@@ -368,8 +368,7 @@ export const dict = {
       libraryIntro:
         "Browse the library by category — every piece shown here is our own work.",
       testimonialsTitle: "What Our Clients Say",
-      testimonialsIntro:
-        "Real words from the organizations we serve.",
+      testimonialsIntro: "Real words from the organizations we serve.",
       ctaTitle: "Ready to create something meaningful?",
       ctaBtn: "Start a Project",
       filters: {
@@ -681,7 +680,8 @@ export const dict = {
       sending: "جارٍ الإرسال…",
       afterNote: "سنراجع طلبك ونعود إليك قريبًا.",
       successMsg: "شكرًا لك — تم إرسال طلبك بنجاح، وسنراجعه ونعود إليك قريبًا.",
-      errorMsg: "حدث خطأ ولم يُرسل طلبك. حاول مرة أخرى أو راسلنا على hello@watm.com.sa.",
+      errorMsg:
+        "حدث خطأ ولم يُرسل طلبك. حاول مرة أخرى أو راسلنا على hello@watm.com.sa.",
       waIntro: "طلب عرض سعر من موقع واتم",
     },
     privacyPage: {
@@ -762,44 +762,59 @@ export const dict = {
       eyebrow: "أعمالنا",
       title: "أعمالنا",
       heroSub:
-        "نظرة أقرب على ما نقدمه — حملات وهويات ومنصات وأعمال إبداعية بُنيت لمنشآت في مختلف أنحاء المملكة.",
-      whatWeDoTitle: "ماذا نفعل",
+        "نظرة أقرب على ما نقدمه — حملات، علامات تجارية، منصات، وأعمال إبداعية صممناها للجهات والمؤسسات في مختلف أنحاء المملكة.",
+
+      whatWeDoTitle: "ماذا نقدم",
       whatWeDoIntro:
-        "تخصصات متكاملة يقدمها فريق واحد. استكشف أيًا منها بالتفصيل في صفحة الخدمات.",
+        "ثمانية تخصصات. فريق واحد متكامل. استكشف مجالات خبرتنا وخدماتنا بمزيد من التفاصيل عبر صفحة الخدمات.",
+
       featuredTitle: "أعمال مختارة",
-      featuredIntro: "منتجات حقيقية صممناها وبنيناها وأطلقناها مع عملائنا.",
-      builtFor: "بنيناه لـ",
+      featuredIntro: "منتجات حقيقية صممناها وطوّرناها وأطلقناها مع عملائنا.",
+
+      builtFor: "صُمم لـ",
+
       devTitle: "التطوير",
       devIntro:
-        "منتجات ويب وجوال بنيناها من البداية إلى النهاية — واجهات أمامية وأنظمة خلفية وكل ما بينهما.",
+        "منتجات للويب والجوال طوّرناها بالكامل من البداية إلى النهاية — من الواجهة الأمامية والخلفية وكل ما بينهما.",
+
       aiTitle: "الذكاء الاصطناعي والتكامل",
       aiIntro:
-        "حالات استخدام لرؤية الحاسب ووكلاء ذكاء اصطناعي نبنيها وندمجها في عمليات عملائنا — ومنها بوتات محادثة وصوت تجيب من بيانات العمل مباشرة.",
+        "حالات استخدام لرؤية الحاسب ووكلاء ذكاء اصطناعي نبنيها وندمجها في عمليات عملائنا — بما في ذلك روبوتات المحادثة والصوت التي تجيب من بيانات العمل المباشرة.",
+
       libraryTitle: "مكتبة أعمالنا",
       libraryIntro:
-        "تصفح المكتبة حسب الفئة — كل ما يُعرض هنا من أعمالنا الخاصة.",
+        "تصفح المكتبة حسب الفئة — كل عمل معروض هنا هو من أعمالنا الخاصة.",
+
       testimonialsTitle: "ماذا يقول عملاؤنا",
       testimonialsIntro: "كلمات حقيقية من الجهات التي نخدمها.",
-      ctaTitle: "جاهز لنصنع شيئًا ذا أثر؟",
-      ctaBtn: "ابدأ مشروعك",
+
+      ctaTitle: "جاهز لصنع شيء ذي معنى؟",
+      ctaBtn: "ابدأ مشروعًا",
+
       filters: {
         all: "الكل",
         technology: "التقنية",
-        campaigns: "حملات",
-        branding: "هوية بصرية",
-        social: "وسائل التواصل",
-        events: "فعاليات",
-        creative: "إبداعي",
-        photography: "تصوير",
+        campaigns: "الحملات",
+        branding: "الهوية والعلامة التجارية",
+        social: "وسائل التواصل الاجتماعي",
+        events: "الفعاليات",
+        creative: "الإبداع",
+        photography: "التصوير الفوتوغرافي",
         other: "أخرى",
       },
+
       lightbox: {
         close: "إغلاق عارض الصور",
         prev: "الصورة السابقة",
         next: "الصورة التالية",
       },
-      carousel: { prev: "الرأي السابق", next: "الرأي التالي" },
-      empty: "لا توجد أعمال في هذه الفئة بعد.",
+
+      carousel: {
+        prev: "التقييم السابق",
+        next: "التقييم التالي",
+      },
+
+      empty: "لا توجد أعمال في هذه الفئة حتى الآن.",
     },
     waFloatLabel: "تحدث مع واتم عبر واتساب",
     whatsappHref:

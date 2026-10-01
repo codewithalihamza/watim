@@ -29,7 +29,16 @@ export type WorkItem = {
   featured?: boolean;
 };
 
+/* =========================================================
+   WORK LIBRARY
+   Development + Creative / Marketing work
+   ========================================================= */
+
 export const workItems: WorkItem[] = [
+  /* -------------------------
+     Development
+     ------------------------- */
+
   {
     id: "panda-retail-intelligence",
     src: "/work/panda-dashboard.webp",
@@ -46,6 +55,7 @@ export const workItems: WorkItem[] = [
     },
     featured: true,
   },
+
   {
     id: "mallah-delivery-app",
     src: "/work/mallah-app-v2.webp",
@@ -62,6 +72,7 @@ export const workItems: WorkItem[] = [
     },
     featured: true,
   },
+
   {
     id: "thetie-bridge-lib",
     src: "/work/thetie-bridge.webp",
@@ -76,7 +87,9 @@ export const workItems: WorkItem[] = [
       en: "The Tie Bridge web messenger showing a team inbox, group chats, and message requests",
       ar: "تطبيق بريدج من The Tie يعرض صندوق وارد للفريق ومحادثات جماعية وطلبات مراسلة",
     },
+    featured: true,
   },
+
   {
     id: "thetie-terminal-lib",
     src: "/work/thetie-terminal.webp",
@@ -91,50 +104,152 @@ export const workItems: WorkItem[] = [
       en: "The Tie Terminal dashboard with crypto ETF KPIs, flows, news, and an AI digest",
       ar: "لوحة تيرمينال The Tie بمؤشرات وتدفقات صناديق ETF والأخبار وملخص ذكي",
     },
+    featured: true,
   },
+
+  /* -------------------------
+     Branding
+     ------------------------- */
+
   {
-    id: "camel-embrace",
-    src: "/portfolio/camel-embrace.jpg",
-    width: 1280,
-    height: 1707,
-    category: "photography",
-    title: { en: "Desert Heritage Shoot", ar: "جلسة تصوير التراث الصحراوي" },
+    id: "caraberry",
+    src: "/work/caraberry.jpg",
+    width: 1600,
+    height: 1200,
+    category: "branding",
+    title: {
+      en: "Caraberry Brand Identity",
+      ar: "الهوية البصرية لعلامة كارابيري",
+    },
     alt: {
-      en: "A happy man in traditional Saudi dress embracing his camel in a desert setting",
-      ar: "رجل سعيد بالزي السعودي التقليدي يحتضن جمله في بيئة صحراوية",
+      en: "Caraberry brand identity and visual design",
+      ar: "الهوية البصرية والتصميم الإبداعي لعلامة كارابيري",
     },
     featured: true,
   },
+
   {
-    id: "bedouin-portrait",
-    src: "/portfolio/bedouin-portrait.jpg",
-    width: 1280,
-    height: 1707,
-    category: "creative",
-    title: { en: "Bedouin Portrait Series", ar: "سلسلة بورتريه بدوية" },
+    id: "company-profile",
+    src: "/work/company-profile.jpg",
+    width: 1600,
+    height: 1200,
+    category: "branding",
+    title: {
+      en: "Corporate Profile Design",
+      ar: "تصميم الملف التعريفي للشركة",
+    },
     alt: {
-      en: "Woman wearing traditional Bedouin attire with coin jewelry in a desert landscape",
-      ar: "امرأة ترتدي زيًا بدويًا تقليديًا مع حلي معدنية في مشهد صحراوي",
+      en: "Professional corporate profile and brand presentation design",
+      ar: "تصميم احترافي للملف التعريفي وهوية الشركة",
     },
     featured: true,
   },
+
+  /* -------------------------
+     Marketing Campaigns
+     ------------------------- */
+
   {
-    id: "uhud-market",
-    src: "/portfolio/uhud-market.jpg",
-    width: 1280,
-    height: 1707,
+    id: "cavallino",
+    src: "/work/cavallino.jpg",
+    width: 1600,
+    height: 1200,
     category: "campaigns",
-    title: { en: "Uhud Marketplace Campaign", ar: "حملة سوق أُحد" },
+    title: {
+      en: "Cavallino Marketing Campaign",
+      ar: "حملة كافالينو التسويقية",
+    },
     alt: {
-      en: "Men in traditional Saudi clothing at a marketplace near Uhud Mountain",
-      ar: "رجال بملابس سعودية تقليدية في سوق قرب جبل أُحد",
+      en: "Cavallino creative marketing campaign",
+      ar: "حملة كافالينو التسويقية والتصميم الإبداعي",
+    },
+    featured: true,
+  },
+
+  {
+    id: "marketing-campaign",
+    src: "/work/Marketing-campaign.jpg",
+    width: 1600,
+    height: 1200,
+    category: "campaigns",
+    title: {
+      en: "Marketing Campaign",
+      ar: "حملة تسويقية",
+    },
+    alt: {
+      en: "Creative marketing campaign visual",
+      ar: "تصميم إبداعي لحملة تسويقية",
+    },
+    featured: true,
+  },
+
+  /* -------------------------
+     Events
+     ------------------------- */
+
+  {
+    id: "mi-event",
+    src: "/work/mi-event.jpg",
+    width: 1600,
+    height: 1200,
+    category: "events",
+    title: {
+      en: "MI Event",
+      ar: "فعالية MI",
+    },
+    alt: {
+      en: "Creative event branding and visual content for MI event",
+      ar: "الهوية والمحتوى البصري الإبداعي لفعالية MI",
+    },
+    featured: true,
+  },
+
+  /* -------------------------
+     Creative
+     ------------------------- */
+
+  {
+    id: "packaging",
+    src: "/work/packaging.jpg",
+    width: 1600,
+    height: 1200,
+    category: "creative",
+    title: {
+      en: "Packaging Design",
+      ar: "تصميم التغليف",
+    },
+    alt: {
+      en: "Creative packaging design and product presentation",
+      ar: "تصميم إبداعي للتغليف وعرض المنتجات",
+    },
+    featured: true,
+  },
+
+  {
+    id: "watm",
+    src: "/work/watm.jpg",
+    width: 1600,
+    height: 1200,
+    category: "creative",
+    title: {
+      en: "WATM Creative Work",
+      ar: "أعمال واتم الإبداعية",
+    },
+    alt: {
+      en: "WATM creative marketing and visual design work",
+      ar: "أعمال واتم في التسويق والتصميم الإبداعي",
     },
     featured: true,
   },
 ];
 
+/* =========================================================
+   TESTIMONIALS
+   ========================================================= */
+
 export type Testimonial = {
   id: string;
+
   /**
    * PLACEHOLDER entries: replace `quote`, `name`, `company`, and `role`
    * with the real client's words before launch. `placeholder: true`
@@ -153,27 +268,57 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    id: "placeholder-1",
-    placeholder: true,
+    id: "watam-logistics",
     quote: {
-      en: "[Sample — replace with a real client testimonial. One or two sentences about a result Watm delivered.]",
-      ar: "[نموذج — استبدله برأي عميل حقيقي: جملة أو جملتان عن نتيجة حققتها وتم.]",
+      en: "Our experience with WATM was truly exceptional. The team was highly professional and incredibly fast throughout the project. They understood our needs from the beginning and turned them into a complete, launch-ready website that truly reflects the quality of our services. Their attention to detail and responsiveness were outstanding, and the final result exceeded our expectations.",
+      ar: "تجربتنا مع وăتم كانت أكثر من رائعة. الفريق كان احترافيًا جدًا وسريعًا في التنفيذ، وفهم احتياجاتنا من البداية وحوّلها إلى موقع متكامل وجاهز يعكس مستوى خدماتنا بشكل احترافي. الاهتمام بالتفاصيل وسرعة الاستجابة كانت من أكثر الأشياء التي أبهرتنا، والنتيجة تجاوزت توقعاتنا بكثير.",
     },
-    name: { en: "Client Name", ar: "اسم العميل" },
-    company: { en: "Company", ar: "اسم الشركة" },
-    role: { en: "Position", ar: "المنصب" },
+    name: {
+      en: "Naif",
+      ar: "نايف",
+    },
+    company: {
+      en: "WATAM Logistics",
+      ar: "وتم للنقل والخدمات اللوجستية",
+    },
   },
+
   {
-    id: "placeholder-2",
-    placeholder: true,
+    id: "terrarium-store",
     quote: {
-      en: "[Sample — replace with a real client testimonial.]",
-      ar: "[نموذج — استبدله برأي عميل حقيقي.]",
+      en: "WATM did an incredible job designing our online store. The design was exceptionally beautiful, modern, and thoughtfully crafted to create a great customer experience. The team also seamlessly integrated the store with Salla and Zid, making it fully ready for business from day one. Honestly, the final result was far beyond what we expected.",
+      ar: "وăتم أبدعوا في تصميم متجرنا الإلكتروني. التصميم كان جميلًا جدًا وعصريًا، والتفاصيل كلها كانت مرتبة بطريقة تعطي تجربة مميزة للعميل. كما قام الفريق بربط المتجر بشكل متكامل مع سلة وزد، مما جعل المتجر جاهزًا للعمل بشكل احترافي من البداية. بصراحة، النتيجة كانت أجمل بكثير مما كنا نتوقع.",
     },
-    name: { en: "Client Name", ar: "اسم العميل" },
-    company: { en: "Company", ar: "اسم الشركة" },
+    name: {
+      en: "Ajal",
+      ar: "اجل",
+    },
+    company: {
+      en: "Terrarium Store",
+      ar: "متجر تيراريوم",
+    },
+  },
+
+  {
+    id: "event-solution",
+    quote: {
+      en: "Working with WATM was one of the best experiences we’ve had with a technology and marketing team. They understood our needs quickly and delivered professional solutions that went far beyond our expectations. The quality of execution, responsiveness, attention to detail, and communication throughout the project were exceptional. With WATM, you genuinely feel that your project is in safe hands.",
+      ar: "تعاملنا مع وăتم كان من أفضل التجارب التي خضناها مع شركات التقنية والتسويق. الفريق كان سريعًا في فهم احتياجاتنا، وقدم حلولًا احترافية تجاوزت توقعاتنا بشكل كبير. جودة التنفيذ، سرعة الاستجابة، الاهتمام بالتفاصيل، والتواصل المستمر كانت جميعها على مستوى استثنائي. وăتم فريق تشعر معه فعلًا أن مشروعك في أيدٍ أمينة.",
+    },
+    name: {
+      en: "Salman Al-Otaibi",
+      ar: "سلمان العتيبي",
+    },
+    company: {
+      en: "Event Solution",
+      ar: "Event Solution",
+    },
   },
 ];
+
+/* =========================================================
+   FEATURED DEVELOPMENT PROJECTS
+   ========================================================= */
 
 export type FeaturedProject = {
   id: string;
@@ -192,6 +337,7 @@ export type FeaturedProject = {
 };
 
 /* Featured client projects — shown as spotlight rows on /our-work. */
+
 export const featuredProjects: FeaturedProject[] = [
   {
     id: "panda",
@@ -201,7 +347,7 @@ export const featuredProjects: FeaturedProject[] = [
       ar: "منصة ذكاء المتاجر",
     },
     description: {
-      en: "An AI platform that turns Panda\u2019s store cameras into live insight — visitor counts, queue monitoring, shelf analytics, and an Arabic AI supervisor.",
+      en: "An AI platform that turns Panda’s store cameras into live insight — visitor counts, queue monitoring, shelf analytics, and an Arabic AI supervisor.",
       ar: "منصة ذكاء اصطناعي تحوّل كاميرات متاجر بنده إلى رؤى مباشرة — عدّ الزوار ومراقبة الطوابير وتحليلات الأرفف، مع مشرف ذكي بالعربية.",
     },
     tags: [
@@ -218,6 +364,7 @@ export const featuredProjects: FeaturedProject[] = [
     },
     kind: "web",
   },
+
   {
     id: "mallah",
     client: { en: "Mallah", ar: "ملاح" },
@@ -243,6 +390,7 @@ export const featuredProjects: FeaturedProject[] = [
     },
     kind: "mobile",
   },
+
   {
     id: "thetie-bridge",
     client: { en: "The Tie", ar: "The Tie" },
@@ -268,6 +416,7 @@ export const featuredProjects: FeaturedProject[] = [
     },
     kind: "web",
   },
+
   {
     id: "thetie-terminal",
     client: { en: "The Tie", ar: "The Tie" },
@@ -295,6 +444,10 @@ export const featuredProjects: FeaturedProject[] = [
   },
 ];
 
+/* =========================================================
+   AI & INTEGRATION
+   ========================================================= */
+
 export type AiUseCase = {
   id: string;
   image: string;
@@ -308,6 +461,7 @@ export type AiUseCase = {
 };
 
 /* AI & Integration use cases — shown as cards on /our-work. */
+
 export const aiUseCases: AiUseCase[] = [
   {
     id: "ai-supervisor",
@@ -315,7 +469,10 @@ export const aiUseCases: AiUseCase[] = [
     imageAr: "/work/panda-ai-chat-ar.webp",
     width: 1762,
     height: 1265,
-    title: { en: "Panda AI Supervisor", ar: "مشرف بنده الذكي" },
+    title: {
+      en: "Panda AI Supervisor",
+      ar: "مشرف بنده الذكي",
+    },
     body: {
       en: "An Arabic AI assistant the store team can ask anything — it answers from the live database with real numbers and photo evidence.",
       ar: "مساعد ذكي بالعربية يسأله فريق المتجر عن أي شيء — فيجيب من قاعدة البيانات مباشرة بالأرقام والأدلة المصورة.",
@@ -325,12 +482,16 @@ export const aiUseCases: AiUseCase[] = [
       ar: "محادثة المشرف الذكي بالعربية تجيب عن سؤال حول استخدام الجوال بالبيانات والأدلة المصورة",
     },
   },
+
   {
     id: "cashier-absence",
     image: "/work/panda-cashier-absence-v2.webp",
     width: 1809,
     height: 1023,
-    title: { en: "Cashier Absence Detection", ar: "كشف غياب الكاشير" },
+    title: {
+      en: "Cashier Absence Detection",
+      ar: "كشف غياب الكاشير",
+    },
     body: {
       en: "Alerts the moment a cashier station is left unattended beyond a set window — straight from the store's own cameras.",
       ar: "تنبيه فوري عندما تبقى محطة الكاشير شاغرة أكثر من المدة المحددة — مباشرة من كاميرات المتجر نفسها.",
@@ -340,12 +501,16 @@ export const aiUseCases: AiUseCase[] = [
       ar: "لقطة مباشرة لمحطة كاشير شاغرة مع تنبيه آلي بأن منطقة العمل خالية",
     },
   },
+
   {
     id: "phone-detection",
     image: "/work/panda-phone-detection-v2.webp",
     width: 1707,
     height: 1339,
-    title: { en: "Staff Phone-Use Detection", ar: "كشف استخدام الجوال أثناء العمل" },
+    title: {
+      en: "Staff Phone-Use Detection",
+      ar: "كشف استخدام الجوال أثناء العمل",
+    },
     body: {
       en: "A vision model spots phone use on duty and logs each case with visual evidence and a plain-language description.",
       ar: "نموذج رؤية يرصد استخدام الجوال أثناء الدوام ويسجل كل حالة بدليل مرئي ووصف واضح.",
