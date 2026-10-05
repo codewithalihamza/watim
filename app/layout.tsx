@@ -51,10 +51,10 @@ const cairo = Cairo({
 export const metadata: Metadata = {
   metadataBase: new URL("https://watm.com.sa"),
 
-  title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+  title: "Watm — Digital Marketing & Technology Partner, KSA",
 
   description:
-    "واتم هو شريك التسويق الرقمي والتطوير السعودي. الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات التي تبني علامات تجارية موثوقة ونموًا قابلًا للقياس.",
+    "Watm is a Saudi digital marketing and technology partner. Strategy, media, content, websites, apps, and AI solutions that build trusted brands and measurable growth.",
 
   keywords: [
     "واتم",
@@ -74,20 +74,20 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+    title: "Watm — Digital Marketing & Technology Partner, KSA",
     description:
-      "واتم هو شريك التسويق الرقمي والتطوير السعودي. الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات التي تبني علامات تجارية موثوقة ونموًا قابلًا للقياس.",
+      "Watm is a Saudi digital marketing and technology partner. Strategy, media, content, websites, apps, and AI solutions that build trusted brands and measurable growth.",
     url: "https://watm.com.sa",
     siteName: "واتم",
-    locale: "ar_SA",
+    locale: "en_US",
     type: "website",
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+    title: "Watm — Digital Marketing & Technology Partner, KSA",
     description:
-      "شريكك في الاستراتيجية، الإعلانات، المحتوى، المواقع، والتطبيقات في السعودية.",
+      "Watm is a Saudi digital marketing and technology partner. Strategy, media, content, websites, apps, and AI solutions that build trusted brands and measurable growth.",
   },
 
   robots: {

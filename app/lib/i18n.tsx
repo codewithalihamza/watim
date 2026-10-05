@@ -1038,10 +1038,25 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   }, [lang]);
 
-  // keep the browser-tab title in the active language for every page
+  // keep the browser-tab title in the active language for every page.
+  // Next.js re-applies the static metadata title after hydration, so we
+  // also observe the <title> element and re-assert the localized one.
   useEffect(() => {
-    const titles = pageTitles[pathname ?? ""];
-    if (titles) document.title = titles[lang];
+    const apply = () => {
+      const titles = pageTitles[pathname ?? ""];
+      if (titles && document.title !== titles[lang]) {
+        document.title = titles[lang];
+      }
+    };
+    apply();
+    // Next replaces the <title> node itself, so watch the whole <head>
+    const observer = new MutationObserver(apply);
+    observer.observe(document.head, {
+      subtree: true,
+      childList: true,
+      characterData: true,
+    });
+    return () => observer.disconnect();
   }, [lang, pathname]);
 
   const setLang = (l: Lang) => {
