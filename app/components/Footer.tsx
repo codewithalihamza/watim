@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "./Reveal";
@@ -27,7 +28,18 @@ export const LINKEDIN_URL = "https://www.linkedin.com/company/watm/";
 export const EMAIL = "hello@watm.com.sa";
 
 export default function Footer() {
-  const { t } = useLang();
+  const { t, lang } = useLang();
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  // mailto fails silently on machines with no mail app configured, so the
+  // email button also copies the address and confirms it visibly.
+  const copyEmail = () => {
+    try {
+      navigator.clipboard?.writeText(EMAIL);
+    } catch {}
+    setEmailCopied(true);
+    window.setTimeout(() => setEmailCopied(false), 2500);
+  };
 
   const quickLinks = [
     { label: t.nav.home, href: "/" },
@@ -142,18 +154,29 @@ export default function Footer() {
                 </h4>
                 <div className="flex gap-3">
                   {socials.map((s) => (
-                    <a
-                      key={s.label}
-                      href={s.href}
-                      {...(s.href.startsWith("http")
-                        ? { target: "_blank", rel: "noopener noreferrer" }
-                        : {})}
-                      aria-label={s.label}
-                      title={s.label}
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-white/10 text-[#dff2f2] transition-all hover:scale-110 hover:border-white hover:bg-white/20 hover:text-white"
-                    >
-                      {s.icon}
-                    </a>
+                    <span key={s.label} className="relative">
+                      <a
+                        href={s.href}
+                        {...(s.href.startsWith("http")
+                          ? { target: "_blank", rel: "noopener noreferrer" }
+                          : { onClick: copyEmail })}
+                        aria-label={s.label}
+                        title={s.label === "Email" ? EMAIL : s.label}
+                        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-white/10 text-[#dff2f2] transition-all hover:scale-110 hover:border-white hover:bg-white/20 hover:text-white"
+                      >
+                        {s.icon}
+                      </a>
+                      {s.label === "Email" && emailCopied && (
+                        <span
+                          role="status"
+                          className="absolute -top-11 start-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-[#0b2735] px-3 py-1.5 text-xs font-medium text-white shadow-lg rtl:translate-x-1/2"
+                        >
+                          {lang === "ar"
+                            ? "تم نسخ البريد ✓"
+                            : "Email copied ✓"}
+                        </span>
+                      )}
+                    </span>
                   ))}
                 </div>
               </Reveal>

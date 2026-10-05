@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import {
   createContext,
   startTransition,
@@ -992,6 +993,22 @@ export const dict = {
 
 export type Dict = (typeof dict)["en"] | (typeof dict)["ar"];
 
+/* Browser-tab titles per route, per language — applied by LanguageProvider
+   so the tab always matches the active site language. */
+export const pageTitles: Record<string, { en: string; ar: string }> = {
+  "/": {
+    en: "Watm — Digital Marketing & Technology Partner, KSA",
+    ar: "واتم | شريك التسويق الرقمي والتكنولوجيا في السعودية",
+  },
+  "/about": { en: "About Us — Watm", ar: "من نحن | واتم" },
+  "/services": { en: "Our Services — Watm", ar: "خدماتنا | واتم" },
+  "/our-work": { en: "Our Work — Watm", ar: "أعمالنا | واتم" },
+  "/contact": { en: "Contact Us — Watm", ar: "تواصل معنا | واتم" },
+  "/get-a-quote": { en: "Get a Quote — Watm", ar: "اطلب عرض سعر | واتم" },
+  "/privacy-policy": { en: "Privacy Policy — Watm", ar: "سياسة الخصوصية | واتم" },
+  "/terms-of-service": { en: "Terms of Service — Watm", ar: "شروط الاستخدام | واتم" },
+};
+
 const LangContext = createContext<{
   lang: Lang;
   setLang: (l: Lang) => void;
@@ -1013,11 +1030,19 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     } catch {}
   }, []);
 
+  const pathname = usePathname();
+
   // reflect the language on <html> so direction, alignment, and fonts follow
   useEffect(() => {
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   }, [lang]);
+
+  // keep the browser-tab title in the active language for every page
+  useEffect(() => {
+    const titles = pageTitles[pathname ?? ""];
+    if (titles) document.title = titles[lang];
+  }, [lang, pathname]);
 
   const setLang = (l: Lang) => {
     if (l !== lang) {
