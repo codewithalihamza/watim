@@ -218,6 +218,17 @@ export const dict = {
       sub: "Delivered to one standard, by one integrated team — engage us for a single discipline, or entrust us with the full journey.",
       cta: "Discuss your project",
     },
+    techStack: {
+      eyebrow: "Tech Stack",
+      title: "The tools behind our work.",
+      intro:
+        "We use a carefully selected ecosystem of marketing, analytics, design, development, and AI tools to deliver efficient, measurable, and scalable solutions for our clients.",
+      categories: {
+        marketing: "Marketing & Analytics",
+        design: "Design & Content",
+        engineering: "Engineering & AI",
+      },
+    },
     contactPage: {
       title: "Let's talk.",
       sub: "Tell us where you intend to be, and we will show you the path — and whether Watm is the right partner for the journey. The first conversation is always without obligation.",
@@ -709,6 +720,17 @@ export const dict = {
       title: "كل ما تحتاجه لتنمو.",
       sub: "بمعيار واحد وفريق واحد متكامل — اعمل معنا في تخصص واحد، أو أوكل إلينا الرحلة كاملة.",
       cta: "تحدث معنا عن مشروعك",
+    },
+    techStack: {
+      eyebrow: "التقنيات والأدوات",
+      title: "الأدوات التي نبني بها أعمالنا.",
+      intro:
+        "نعتمد منظومة مختارة بعناية من أدوات التسويق والتحليلات والتصميم والتطوير والذكاء الاصطناعي، لنقدّم لعملائنا حلولاً فعّالة وقابلة للقياس والتوسّع.",
+      categories: {
+        marketing: "التسويق والتحليلات",
+        design: "التصميم والمحتوى",
+        engineering: "الهندسة والذكاء الاصطناعي",
+      },
     },
     contactPage: {
       title: "لنتحدث.",

@@ -6,6 +6,7 @@ import FaqSection from "./FaqSection";
 import PageShell from "./PageShell";
 import Reveal from "./Reveal";
 import Services from "./Services";
+import TechStack from "./TechStack";
 
 import { useLang } from "../lib/i18n";
 
@@ -16,6 +17,9 @@ export default function ServicesPageContent() {
     <PageShell>
       {/* Services Component */}
       <Services />
+
+      {/* Tech stack — logo grid between the services and the process */}
+      <TechStack />
 
       {/* Process */}
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10">
