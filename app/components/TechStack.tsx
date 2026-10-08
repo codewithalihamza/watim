@@ -5,33 +5,21 @@ import { useLang } from "../lib/i18n";
 import { techStack, type TechTool } from "../lib/tech-stack";
 
 /*
-  Tech-stack logo grid for /services: three labelled rows of white tiles,
+  Tech-stack logo grid for /services: three labelled groups of white tiles,
   each holding a brand mark and its name. Tool names stay in Latin script in
   both languages; only the heading copy and category labels are translated.
 */
 
 function Logo({ tool }: { tool: TechTool }) {
-  if ("badge" in tool) {
-    return (
-      <span
-        aria-hidden
-        className="flex h-10 w-10 items-center justify-center rounded-lg text-[1.05rem] font-bold leading-none tracking-tight"
-        style={{ background: tool.bg, color: tool.fg }}
-        dir="ltr"
-      >
-        {tool.badge}
-      </span>
-    );
-  }
-
   return (
     <svg
       viewBox="0 0 24 24"
       aria-hidden
       className="h-10 w-10"
-      fill={tool.color}
-      stroke={tool.stroke}
-      strokeWidth={tool.stroke ? 0.7 : undefined}
+      fill={tool.outline ? "none" : tool.color}
+      stroke={tool.outline ? tool.color : undefined}
+      strokeWidth={tool.outline ? 1.75 : undefined}
+      strokeLinecap="round"
       strokeLinejoin="round"
     >
       <path d={tool.path} />
@@ -74,11 +62,7 @@ export default function TechStack() {
               {cat.tools.map((tool) => (
                 <li
                   key={tool.name}
-                  className="flex h-28 flex-col items-center justify-center gap-2.5 rounded-2xl p-3 text-center shadow-[0_10px_28px_-14px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1"
-                  style={{
-                    background:
-                      "tile" in tool && tool.tile ? tool.tile : "#ffffff",
-                  }}
+                  className="flex h-28 flex-col items-center justify-center gap-2.5 rounded-2xl bg-white p-3 text-center shadow-[0_10px_28px_-14px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-transform duration-300 hover:-translate-y-1"
                 >
                   <Logo tool={tool} />
                   <span
