@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Montserrat, Inter, Luckiest_Guy, Cairo } from "next/font/google";
 
 import "./globals.css";
@@ -106,7 +106,18 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${inter.variable} ${luckiestGuy.variable} ${cairo.variable} h-full antialiased`}
     >
+      {/* Google Tag Manager — container GTM-TB22BH63 (script loads after hydration) */}
+      <GoogleTagManager gtmId="GTM-TB22BH63" />
       <body className="min-h-full" suppressHydrationWarning>
+        {/* Google Tag Manager (noscript) — must sit immediately after <body> */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TB22BH63"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <LanguageProvider>
           <CursorGlow />
           <Navbar />
