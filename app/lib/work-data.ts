@@ -165,7 +165,73 @@ export const workItems: WorkItem[] = [
     },
     featured: true,
   },
+  {
+    id: "snbl-art",
+    src: "/work/snbl-art.jpeg",
+    width: 1200,
+    height: 1200,
+    category: "creative",
+    title: {
+      en: "SNBL ART Creative Campaign",
+      ar: "الحملة الإبداعية لـ SNBL ART",
+    },
+    alt: {
+      en: "SNBL ART creative campaign featuring Saudi-inspired visual artwork",
+      ar: "تصميم إبداعي لحملة SNBL ART بطابع بصري مستوحى من الثقافة السعودية",
+    },
+    featured: true,
+  },
 
+  {
+    id: "valuefirst-campaign-1",
+    src: "/work/valuefirst-campaign-1.jpg",
+    width: 1200,
+    height: 1200,
+    category: "campaigns",
+    title: {
+      en: "ValueFirst Marketing Campaign",
+      ar: "حملة ValueFirst التسويقية",
+    },
+    alt: {
+      en: "ValueFirst creative marketing campaign designs",
+      ar: "تصاميم إبداعية لحملة ValueFirst التسويقية",
+    },
+    featured: true,
+  },
+
+  {
+    id: "valuefirst-campaign-2",
+    src: "/work/valuefirst-campaign-2.jpg",
+    width: 1200,
+    height: 1200,
+    category: "campaigns",
+    title: {
+      en: "ValueFirst Digital Campaign",
+      ar: "الحملة الرقمية لـ ValueFirst",
+    },
+    alt: {
+      en: "ValueFirst digital marketing campaign and social media designs",
+      ar: "تصاميم الحملة الرقمية والتسويقية لـ ValueFirst",
+    },
+    featured: true,
+  },
+
+  {
+    id: "purity-tech",
+    src: "/work/purity-tech.jpg",
+    width: 1200,
+    height: 1200,
+    category: "branding",
+    title: {
+      en: "Purity Tech Branding",
+      ar: "الهوية البصرية لـ Purity Tech",
+    },
+    alt: {
+      en: "Purity Tech branding and corporate visual designs",
+      ar: "تصاميم الهوية البصرية والعلامة التجارية لـ Purity Tech",
+    },
+    featured: true,
+  },
   {
     id: "marketing-campaign",
     src: "/work/Marketing-campaign.jpg",
@@ -271,7 +337,7 @@ export const testimonials: Testimonial[] = [
     id: "watam-logistics",
     quote: {
       en: "Our experience with WATM was truly exceptional. The team was highly professional and incredibly fast throughout the project. They understood our needs from the beginning and turned them into a complete, launch-ready website that truly reflects the quality of our services. Their attention to detail and responsiveness were outstanding, and the final result exceeded our expectations.",
-      ar: "تجربتنا مع وăتم كانت أكثر من رائعة. الفريق كان احترافيًا جدًا وسريعًا في التنفيذ، وفهم احتياجاتنا من البداية وحوّلها إلى موقع متكامل وجاهز يعكس مستوى خدماتنا بشكل احترافي. الاهتمام بالتفاصيل وسرعة الاستجابة كانت من أكثر الأشياء التي أبهرتنا، والنتيجة تجاوزت توقعاتنا بكثير.",
+      ar: "تجربتنا مع واتم كانت أكثر من رائعة. الفريق كان احترافيًا جدًا وسريعًا في التنفيذ، وفهم احتياجاتنا من البداية وحوّلها إلى موقع متكامل وجاهز يعكس مستوى خدماتنا بشكل احترافي. الاهتمام بالتفاصيل وسرعة الاستجابة كانت من أكثر الأشياء التي أبهرتنا، والنتيجة تجاوزت توقعاتنا بكثير.",
     },
     name: {
       en: "Naif",
@@ -287,11 +353,11 @@ export const testimonials: Testimonial[] = [
     id: "terrarium-store",
     quote: {
       en: "WATM did an incredible job designing our online store. The design was exceptionally beautiful, modern, and thoughtfully crafted to create a great customer experience. The team also seamlessly integrated the store with Salla and Zid, making it fully ready for business from day one. Honestly, the final result was far beyond what we expected.",
-      ar: "وăتم أبدعوا في تصميم متجرنا الإلكتروني. التصميم كان جميلًا جدًا وعصريًا، والتفاصيل كلها كانت مرتبة بطريقة تعطي تجربة مميزة للعميل. كما قام الفريق بربط المتجر بشكل متكامل مع سلة وزد، مما جعل المتجر جاهزًا للعمل بشكل احترافي من البداية. بصراحة، النتيجة كانت أجمل بكثير مما كنا نتوقع.",
+      ar: "واتم أبدعوا في تصميم متجرنا الإلكتروني. التصميم كان جميلًا جدًا وعصريًا، والتفاصيل كلها كانت مرتبة بطريقة تعطي تجربة مميزة للعميل. كما قام الفريق بربط المتجر بشكل متكامل مع سلة وزد، مما جعل المتجر جاهزًا للعمل بشكل احترافي من البداية. بصراحة، النتيجة كانت أجمل بكثير مما كنا نتوقع.",
     },
     name: {
-      en: "Ajal",
-      ar: "اجل",
+      en: "Nada",
+      ar: "ندى",
     },
     company: {
       en: "Terrarium Store",
@@ -303,7 +369,7 @@ export const testimonials: Testimonial[] = [
     id: "event-solution",
     quote: {
       en: "Working with WATM was one of the best experiences we’ve had with a technology and marketing team. They understood our needs quickly and delivered professional solutions that went far beyond our expectations. The quality of execution, responsiveness, attention to detail, and communication throughout the project were exceptional. With WATM, you genuinely feel that your project is in safe hands.",
-      ar: "تعاملنا مع وăتم كان من أفضل التجارب التي خضناها مع شركات التقنية والتسويق. الفريق كان سريعًا في فهم احتياجاتنا، وقدم حلولًا احترافية تجاوزت توقعاتنا بشكل كبير. جودة التنفيذ، سرعة الاستجابة، الاهتمام بالتفاصيل، والتواصل المستمر كانت جميعها على مستوى استثنائي. وăتم فريق تشعر معه فعلًا أن مشروعك في أيدٍ أمينة.",
+      ar: "تعاملنا مع واتم كان من أفضل التجارب التي خضناها مع شركات التقنية والتسويق. الفريق كان سريعًا في فهم احتياجاتنا، وقدم حلولًا احترافية تجاوزت توقعاتنا بشكل كبير. جودة التنفيذ، سرعة الاستجابة، الاهتمام بالتفاصيل، والتواصل المستمر كانت جميعها على مستوى استثنائي. واتم فريق تشعر معه فعلًا أن مشروعك في أيدٍ أمينة.",
     },
     name: {
       en: "Salman Al-Otaibi",
