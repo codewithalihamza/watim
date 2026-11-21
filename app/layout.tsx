@@ -1,28 +1,22 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { Montserrat, Inter, Luckiest_Guy, Cairo } from "next/font/google";
+import CookieConsent from "./components/CookieConsent";
 
 import "./globals.css";
 
 import { LanguageProvider } from "./lib/i18n";
 
 import Navbar from "./components/Navbar";
-
 import Footer from "./components/Footer";
-
 import CursorGlow from "./components/CursorGlow";
-
 import WhatsAppFloat from "./components/WhatsAppFloat";
 
 /**
- * Headline ("MARKETING SOLUTIONS START WITH") uses Montserrat 800 ExtraBold.
- *
- * The "WATM" wordmark uses a wobbly comic/sticker display face per the
- * reference art — Luckiest Guy is the closest widely-available match.
- *
- * Inter carries body copy. Cairo carries all Arabic text (body + display)
- * when the site is switched to العربية.
+ * Headline uses Montserrat 800 ExtraBold.
+ * WATM wordmark uses Luckiest Guy.
+ * Inter carries body copy.
+ * Cairo carries Arabic text.
  */
 
 const montserrat = Montserrat({
@@ -106,52 +100,38 @@ export default function RootLayout({
       lang="en"
       className={`${montserrat.variable} ${inter.variable} ${luckiestGuy.variable} ${cairo.variable} h-full antialiased`}
     >
-      {/* Google Tag Manager — container GTM-TB22BH63 (script loads after hydration) */}
-      <GoogleTagManager gtmId="GTM-TB22BH63" />
+      <head>
+        {/* Consent Mode defaults — optional storage denied */}
+        <Script id="google-consent-default" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function() {
+              window.dataLayer.push(arguments);
+            };
+
+            window.gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              functionality_storage: 'granted',
+              security_storage: 'granted',
+              personalization_storage: 'denied'
+            });
+          `}
+        </Script>
+      </head>
+
       <body className="min-h-full" suppressHydrationWarning>
-        {/* Google Tag Manager (noscript) — must sit immediately after <body> */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TB22BH63"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
         <LanguageProvider>
           <CursorGlow />
           <Navbar />
           {children}
           <Footer />
           <WhatsAppFloat />
+          <CookieConsent />
         </LanguageProvider>
-        {/* LinkedIn Insight Tag — partner 10981033, loads after hydration */}
-        <Script id="linkedin-insight" strategy="afterInteractive">
-          {`_linkedin_partner_id = "10981033";
-window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-(function(l) {
-if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-window.lintrk.q=[]}
-var s = document.getElementsByTagName("script")[0];
-var b = document.createElement("script");
-b.type = "text/javascript";b.async = true;
-b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-s.parentNode.insertBefore(b, s);})(window.lintrk);`}
-        </Script>
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            alt=""
-            src="https://px.ads.linkedin.com/collect/?pid=10981033&fmt=gif"
-          />
-        </noscript>
       </body>
-      {/* Google Analytics 4 — client's Measurement ID */}
-      <GoogleAnalytics gaId="G-V4J0EKMT8X" />
     </html>
   );
 }
