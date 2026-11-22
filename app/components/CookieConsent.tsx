@@ -1,7 +1,9 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
 import { useLang } from "../lib/i18n";
+import { Cookie } from "lucide-react";
 
 import {
   DEFAULT_CONSENT,
@@ -93,22 +95,20 @@ export default function CookieConsent() {
   const save = (nextConsent: ConsentType) => {
     saveConsent(nextConsent);
     setConsent(nextConsent);
-
     setGtmEnabled(nextConsent.analytics || nextConsent.marketing);
-
     setVisible(false);
     setCustomizing(false);
   };
 
   const content = isArabic
     ? {
-        label: "إعدادات الخصوصية",
-        title: "خصوصيتك، وقرارك.",
+        label: "موافقة ملفات تعريف الارتباط",
+        title: "نستخدم ملفات تعريف الارتباط",
         description:
-          "نستخدم ملفات تعريف الارتباط الضرورية لتشغيل الموقع. وبموافقتك، قد نستخدم ملفات إضافية لفهم كيفية استخدام الموقع وتحسين أدائه وقياس نتائج حملاتنا. يمكنك تعديل تفضيلاتك في أي وقت.",
-        accept: "قبول الكل",
+          "نستخدم ملفات تعريف الارتباط الضرورية لتشغيل الموقع. وبموافقتك، نستخدم ملفات إضافية لتحليل الزيارات وتحسين تجربتك وقياس أداء حملاتنا.",
+        accept: "قبول جميع الكوكيز",
         reject: "رفض الكل",
-        customize: "تفضيلات الخصوصية",
+        customize: "تخصيص التفضيلات",
         save: "حفظ اختياراتي",
         necessary: "ملفات ضرورية",
         necessaryDesc: "تضمن عمل الموقع ووظائفه الأساسية.",
@@ -122,13 +122,13 @@ export default function CookieConsent() {
         privacy: "سياسة الخصوصية",
       }
     : {
-        label: "PRIVACY SETTINGS",
-        title: "Your privacy. Your choice.",
+        label: "COOKIE CONSENT",
+        title: "We use cookies.",
         description:
-          "We use essential cookies to keep this website running. With your permission, we may also use additional cookies to understand website usage, improve performance, and measure our campaigns. You can update your preferences at any time.",
-        accept: "Accept All",
+          "We use essential cookies to keep this website running. With your permission, we also use additional cookies to analyze visits, improve your experience, and measure our campaigns.",
+        accept: "Accept All Cookies",
         reject: "Reject All",
-        customize: "Privacy Preferences",
+        customize: "Customize Preferences",
         save: "Save My Choices",
         necessary: "Essential Cookies",
         necessaryDesc: "Keep the website and its core features working.",
@@ -168,71 +168,70 @@ export default function CookieConsent() {
       {visible && (
         <div
           dir={isArabic ? "rtl" : "ltr"}
-          className="fixed inset-x-0 bottom-0 z-[9999] p-3 sm:p-5"
+          className="fixed inset-x-0 bottom-0 z-[9999] p-3 sm:p-4"
         >
           <section
             role="dialog"
             aria-modal="false"
             aria-labelledby="watm-cookie-title"
-            className="relative mx-auto w-full max-w-5xl overflow-hidden rounded-2xl border border-[#36C3C9]/30 bg-gradient-to-br from-[#102D37] via-[#0A222C] to-[#071A23] text-[#F5FAFA] shadow-[0_12px_55px_rgba(0,0,0,0.38)]"
+            className="relative mx-auto w-full max-w-3xl overflow-hidden rounded-2xl border border-[#36C3C9]/30 bg-gradient-to-br from-[#102D37] via-[#0A222C] to-[#071A23] text-[#F5FAFA] shadow-[0_12px_55px_rgba(0,0,0,0.38)]"
           >
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#36C3C9] to-transparent" />
 
-            <div className="grid gap-5 p-5 sm:p-6 md:grid-cols-[1fr_auto] md:items-center md:gap-8">
-              <div>
-                <div className="mb-3 flex items-center gap-2">
-                  <span className="text-xl font-extrabold text-[#36C3C9]">
-                    W
-                  </span>
+            <div className="p-4 sm:p-5">
+              <div className="grid gap-3 md:grid-cols-[1fr_176px] md:items-center md:gap-5">
+                <div>
+                  <div className="mb-2 flex items-center gap-2.5">
+                    <Cookie
+                      size={24}
+                      strokeWidth={2}
+                      className="shrink-0 text-[#36C3C9]"
+                      aria-hidden="true"
+                    />
 
-                  <span className="text-[10px] font-semibold tracking-[0.28em] text-white/75">
-                    WATM
-                  </span>
+                    <span className="text-[10px] font-bold tracking-[0.18em] text-[#55C9CD]">
+                      {content.label}
+                    </span>
+                  </div>
 
-                  <span className="mx-2 h-4 w-px bg-[#36C3C9]/30" />
+                  <h2
+                    id="watm-cookie-title"
+                    className="mb-1 text-lg font-bold leading-snug sm:text-xl"
+                  >
+                    {content.title}
+                  </h2>
 
-                  <span className="text-[10px] font-semibold tracking-[0.12em] text-[#55C9CD]">
-                    {content.label}
-                  </span>
+                  <p className="max-w-2xl text-xs leading-5 text-[#C0D3D8] sm:text-[13px]">
+                    {content.description}
+                  </p>
                 </div>
 
-                <h2
-                  id="watm-cookie-title"
-                  className="mb-2 text-xl font-bold leading-snug sm:text-2xl"
-                >
-                  {content.title}
-                </h2>
+                <div className="flex w-full flex-col gap-2">
+                  <button
+                    onClick={() =>
+                      save({
+                        necessary: true,
+                        analytics: true,
+                        marketing: true,
+                        preferences: true,
+                      })
+                    }
+                    className="rounded-lg bg-[#36C3C9] px-3 py-2.5 text-sm font-semibold text-[#071D25] transition duration-300 hover:bg-[#65D6D9]"
+                  >
+                    {content.accept}
+                  </button>
 
-                <p className="max-w-2xl text-xs leading-6 text-[#C0D3D8] sm:text-sm">
-                  {content.description}
-                </p>
-              </div>
-
-              <div className="flex w-full flex-col gap-2 md:w-[190px]">
-                <button
-                  onClick={() =>
-                    save({
-                      necessary: true,
-                      analytics: true,
-                      marketing: true,
-                      preferences: true,
-                    })
-                  }
-                  className="rounded-lg bg-[#36C3C9] px-5 py-3 text-sm font-semibold text-[#071D25] transition duration-300 hover:bg-[#65D6D9]"
-                >
-                  {content.accept}
-                </button>
-
-                <button
-                  onClick={() => save(DEFAULT_CONSENT)}
-                  className="rounded-lg border border-[#6B8990]/40 bg-white/[0.035] px-5 py-3 text-sm font-medium text-white transition duration-300 hover:border-[#36C3C9]/60 hover:bg-white/[0.07]"
-                >
-                  {content.reject}
-                </button>
+                  <button
+                    onClick={() => save(DEFAULT_CONSENT)}
+                    className="rounded-lg border border-[#6B8990]/40 bg-white/[0.035] px-3 py-2.5 text-sm font-medium text-white transition duration-300 hover:border-[#36C3C9]/60 hover:bg-white/[0.07]"
+                  >
+                    {content.reject}
+                  </button>
+                </div>
               </div>
 
               {customizing && (
-                <div className="border-t border-[#36C3C9]/20 pt-4 md:col-span-2">
+                <div className="mt-4 border-t border-[#36C3C9]/20 pt-3">
                   <div className="grid gap-2 sm:grid-cols-2">
                     <div className="rounded-xl border border-[#36C3C9]/20 bg-[#36C3C9]/[0.06] p-3">
                       <div className="flex items-center justify-between gap-3">
@@ -282,7 +281,7 @@ export default function CookieConsent() {
                 </div>
               )}
 
-              <div className="flex items-center justify-between gap-3 border-t border-[#36C3C9]/15 pt-3 md:col-span-2">
+              <div className="mt-3 flex items-center justify-between gap-3 border-t border-[#36C3C9]/15 pt-2.5">
                 <button
                   onClick={() => {
                     if (customizing) {
