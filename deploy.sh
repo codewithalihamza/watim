@@ -13,14 +13,15 @@ cd "$APP_DIR"
 echo "==> Pulling latest main"
 git pull origin main
 
-echo "==> Installing dependencies (npm ci)"
-npm ci
+echo "==> Installing dependencies (pnpm install --frozen-lockfile)"
+pnpm install --frozen-lockfile
 
 echo "==> Building"
-npm run build
+pnpm run build
 
 echo "==> Restarting pm2 process: $PM2_APP"
-pm2 restart "$PM2_APP"
+pm2 restart "$PM2_APP" 2>/dev/null || pm2 start npm --name "$PM2_APP" -- start
+pm2 save
 
 echo "==> Done. Current status:"
 pm2 status "$PM2_APP"
